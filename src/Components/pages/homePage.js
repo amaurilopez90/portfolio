@@ -10,6 +10,9 @@ class Homepage extends Component {
           Home Page Content
         </h1>
 
+        <p>
+          Dummy Text here for testing
+        </p>
       
       </div>
     );
