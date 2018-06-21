@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link} from 'react-router-dom';
 
+//Hello
 class Header extends Component {
   //When using render(), we should wrap all of our main elements under our div
   render() {
