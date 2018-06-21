@@ -9,13 +9,8 @@ $red: #ff1755;
 
 /*
 Fonts
-
-regular 400
-regular 400 Italic
-bold 700
-bold 700 Italic
 */
-
+@import url('https://fonts.googleapis.com/css?family=Orbitron|Press+Start+2P|Rhodium+Libre|Roboto|Rokkitt|VT323');
 /*
 Mixins
 */
@@ -32,7 +27,7 @@ Mixins
 }
 
 body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Orbitron', sans-serif;
     font-size: 18px;
     color: $black;
     font-weight: 400;

@@ -7,7 +7,9 @@ import './Assets/css/default.min.css';
 //Components
 import Header from './Components/headerComponents/header';
 import Homepage from './Components/pages/homePage';
-import Contact from './Components/pages/contact';
+import Resume from './Components/pages/resume';
+import AboutMe from './Components/pages/aboutPage';
+import Projects from './Components/pages/projectsPage';
 
 
 class App extends Component {
@@ -19,7 +21,9 @@ class App extends Component {
         <Header />
         
           <Route exact path='/' component={Homepage} />
-          <Route exact path='/Contact' component={Contact} />
+          <Route exact path='/AboutMe' component={AboutMe} />
+          <Route exact path='/Projects' component={Projects} />
+          <Route exact path='/Resume' component={Resume} />
 
       </div>
       </Router>

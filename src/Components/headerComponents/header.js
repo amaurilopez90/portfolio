@@ -6,20 +6,20 @@ class Header extends Component {
   render() {
       return (
           <header>
-          
-             <div className = "logo">
-
-               LOGO
-
-             </div>
 
               <nav>
                  <ul>
                      <li className = "first">
                          <Link to="/">Home</Link>
                      </li>
+                     <li>
+                         <Link to="/AboutMe">About Me</Link>
+                     </li>
+                     <li>
+                         <Link to="/Projects">Projects</Link>
+                     </li>
                      <li className = "last">
-                         <Link to="/Contact">Contact</Link>
+                         <Link to="/Resume">Resume</Link>
                      </li>
                  </ul>
               </nav>
