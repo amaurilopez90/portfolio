@@ -1,0 +1,29 @@
+@import '_config.scss';
+
+.container-home{
+    line-height: 24px;
+
+    padding-left: 40px; padding-right: 40px;
+    padding-top: 20px;
+    
+    .Image{
+        height: 100vh;
+        background-image: url(../Image.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+
+        text-align: center;
+        color: $white;
+        font-size: 2em;
+
+        h1 {
+            margin-bottom: 0;
+        }
+    }
+}
