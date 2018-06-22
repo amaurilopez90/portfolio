@@ -29,6 +29,11 @@
 
     p.body{
         position: relative;
+
+        &:hide{
+            transform: rotateY(0deg);
+        }
+
         &::after{
             content: ' ';
             position: absolute;
@@ -42,10 +47,5 @@
             transition: transform 1s;
         }
 
-        &:hide{
-            &::after{
-                transform: rotateY(0deg);
-            }
-        }
     }
 }
