@@ -8,6 +8,14 @@ header{
     color: $white;
     height: 82px;
 
+    //Use .syntax to reference classNames within scss
+    .logo{
+        position: relative;
+        top: 50%; left: 15px;
+        @include translateY(-50%);
+    }
+
+
     nav,
     nav ul,
     nav ul li{

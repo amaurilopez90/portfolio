@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link} from 'react-router-dom';
+import React, { Component, PropTypes} from 'react';
+import { Route, Link} from 'react-router-dom';
 
 //Hello
 class Header extends Component {
@@ -7,6 +7,12 @@ class Header extends Component {
   render() {
       return (
           <header>
+
+              <div className = "logo">
+
+                
+
+              </div>
 
               <nav>
                  <ul>

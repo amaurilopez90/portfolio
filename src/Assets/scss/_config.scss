@@ -30,6 +30,7 @@ body{
     font-family: 'Orbitron', sans-serif;
     font-size: 18px;
     color: $black;
+    background: $lightGrey;
     font-weight: 400;
     font-style: normal;
 }
@@ -45,6 +46,24 @@ a {
     }
 }
 
-.container-fluid{
+.container-home{
     line-height: 24px;
+
+    padding-left: 40px; padding-right: 40px;
+    padding-top: 20px;
+    
+    .Image{
+        height: 100vh;
+        background-image: url(../Image.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+
+        text-align: center;
+    }
 }
