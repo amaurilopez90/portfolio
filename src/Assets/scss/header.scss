@@ -1,12 +1,12 @@
 @import "_config.scss";
 
 header{
-    position: relative;
+    position: fixed;
+    top: 20px; left: 65.1%; right: 0;
     display: block;
-    width: 100%;
-    background: $black;
+    background: #e6e6e6;
     color: $white;
-    height: 82px;
+    height: 68px;
 
     //Use .syntax to reference classNames within scss
     .logo{
@@ -36,11 +36,16 @@ header{
             &.last{
                 margin: 0;
             }
+            
 
             a {
                 font-size: 19px;
+                font-weight: 600;
                 line-height: normal;
-                color: $white;
+                color: $red;
+                text-decoration-color: $red;
+                text-decoration-line: underline;
+                
             }
         }
     }
