@@ -4,7 +4,7 @@ class Resume extends Component {
   //When using render(), we should wrap all of our main elements under our div
   render() {
     return (
-      <div className = "container-fluid">
+      <div className = "container-resume">
 
         <h1>
           Resume Page Content
