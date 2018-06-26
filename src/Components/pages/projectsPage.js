@@ -11,9 +11,9 @@ class Projects extends Component {
   render() {
     return (
     
-      <div className = "container-projects">
+      <div className = "container-fluid">
 
-        <div className="Zoomy">
+        <div className="project-item">
 
           <div className="Index">
             <h1>01</h1>
@@ -24,7 +24,7 @@ class Projects extends Component {
             Alienz</a>
           
           </h1>
-          
+
           <Flex justify={'center'}>
             <ReactZoomy
               imageUrl={require('../../Assets/Alienz.gif')}

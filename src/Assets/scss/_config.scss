@@ -49,16 +49,18 @@ div.Main-Background{
     z-index: -99; //Behind everything
     left: 5vw; width: 90vw;
     top: 17vh; height: 100vh;
-    opacity: 0.3;
+    opacity: 0.4;
     
     background-image: url('../CPUtransparent.png');
     background-repeat: no-repeat;
-    background-color: $hansaYellow;
+    background-color: $uclaGold;
     background-size: 70%;
     background-position: center;
 
 
 }
+
+//Default
 body{
     font-family: 'Press Start 2P', serif;
     padding-top: 82px;
@@ -80,5 +82,9 @@ h1.Title{
 
 Link{
     text-decoration: none;
+}
+
+.container-fluid{
+    padding-left: 140px; padding-right: 140px;
 }
 

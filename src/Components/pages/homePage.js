@@ -9,7 +9,7 @@ class Homepage extends Component {
   //When using render(), we should wrap all of our main elements under our div
   render() {
     return (
-      <div className = "container-home">
+      <div className = "container-fluid">
 
         <div className = 'Image'>
           <h1>Amauri Lopez</h1>

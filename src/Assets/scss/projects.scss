@@ -1,11 +1,8 @@
 @import '_config.scss';
 
-.container-projects{
+.container-fluid{
 
-    padding-left: 140px; padding-right: 140px;
-    
-    div.Zoomy{
-        @include translateY(7%);
+    div.project-item{
 
         h1{
             font-size: 30px;
@@ -13,11 +10,11 @@
             margin-bottom: 80px;
     
             a{
-                color: $uclaBlue;
+                color: $upsdellRed;
                 position: relative;
                 
                 &:hover{
-                    color: $lightBlue;
+                    color: $red;
                     text-decoration: none;
                     text-decoration-line: none;
                 }
@@ -27,7 +24,7 @@
                     position: absolute;
                     left: 0; bottom: 0;
                     height: 10%; width: 100%;
-                    background-color: $uclaBlue;
+                    background-color: $upsdellRed;
                     z-index: -1;
                     transition: height .1s, background-color .1s;
                 }
