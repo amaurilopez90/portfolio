@@ -10,6 +10,21 @@ $darkGrey: #333;
 $red: #ff1755;
 $lightBlue: rgb(84, 93, 223);
 
+//From Coolors
+$lightBrown: #C6Ac8F;
+$peach: #FFF689;
+
+//Caitlin Paletter_2
+$hansaYellow: #EDDE6D;
+$eerieBlack: #13172D;
+$uclaBlue: #5A6D87;
+$pastelGray: #D1CDC9;
+$upsdellRed: #AD2626;
+$uclaGold: #FFAE03;
+$pumpkin: #FC6F0E;
+$sheenGreen: #96D106;
+$robineggBlue: #1DD3CC;
+
 /*
 Fonts
 */
@@ -29,35 +44,41 @@ Mixins
             transition: $e;
 }
 
+div.Main-Background{
+    position: fixed;
+    z-index: -99; //Behind everything
+    left: 5vw; width: 90vw;
+    top: 17vh; height: 100vh;
+    opacity: 0.3;
+    
+    background-image: url('../CPUtransparent.png');
+    background-repeat: no-repeat;
+    background-color: $hansaYellow;
+    background-size: 70%;
+    background-position: center;
 
-h1.Title{
-    font-family: 'Press Start 2P', serif;
-    position: relative;
-    
-    
-    
+
 }
-
 body{
-    font-family: 'Orbitron', cursive;
+    font-family: 'Press Start 2P', serif;
     padding-top: 82px;
     font-size: 18px;
     color: $black;
-    background: #e6e6e6;
+    background: $white;
     font-weight: 400;
     font-style: normal;
+    
 }
 
-a {
+h1, h2, h3{
+    font-weight: normal;
+}
+
+h1.Title{
+    color: $pumpkin;
+}
+
+Link{
     text-decoration: none;
-    @include transition(.3s ease-in-out);
-    cursor: pointer;
-
-    &:hover{
-        color: $white;
-        background-color: #b6b6b6ab;
-        text-decoration-line: underline;
-        text-decoration-color: $white;
-        @include transition(.3s ease-in-out);
-    }
 }
+

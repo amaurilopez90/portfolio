@@ -18,6 +18,8 @@ class App extends Component {
       <Router>
         <div className="App">
 
+          <div className="Main-Background" />
+
           <Routes />
           <Header />
 

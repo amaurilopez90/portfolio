@@ -4,7 +4,7 @@ header{
     position: fixed;
     top: 20px; left: 65.1%; right: 0;
     display: block;
-    background: #e6e6e6;
+    background: $white;
     color: $white;
     height: 68px;
 
@@ -21,14 +21,16 @@ header{
     nav ul li{
         margin: 0;
         padding: 8px;
+        text-decoration: none;
     }
 
     nav {
-        position: absolute;
+        position: relative;
         top: 50%; right: 15px;
         @include translateY(-50%);
 
         ul li{
+            position: relative;
             list-style-type: none;
             display: inline-block;
             margin-right: 15px;
@@ -42,9 +44,16 @@ header{
                 font-size: 19px;
                 font-weight: 600;
                 line-height: normal;
-                color: $red;
-                text-decoration-color: $red;
-                text-decoration-line: underline;
+                color: $uclaBlue;
+                text-decoration: none;
+                position: relative;
+            
+                &:hover{
+                    color: $uclaBlue;
+                    text-decoration: none;
+                    text-decoration-line: none;
+
+                }
                 
             }
         }

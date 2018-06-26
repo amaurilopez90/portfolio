@@ -1,13 +1,60 @@
 @import '_config.scss';
 
 .container-projects{
-    
-    
 
+    padding-left: 140px; padding-right: 140px;
+    
     div.Zoomy{
-        position: relative;
-        left: 34%; padding-top: 40px;
+        @include translateY(7%);
 
+        h1{
+            font-size: 30px;
+            position: relative;
+            margin-bottom: 80px;
+    
+            a{
+                color: $uclaBlue;
+                position: relative;
+                
+                &:hover{
+                    color: $lightBlue;
+                    text-decoration: none;
+                    text-decoration-line: none;
+                }
+                
+                &:after{
+                    content: ' ';
+                    position: absolute;
+                    left: 0; bottom: 0;
+                    height: 10%; width: 100%;
+                    background-color: $uclaBlue;
+                    z-index: -1;
+                    transition: height .1s, background-color .1s;
+                }
+                
+                &:hover:after{
+                    height: 40%;
+                    background-color: $peach;
+                }
+            }
+        }
+
+        .Index{
+            position: relative;
+            left: 0; bottom: 0;
+            z-index: -1;
+            
+            h1{
+                font-size: 5em;
+                margin: 0;
+                font-weight: bold;
+                color: $uclaGold;
+                opacity: 0.6;
+                @include translateY(50%);
+
+            }
+        }
+        
     }
     
 }

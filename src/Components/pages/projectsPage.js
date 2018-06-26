@@ -3,6 +3,7 @@ import ReactZoomy from 'react-zoomy';
 
 //Import special Styling components
 import { ImageButton } from '../specialStyling/hoverScale';
+import { Flex } from '../specialStyling/flexBox';
 
 
 class Projects extends Component {
@@ -12,27 +13,35 @@ class Projects extends Component {
     
       <div className = "container-projects">
 
-        <h1 className="Title">
-            Projects
-        </h1>
-
         <div className="Zoomy">
 
-          <ReactZoomy
-            imageUrl={require('../../Assets/Alienz.gif')}
-            renderThumbnail={({ showImage }) => 
-            <ImageButton onClick={showImage}>
-              <img src={require('../../Assets/Alienz_thumbnail_smaller.jpg')} alt="Alienz" />
-            </ImageButton>
-            }
-            scale={[1.1, 1.1]}
-            imageProps={{
-              style: {
-                width: '100vw',
-                height: 'auto'
+          <div className="Index">
+            <h1>01</h1>
+          </div>
+
+          <h1>
+            Tile Based - <a href="">
+            Alienz</a>
+          
+          </h1>
+          
+          <Flex justify={'center'}>
+            <ReactZoomy
+              imageUrl={require('../../Assets/Alienz.gif')}
+              renderThumbnail={({ showImage }) => 
+              <ImageButton onClick={showImage}>
+                <img src={require('../../Assets/Alienz_thumbnail_smaller.jpg')} alt="Alienz" />
+              </ImageButton>
               }
-            }}
-          />
+              scale={[1.1, 1.1]}
+              imageProps={{
+                style: {
+                  width: '100vw',
+                  height: 'auto'
+                }
+              }}
+            />
+          </Flex>
 
         </div>
       
