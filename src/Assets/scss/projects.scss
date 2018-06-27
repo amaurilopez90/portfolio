@@ -7,10 +7,10 @@
         margin-top: 30px;
 
         h1{
-            font-size: 20px;
+            font-size: 17px;
             position: relative;
-            margin-bottom: 37px;
-            margin-left: 6em;
+            margin-bottom: 25px;
+            margin-left: 8em;
             color: $charcoalBlack;
 
             //Tablet
@@ -25,11 +25,11 @@
             }
     
             a{
-                color: $upsdellRed;
+                color: $uclaBlue;
                 position: relative;
                 
                 &:hover{
-                    color: $red;
+                    color: $robineggBlue;
                     text-decoration: none;
                     text-decoration-line: none;
                 }
@@ -39,7 +39,7 @@
                     position: absolute;
                     left: 0; bottom: 0;
                     height: 10%; width: 100%;
-                    background-color: $upsdellRed;
+                    background-color: $uclaBlue;
                     z-index: -1;
                     transition: height .2s, background-color .2s;
                 }
@@ -55,14 +55,14 @@
             position: relative;
             left: 0.2em; bottom: 0;
             z-index: -1;
-            margin-left: 10em;
+            margin-left: 11em;
             
             h1{
                 font-size: 4.6em;
                 margin: 0;
                 font-weight: bold;
-                color: $uclaGold;
-                opacity: 0.3;
+                color:$uclaGold;
+                opacity: 0.4;
                 @include translateY(50%);
 
                 //Tablet

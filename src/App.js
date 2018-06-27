@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
+
 //make sure everything that is deployed are minified css files
 import './Assets/css/header.min.css';
 import './Assets/css/home.min.css';
