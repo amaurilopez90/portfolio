@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, HashRouter} from 'react-router-dom';
+import { Route} from 'react-router-dom';
 
 //Components
-import Header from './Components/headerComponents/header';
 import Homepage from './Components/pages/homePage';
 import Resume from './Components/pages/resume';
 import AboutMe from './Components/pages/aboutPage';

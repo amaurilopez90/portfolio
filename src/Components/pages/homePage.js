@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 
 //Special Styling components
 import { Revealp } from '../specialStyling/revealAnimation';
