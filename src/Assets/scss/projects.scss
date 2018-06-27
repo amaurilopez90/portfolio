@@ -7,7 +7,18 @@
         h1{
             font-size: 30px;
             position: relative;
-            margin-bottom: 80px;
+            margin-bottom: 60px;
+
+            //Tablet
+            @media(max-width: $tablet){
+                font-size: 20px;
+                margin-bottom: 40px;
+            }
+            //Phone
+            @media(max-width: $phone){
+                font-size: 13px;
+                margin-bottom: 30px;
+            }
     
             a{
                 color: $upsdellRed;
@@ -48,6 +59,15 @@
                 color: $uclaGold;
                 opacity: 0.6;
                 @include translateY(50%);
+
+                //Tablet
+                @media(max-width: $tablet){
+                    font-size: 4em;
+                }
+                //Phone
+                @media(max-width: $phone){
+                    font-size: 3em;
+                }
 
             }
         }

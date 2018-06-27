@@ -14,7 +14,6 @@ class Projects extends Component {
       <div className = "container-fluid">
 
         <div className="project-item">
-
           <div className="Index">
             <h1>01</h1>
           </div>
@@ -42,6 +41,20 @@ class Projects extends Component {
               }}
             />
           </Flex>
+        </div>
+
+        <div className="project-item">
+          <div className="Index">
+            <h1>02</h1>
+          </div>
+
+          <h1>
+            Raspberry Pi - <a href="">
+            Sampled Sound Synthesizer</a>
+          
+          </h1>
+
+          
 
         </div>
       

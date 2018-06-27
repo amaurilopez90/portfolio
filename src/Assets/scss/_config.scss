@@ -56,6 +56,26 @@ div.Main-Background{
     left: 5vw; width: 90vw;
     top: 17vh; height: 100vh;
     opacity: 0.4;
+
+    //media Devices
+    @media(max-width: $giant){
+
+    }
+
+    //Desktop
+    @media(max-width: $desktop){
+        width: 90vw; left: 5vw;
+        top: 17vh; height: 100vh;
+    }
+    
+    //Tablet
+    @media(max-width: $tablet){
+        
+    }
+    //Phone
+    @media(max-width: $phone){
+        left: 0; width: 100%;
+    }
     
     background-image: url('../CPUtransparent.png');
     background-repeat: no-repeat;
