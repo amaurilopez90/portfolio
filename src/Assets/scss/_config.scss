@@ -7,6 +7,7 @@ $lightGrey: #bba3a3;
 $darkGrey: #333;
 $red: #ff1755;
 $lightBlue: rgb(84, 93, 223);
+$charcoalBlack: #424242;
 
 //From Coolors
 $lightBrown: #C6Ac8F;
@@ -53,9 +54,9 @@ Mixins
 div.Main-Background{
     position: fixed;
     z-index: -99; //Behind everything
-    left: 5vw; width: 90vw;
-    top: 17vh; height: 100vh;
-    opacity: 0.4;
+    left: 10vw; width: 80vw;
+    top: 10vh; height: 100vh;
+    opacity: 0.2;
 
     //media Devices
     @media(max-width: $giant){
@@ -89,8 +90,8 @@ div.Main-Background{
 //Default
 body{
     font-family: 'Press Start 2P', serif;
-    padding-top: 82px;
-    font-size: 18px;
+    padding-top: 5px;
+    font-size: 12px;
     color: $black;
     background: $white;
     font-weight: 400;
@@ -103,7 +104,20 @@ h1, h2, h3{
 }
 
 h1.Title{
-    color: $pumpkin;
+    position: fixed;
+    color: $red;
+    z-index: 1;
+    font-size: 27px;
+    
+    //Tablet
+    @media(max-width: $tablet){
+        font-size: 18px;
+    }
+    //Phone
+    @media(max-width: $phone){
+        font-size: 10px;
+    }
+
 }
 
 Link{
@@ -111,8 +125,8 @@ Link{
 }
 
 .container-fluid{
-    padding-left: 120px; padding-right: 120px;
-    padding-top: 30px;
+    padding-left: 100px; padding-right: 100px;
+    padding-top: 25px;
     
     //media devices
     

@@ -6,15 +6,9 @@
     
     .Image{
         height: 100vh;
-        background-image: url(../myPortfolioHome.mp4);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: center;
-
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        justify-content: center;
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
 
         text-align: center;
         color: $white;

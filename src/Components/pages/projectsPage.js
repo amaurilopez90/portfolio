@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactZoomy from 'react-zoomy';
+import ParallaxImage from 'react-image-parallax2';
 
 //Import special Styling components
 import { ImageButton } from '../specialStyling/hoverScale';
@@ -13,7 +14,10 @@ class Projects extends Component {
     
       <div className = "container-fluid">
 
+        <h1 className="Title">Projects</h1>
+
         <div className="project-item">
+
           <div className="Index">
             <h1>01</h1>
           </div>
@@ -54,7 +58,13 @@ class Projects extends Component {
           
           </h1>
 
+          <div className="Image">
           
+            <ParallaxImage
+              reduceHeight={1/3.7}
+              src={require('../../Assets/Synth.jpeg')}/>
+            
+          </div>
 
         </div>
       

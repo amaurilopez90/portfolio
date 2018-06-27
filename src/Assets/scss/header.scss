@@ -2,19 +2,12 @@
 
 header{
     position: fixed;
-    top: 20px; left: 58%; right: 0;
+    top: 2em; left: 65%; right: 2em;
     display: block;
     background: $white;
     color: $white;
-    height: 68px;
+    height: 50px;
     width: 50vw;
-
-    //Use .syntax to reference classNames within scss
-    .logo{
-        position: relative;
-        top: 50%; left: 15px;
-        @include translateY(-50%);
-    }
 
 
     nav,
@@ -42,18 +35,33 @@ header{
             
 
             a {
-                font-size: 19px;
-                font-weight: 600;
+                font-size: 14px;
+                font-weight: 500;
                 line-height: normal;
                 color: $uclaBlue;
-                text-decoration: none;
                 position: relative;
+                transform-origin: -20px;
             
                 &:hover{
-                    color: $uclaBlue;
+                    color: $white;
                     text-decoration: none;
                     text-decoration-line: none;
 
+                }
+
+                &:after{
+                    content: ' ';
+                    position: absolute;
+                    left: 0; bottom: 0;
+                    height: 10%; width: 100%;
+                    background-color: $uclaBlue;
+                    z-index: -1;
+                    transition: height .2s, background-color .2s;
+                }
+                
+                &:hover:after{
+                    height: 120%;
+                    background-color: $red;
                 }
                 
             }

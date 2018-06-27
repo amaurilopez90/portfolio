@@ -10,7 +10,6 @@ class Homepage extends Component {
   render() {
     return (
       <div className = "container-fluid">
-
         <div className = 'Image'>
           <h1>Amauri Lopez</h1>
           <h2>Software Developer</h2>
