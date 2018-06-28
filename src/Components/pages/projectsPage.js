@@ -16,34 +16,19 @@ class Projects extends Component {
       <div className = "container-fluid">
 
         <h1 className="Title">Projects</h1>
-
-        <br/><br/><br/><br/><br/>
-        <br/><br/><br/><br/><br/>
-        <br/><br/><br/><br/><br/>
-        <br/><br/><br/><br/><br/>
-        <br/><br/><br/><br/><br/>
-        <br/><br/><br/><br/><br/>
         
-
         <div className="project-item">
 
           <div className="Index">
             <h1>01</h1>
           </div>
 
-          <WhenInView>
-            {({ isInView }) => 
-              <Slidep direction={'right'} stop={'0vw'} hide={!isInView}>
+          <h1 className="left">
+            Tile Based - <a href="">
+            Alienz</a>
+          
+          </h1>
 
-                <h1>
-                  Tile Based - <a href="">
-                  Alienz</a>
-                
-                </h1>
-
-              </Slidep>
-            }
-          </WhenInView>
 
 
           <Flex justify={'center'}>
@@ -61,20 +46,38 @@ class Projects extends Component {
                   height: 'auto'
                 }
               }}
-            />
+              />
           </Flex>
         </div>
 
         <div className="project-item">
-          <div className="Index">
-            <h1>02</h1>
-          </div>
 
-          <h1>
-            Raspberry Pi - <a href="">
-            Sampled Sound Synthesizer</a>
-          
-          </h1>
+          <WhenInView>
+            {({ isInView }) => 
+              <Slidep direction={'top'} hide={!isInView}>
+
+                <div className="Index">
+                  <h1 className="right">02</h1>
+                </div>
+                
+              </Slidep>
+            }
+          </WhenInView>
+
+
+          <WhenInView>
+            {({ isInView }) => 
+              <Slidep direction={'left'} hide={!isInView}>
+
+                <h1 className="right">
+                  Raspberry Pi - <a href="">
+                  Sampled Sound Synthesizer</a>
+                
+                </h1>
+
+              </Slidep>
+            }
+          </WhenInView>
 
           <div className="Image">
           

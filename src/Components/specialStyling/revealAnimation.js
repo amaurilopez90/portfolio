@@ -9,7 +9,7 @@ export const Slidep = styled.p`
     ${({ direction }) => direction && css`
         ${direction}: 0;
 
-        transition: ${direction} 1.4s;
+        transition: ${direction} 1.5s;
         
         ${({ hide }) => hide && css`
             ${direction}: 100vw;
