@@ -1,13 +1,13 @@
 @import '_config.scss';
 
 header{
+    
     position: fixed;
     top: 2em; left: 65%; right: 2em;
     display: block;
     background: $white;
     color: $white;
     height: 50px;
-
 
     nav,
     nav ul,

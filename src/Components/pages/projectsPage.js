@@ -5,7 +5,8 @@ import ParallaxImage from 'react-image-parallax2';
 //Import special Styling components
 import { ImageButton } from '../specialStyling/hoverScale';
 import { Flex } from '../specialStyling/flexBox';
-
+import { Slidep } from '../specialStyling/revealAnimation';
+import WhenInView from '../specialStyling/whenInView';
 
 class Projects extends Component {
   //When using render(), we should wrap all of our main elements under our div
@@ -16,17 +17,34 @@ class Projects extends Component {
 
         <h1 className="Title">Projects</h1>
 
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        
+
         <div className="project-item">
 
           <div className="Index">
             <h1>01</h1>
           </div>
 
-          <h1>
-            Tile Based - <a href="">
-            Alienz</a>
-          
-          </h1>
+          <WhenInView>
+            {({ isInView }) => 
+              <Slidep direction={'right'} stop={'0vw'} hide={!isInView}>
+
+                <h1>
+                  Tile Based - <a href="">
+                  Alienz</a>
+                
+                </h1>
+
+              </Slidep>
+            }
+          </WhenInView>
+
 
           <Flex justify={'center'}>
             <ReactZoomy
