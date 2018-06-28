@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route} from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 //Components
 import Homepage from './Components/pages/homePage';
@@ -11,12 +11,12 @@ import Projects from './Components/pages/projectsPage';
 class Routes extends Component{
     render(){
         return(
-               <div className = "Routes">     
+            <div className = "Routes">     
                 <Route exact path='/' component={Homepage} />
                 <Route exact path='/AboutMe' component={AboutMe} />
                 <Route exact path='/Projects' component={Projects} />
                 <Route exact path='/Resume' component={Resume} />
-                </div> 
+            </div> 
         );
     }
 }
