@@ -16,6 +16,12 @@ class Projects extends Component {
       <div className = "container-fluid">
 
         <h1 className="Title">Projects</h1>
+
+        <Flex justify={'center'} align={'center'} column>
+          <p className="Description">
+            "I sit down, listen to music, and think of tasks that would challenge and expand my creative mind. And then I do them. What's the most important quality of the projects I work towards presenting? That they are fun for me, and more importantly, fun for you!"
+          </p>
+        </Flex>
         
         <div className="project-item">
 
@@ -28,8 +34,6 @@ class Projects extends Component {
             Alienz</a>
           
           </h1>
-
-
 
           <Flex justify={'center'}>
             <ReactZoomy
@@ -88,6 +92,41 @@ class Projects extends Component {
           </div>
 
         </div>
+
+        <div className="project-item">
+
+          <WhenInView>
+            {({ isInView }) => 
+              <Slidep direction={'bottom'} hide={!isInView}>
+
+                <div className="Index">
+                  <h1>03</h1>
+                </div>
+                
+              </Slidep>
+            }
+          </WhenInView>
+
+          <WhenInView>
+            {({ isInView }) => 
+              <Slidep direction={'right'} hide={!isInView}>
+
+                <h1 className="left">
+                  Unity 3D - <a href="">
+                  Battle Spheres</a>
+                
+                </h1>
+
+              </Slidep>
+            }
+          </WhenInView>
+
+          <Flex justify={'center'}>
+            <img src={require('../../Assets/BattleSpheresGif.gif')}/>
+          </Flex>
+
+        </div>
+
       
       </div>
     );

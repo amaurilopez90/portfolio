@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 //Create a paragraph tag that comes with a reveal animation depending on
 //the 'hide' pseudo element we create
 
-export const Slidep = styled.p`
+export const Slidep = styled.div`
     position: relative;
     
     ${({ direction }) => direction && css`
@@ -12,7 +12,7 @@ export const Slidep = styled.p`
         transition: ${direction} 1.5s;
         
         ${({ hide }) => hide && css`
-            ${direction}: 100vw;
+            ${direction}: 200vw;
         `}
 
     `}

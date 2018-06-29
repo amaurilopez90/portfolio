@@ -5,7 +5,7 @@ $black: #010000;
 $white: #ffffff;
 $fadedBlue: #f5f8f7;
 $fadedRed: #f1e1e9;
-$darkGrey: #333;
+$darkGrey: rgb(150, 141, 141);
 $red: #ff1755;
 $lightBlue: rgb(84, 93, 223);
 $charcoalBlack: #424242;
@@ -56,9 +56,9 @@ Mixins
 div.Main-Background{
     position: fixed;
     z-index: -99; //Behind everything
-    left: 12vw; width: 76vw;
+    left: 10vw; width: 80vw;
     top: 10vh; height: 100vh;
-    opacity: 0.25;
+    opacity: 0.15;
 
     //media Devices
     @media(max-width: $giant){
@@ -84,7 +84,7 @@ div.Main-Background{
     background-image: url('../Aquicon-Github.png');
     background-repeat: no-repeat;
     background-color: $fadedBlue;
-    background-size: 65%;
+    background-size: 55%;
     background-position: center;
 
 
