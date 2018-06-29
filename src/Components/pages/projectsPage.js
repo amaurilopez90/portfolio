@@ -19,7 +19,7 @@ class Projects extends Component {
 
         <Flex justify={'center'} align={'center'} column>
           <p className="Description">
-            "I sit down, listen to music, and think of tasks that would challenge and expand my creative mind. And then I do them. What's the most important quality of the projects I work towards presenting? That they are fun for me, and more importantly, fun for you!"
+            "I sit down and think of tasks that would challenge and expand my creative mind. And then I do them. What's the most important quality of the projects I work towards presenting? That they are fun for me, and more importantly, fun for you!"
           </p>
         </Flex>
         
