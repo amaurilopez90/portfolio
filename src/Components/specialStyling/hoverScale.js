@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 //Create a Image button tag that comes with a hover scale animation 
 //that scales the image thumbnail within its container when you hover over it
@@ -16,4 +16,5 @@ export const ImageButton = styled.div`
             transform: scale(1.2);
         }
     }
+    
 `;

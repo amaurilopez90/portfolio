@@ -7,6 +7,7 @@ import { ImageButton } from '../specialStyling/hoverScale';
 import { Flex } from '../specialStyling/flexBox';
 import { Slidep } from '../specialStyling/revealAnimation';
 import WhenInView from '../specialStyling/whenInView';
+import { Rotatep } from '../specialStyling/types';
 
 class Projects extends Component {
   //When using render(), we should wrap all of our main elements under our div
@@ -14,9 +15,7 @@ class Projects extends Component {
     return (
     
       <div className = "container-fluid">
-
         <h1 className="Title">Projects</h1>
-
         <Flex justify={'center'} align={'center'} column>
           <p className="Description">
             "I sit down and think of tasks that would challenge and expand my creative mind. And then I do them. What's the most important quality of the projects I work towards presenting? That they are fun for me, and more importantly, fun for you!"
@@ -35,12 +34,27 @@ class Projects extends Component {
           
           </h1>
 
+          {/* <Flex justify={'left'} style={{
+            transform: 'translateY(20vh)',
+          }}>
+
+            <Rotatep degree={'-90'}
+            style={{
+              marginLeft: '20%',
+            }}>
+
+              Click to zoom!
+            </Rotatep>
+
+          </Flex> */}
+
           <Flex justify={'center'}>
+
             <ReactZoomy
               imageUrl={require('../../Assets/Alienz.gif')}
               renderThumbnail={({ showImage }) => 
               <ImageButton onClick={showImage}>
-                <img src={require('../../Assets/Alienz_thumbnail_smaller.jpg')} alt="Alienz" />
+                <img src={require('../../Assets/Alienz_thumbnail_bigger.jpg')} alt="Alienz" />
               </ImageButton>
               }
               scale={[1.1, 1.1]}
@@ -51,8 +65,11 @@ class Projects extends Component {
                 }
               }}
               />
+        
           </Flex>
+
         </div>
+
 
         <div className="project-item">
 
@@ -122,7 +139,7 @@ class Projects extends Component {
           </WhenInView>
 
           <Flex justify={'center'}>
-            <img src={require('../../Assets/BattleSpheresGif.gif')}/>
+            <img src={require('../../Assets/BattleSpheresGif.gif')} alt=""/>
           </Flex>
 
         </div>
