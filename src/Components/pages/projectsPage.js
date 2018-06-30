@@ -5,7 +5,7 @@ import ParallaxImage from 'react-image-parallax2';
 //Import special Styling components
 import { ImageButton } from '../specialStyling/hoverScale';
 import { Flex } from '../specialStyling/flexBox';
-import { Slidep } from '../specialStyling/revealAnimation';
+import { Slidep, SlideSideTextLeft, SlideSideTextRight, FadeIn } from '../specialStyling/revealAnimation';
 import WhenInView from '../specialStyling/whenInView';
 import { Rotatep } from '../specialStyling/types';
 
@@ -34,27 +34,16 @@ class Projects extends Component {
           
           </h1>
 
-          {/* <Flex justify={'left'} style={{
-            transform: 'translateY(20vh)',
+          <div className="Alienz" style={{
+            display: 'inline-flex',
+            position: 'relative',
           }}>
-
-            <Rotatep degree={'-90'}
-            style={{
-              marginLeft: '20%',
-            }}>
-
-              Click to zoom!
-            </Rotatep>
-
-          </Flex> */}
-
-          <Flex justify={'center'}>
-
-            <ReactZoomy
+          
+            <ReactZoomy className="Zoomy"
               imageUrl={require('../../Assets/Alienz.gif')}
               renderThumbnail={({ showImage }) => 
               <ImageButton onClick={showImage}>
-                <img src={require('../../Assets/Alienz_thumbnail_bigger.jpg')} alt="Alienz" />
+                <img className="ZoomyThumbnail" src={require('../../Assets/Alienz_thumbnail_bigger.jpg')} alt="Alienz" />
               </ImageButton>
               }
               scale={[1.1, 1.1]}
@@ -65,8 +54,13 @@ class Projects extends Component {
                 }
               }}
               />
-        
-          </Flex>
+          
+          </div>
+
+          <div className="SideTextAlienzNew">
+            <h6 className="SideText">Click to Zoom!</h6>
+          
+          </div>
 
         </div>
 
@@ -100,13 +94,31 @@ class Projects extends Component {
             }
           </WhenInView>
 
-          <div className="Image">
-          
-            <ParallaxImage
-              reduceHeight={1/3.7}
-              src={require('../../Assets/Synth.jpeg')}/>
+          <Flex justify={'center'}>
+            <div className="SynthImage">
             
-          </div>
+              <ParallaxImage
+                reduceHeight={1/3.7}
+                src={require('../../Assets/Synth.jpeg')}/>
+                
+                <WhenInView>
+                  {({ isInView }) => 
+
+                    <div className="SideTextSynth">
+                      <SlideSideTextLeft hide={!isInView}>
+                        <h6 className="leftSideText">Look closely...</h6>
+                      </SlideSideTextLeft>
+
+                      <SlideSideTextRight hide={!isInView}>
+                        <h6 className="rightSideText">See the parallax?</h6>
+                      </SlideSideTextRight>
+                    </div>
+
+                  }
+                </WhenInView>
+              
+            </div>
+          </Flex>
 
         </div>
 
@@ -138,13 +150,65 @@ class Projects extends Component {
             }
           </WhenInView>
 
+
           <Flex justify={'center'}>
-            <img src={require('../../Assets/BattleSpheresGif.gif')} alt=""/>
+            <img className="BattleSpheresImage" src={require('../../Assets/BattleSpheresGif.gif')} alt=""/>
           </Flex>
+
+          <WhenInView>
+            {({ isInView }) => 
+              <FadeIn hide={!isInView}>
+                <div className="SideTextSpheres">
+                  <h6 className="topSideText">«This one's my favorite!»</h6>
+                </div>
+              </FadeIn>
+            }
+          </WhenInView>
+
+        </div>
+        
+        <div className="project-item">
+
+          <WhenInView>
+            {({ isInView }) => 
+              <Slidep direction={'top'} hide={!isInView}>
+
+                <div className="Index">
+                  <h1 className="right">04</h1>
+                </div>
+                
+              </Slidep>
+            }
+          </WhenInView>
+
+          <WhenInView>
+            {({ isInView }) => 
+              <Slidep direction={'left'} hide={!isInView}>
+
+                <h1 className="right">
+                  ReactJS - <a href="">
+                  My Portfolio</a>
+                
+                </h1>
+
+              </Slidep>
+            }
+          </WhenInView>
+
+          <h6 style={{
+            textAlign: 'end',
+            marginRight: '12vw',
+            marginTop: '9vh',
+            fontSize: '13px',
+            color: 'rgb(150, 141, 141)',
+          }}>Like what you see? Click to view the source! ^</h6>
 
         </div>
 
-      
+        <Flex justify={'center'} align={"center"}>
+          <a className="ViewMore" href="">View More</a>
+        </Flex>
+     
       </div>
     );
   }

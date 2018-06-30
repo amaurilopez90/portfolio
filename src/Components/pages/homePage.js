@@ -11,12 +11,9 @@ class Homepage extends Component {
     return (
       <div className = "container-fluid">
 
-        <div className = 'Image'>
-          <h1>Amauri Lopez</h1>
-          <h2>Software Developer</h2>
-          <h2>Computer Engineer</h2>
-          
-        </div>
+        <h1>Amauri Lopez</h1>
+        <h2>Software Developer</h2>
+        <h2>Computer Engineer</h2>
 
         <WhenInView>
           {({ isInView }) => 

@@ -12,10 +12,43 @@ export const Slidep = styled.div`
         transition: ${direction} 1.5s;
         
         ${({ hide }) => hide && css`
-            ${direction}: 200vw;
+            ${direction}: 2000px;
         `}
 
     `}
+`;
+
+export const SlideSideTextLeft = styled.div`
+    position: relative;
+
+    transition: transform 1.5s
+
+    ${({ hide }) => hide && css`
+        transform: translateY(-200vh);
+    `}
+
+`;
+
+export const SlideSideTextRight = styled.div`
+    position: relative;
+
+    transition: transform 1.5s
+
+    ${({ hide }) => hide && css`
+        transform: translateY(200vh);
+    `}
+
+`;
+
+export const FadeIn = styled.div`
+    position: relative;
+
+    transition: opacity 1.5s
+
+    ${({ hide }) => hide && css`
+        opacity: 0;
+    `}
+
 `;
 
 export const Revealp = styled.p`

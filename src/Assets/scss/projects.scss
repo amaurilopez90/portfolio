@@ -10,12 +10,213 @@
         width: 70%; 
         color: $darkGrey;
         transform: scaleY(1.4);
+
+        //Laptop
+        @media(max-width: $laptop){
+            margin-left: 18%;
+            font-size: 8px;
+        }
+
+        //tablet
+        @media(max-width: $tablet){
+            margin-left: 16.5%;
+        }
+    }
+
+    a{
+        color: $uclaBlue;
+        position: relative;
+        
+        &:hover{
+            color: $robineggBlue;
+            text-decoration: none;
+            text-decoration-line: none;
+        }
+        
+        &:after{
+            content: ' ';
+            position: absolute;
+            left: 0; bottom: 0;
+            height: 10%; width: 100%;
+            background-color: $uclaBlue;
+            z-index: -1;
+            transition: height .2s, background-color .2s;
+        }
+        
+        &:hover:after{
+            height: 40%;
+            background-color: $peach;
+        }
+
+        &.ViewMore{
+            font-size: 12px;
+            transform: scale(0.8, 1.2);
+            margin-top: 8vh; margin-bottom: 25vh;
+
+            @media(max-width: $laptop){
+                font-size: 10px;
+                margin-top: 10vh;
+            }
+            @media(max-width: $tablet){
+                font-size: 10px;
+                margin-top: 10vh;
+            }
+        }
     }
 
     div.project-item{
-        margin-bottom: 35px;
+        margin-bottom: 30px;
         margin-top: 30px;
+        
+        .SideTextAlienzNew{
+            position: relative;
+            transform: translateY(-37vh) rotate(-90deg);
+            left: -22%;
+            transition: transform .2s;
 
+            @media(max-width: $laptopL){
+                transform: translateY(-34vh) rotate(-90deg);
+                left: -25%;
+            }
+
+            @media(max-width: $laptop){
+                transform: translateY(-42vh) rotate(-90deg);
+                left: -62%;
+            }
+
+            @media(max-width: $desktop){
+                
+            }
+
+            @media(max-width: $tablet){
+                transform: translateY(-39vh) rotate(-90deg);
+                left: 0%;
+            }
+            
+
+            display: inline-block;
+            
+            .SideText{
+                position: relative;
+                font-size: 12px;
+                color: $charcoalBlack;
+                
+            }
+        }
+
+        
+
+        .SynthImage{
+            width: 800px;
+
+            @media(max-width: $laptop){
+                margin-left: 3vw;
+            }
+
+            @media(max-width: $tablet){
+                height: auto;
+                margin-left: 2vw;
+                width: 650px;
+            }
+
+            .SideTextSynth{
+
+                .leftSideText{
+                    position: relative;
+                    font-size: 13px;
+                    color: $charcoalBlack;
+
+                    transform: translateY(-52vh) rotate(-90deg);
+                    right: 27vw;
+
+                    @media(max-width: $laptopL){
+                        transform: translateY(-49vh) rotate(-90deg);
+                        right: 29vw;
+                    }
+
+                    @media(max-width: $laptop){
+                        transform: translateY(-58vh) rotate(-90deg);
+                        right: 40.5vw;
+                    }
+
+                    @media(max-width: $tablet){
+                        font-size: 10px;
+                        transform: translateY(-50vh) rotate(-90deg);
+                        right: 44.5vw;
+                    }
+                    
+                }
+    
+                .rightSideText{
+                    position: relative;
+                    font-size: 13px;
+                    color: $charcoalBlack;
+
+                    transform: translateY(-7vh) rotate(90deg);
+                    left: 27vw;
+
+                    @media(max-width: $laptopL){
+                        transform: translateY(-7vh) rotate(90deg);
+                        left: 29vw;
+                    }
+
+                    @media(max-width: $laptop){
+                        transform: translateY(-7vh) rotate(90deg);
+                        left: 40.5vw;
+                    }
+                    
+                    @media(max-width: $tablet){
+                        font-size: 10px;
+                        transform: translateY(-17vh) rotate(90deg);
+                        left: 44.5vw;
+                    }
+                }
+            }
+        }
+
+        .SideTextSpheres{
+            position: relative;
+            transform :translateY(-64vh);
+            left: 58%;
+            z-index: 1;
+            .topSideText{
+                color: $sheenGreen;
+                font-size: 10px;
+                transform: scaleY(1.2);
+            }
+
+            @media(max-width: $laptopL){
+                transform: translateY(-57vh);
+            }
+
+            @media(max-width: $laptop){
+                transform: translateY(-71vh);
+                left: 61%;
+                .topSideText{
+                    font-size: 8px;
+                }
+            }
+
+            @media(max-width: $tablet){
+                transform: translateY(-62vh);
+            }
+        }
+
+        img.BattleSpheresImage{
+
+            width: 950px;
+            
+            //Laptop
+            @media(max-width: $laptop){
+                margin-left: 1vw;
+            }
+
+            //Tablet
+            @media(max-width: $tablet){
+                width: 680px;
+                height: 400px;
+            }
+        }
 
         h1{
             font-size: 17px;
@@ -26,11 +227,58 @@
 
             &.left{
                 margin-left: 8em;
+                @media(max-width: $laptop){
+                    margin-left: 4em;   
+                }
+    
+                //Desktop
+                @media(max-width: $desktop){
+                    
+                }
+                
+                //Tablet
+                @media(max-width: $tablet){
+                    margin-left: 4%;
+                }
+    
+                //Phone
+                @media(max-width: $phone){
+                    
+                }
             }
 
             &.right{
-                margin-inline-start: 38%;
-                margin-inline-end: 10%;
+                
+                text-align: end;
+                margin-right: 10vw;
+
+                @media(max-width: $laptopL){
+                    margin-right: 9.5vw;
+                }
+
+                @media(max-width: $laptop){
+                    margin-right: 3vw;
+                }
+    
+                //Desktop
+                @media(max-width: $desktop){
+                    
+                }
+                
+                //Tablet
+                @media(max-width: $tablet){
+                    
+                }
+    
+                //Phone
+                @media(max-width: $phone){
+                    
+                }
+            }
+
+            //Laptop
+            @media(max-width: $laptop){
+                font-size: 12px;
             }
 
             //Tablet
@@ -44,31 +292,6 @@
                 margin-bottom: 30px;
             }
     
-            a{
-                color: $uclaBlue;
-                position: relative;
-                
-                &:hover{
-                    color: $robineggBlue;
-                    text-decoration: none;
-                    text-decoration-line: none;
-                }
-                
-                &:after{
-                    content: ' ';
-                    position: absolute;
-                    left: 0; bottom: 0;
-                    height: 10%; width: 100%;
-                    background-color: $uclaBlue;
-                    z-index: -1;
-                    transition: height .2s, background-color .2s;
-                }
-                
-                &:hover:after{
-                    height: 40%;
-                    background-color: $peach;
-                }
-            }
         }
 
         .Index{
@@ -77,6 +300,19 @@
             z-index: -1;
             margin-left: 11em;
             transform: scaleY(1.3);
+
+            //Laptop
+            @media(max-width: $laptop){
+                margin-left: 5em;
+            }
+            //Tablet
+            @media(max-width: $tablet){
+                margin-left: 3em;
+            }
+            //Phone
+            @media(max-width: $phone){
+                
+            }
             
             h1{
                 font-size: 4.6em;
@@ -85,14 +321,39 @@
                 opacity: 0.4;
 
                 &.right{
-                    margin-inline-start: 75%;
+                    direction: rtl;
+                    text-align: start;
+                    
+                    @media(max-width: $laptop){
+                           
+                    }
+        
+                    //Desktop
+                    @media(max-width: $desktop){
+                        
+                    }
+                    
+                    //Tablet
+                    @media(max-width: $tablet){
+                        
+                    }
+        
+                    //Phone
+                    @media(max-width: $phone){
+                        
+                    }
                 }
 
-                @include translateY(60%);
+                @include translateY(56%);
 
+                //Laptop
+                @media(max-width: $laptop){
+                    font-size: 3.5em;
+                }
                 //Tablet
                 @media(max-width: $tablet){
-                    font-size: 4em;
+                    font-size: 3em;
+                    @include translateY(90%);
                 }
                 //Phone
                 @media(max-width: $phone){
@@ -100,6 +361,35 @@
                 }
 
             }
+        }
+
+        .Alienz{
+            left: 28%;
+            &:hover + .SideTextAlienzNew{
+                transform: translateY(-41vh) rotate(-90deg);
+            }
+
+            @media(max-width: $laptopL){
+                &:hover + .SideTextAlienzNew{
+                    transform: translateY(-38vh) rotate(-90deg);
+                }
+            }
+
+            @media(max-width: $laptop){
+                left: 18%;
+                &:hover + .SideTextAlienzNew{
+                    transform: translateY(-46vh) rotate(-90deg);
+                }
+            }
+
+            @media(max-width: $tablet){
+                left: 11%;
+                transform: scale(0.95, 0.95);
+                &:hover + .SideTextAlienzNew{
+                    transform: translateY(-43vh) rotate(-90deg);
+                }
+            }
+
         }
         
     }
