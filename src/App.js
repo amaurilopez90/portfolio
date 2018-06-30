@@ -15,17 +15,22 @@ import Header from './Components/headerComponents/header';
 import ReallySmoothScroll from 'really-smooth-scroll';
 ReallySmoothScroll.shim();
 
+ReallySmoothScroll.config({
+  mousewheelSensitivity: 7, // Default
+  keydownSensitivity: 7 // Default (When you press arrow down/up key)
+});
+
 //Listen to a change in routes and scroll to the top of the screen
 const history = createBrowserHistory();
 history.listen(() => {
   window.scrollTo(0, 0);
 });
 
+
 class App extends Component {  
-  
   render() {
     return (
-      <Router history={history}>
+      <Router history={history} >
 
         <div className="App">
 

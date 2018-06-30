@@ -15,6 +15,14 @@ class Homepage extends Component {
         <h2>Software Developer</h2>
         <h2>Computer Engineer</h2>
 
+        <br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/>
+        
         <WhenInView>
           {({ isInView }) => 
             <Revealp transform={'right'} hide={!isInView}>

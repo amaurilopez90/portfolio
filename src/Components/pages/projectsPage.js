@@ -29,7 +29,7 @@ class Projects extends Component {
           </div>
 
           <h1 className="left">
-            Tile Based - <a href="">
+            Tile Based - <a href="https://github.com/amaurilopez90/GameDev/tree/master/Alienz" target="_blank">
             Alienz</a>
           
           </h1>
@@ -85,7 +85,7 @@ class Projects extends Component {
               <Slidep direction={'left'} hide={!isInView}>
 
                 <h1 className="right">
-                  Raspberry Pi - <a href="">
+                  Raspberry Pi - <a href="https://github.com/amaurilopez90/SampledSoundSynth" target="_blank">
                   Sampled Sound Synthesizer</a>
                 
                 </h1>
@@ -141,7 +141,7 @@ class Projects extends Component {
               <Slidep direction={'right'} hide={!isInView}>
 
                 <h1 className="left">
-                  Unity 3D - <a href="">
+                  Unity 3D - <a href="https://github.com/amaurilopez90/GameDev/tree/master/BattleSpheres" target="_blank">
                   Battle Spheres</a>
                 
                 </h1>
@@ -186,7 +186,7 @@ class Projects extends Component {
               <Slidep direction={'left'} hide={!isInView}>
 
                 <h1 className="right">
-                  ReactJS - <a href="">
+                  ReactJS - <a href="https://github.com/amaurilopez90/MyPortfolio" target="_blank">
                   My Portfolio</a>
                 
                 </h1>
@@ -206,7 +206,7 @@ class Projects extends Component {
         </div>
 
         <Flex justify={'center'} align={"center"}>
-          <a className="ViewMore" href="">View More</a>
+          <a className="ViewMore" href="https://github.com/amaurilopez90" target="_blank">View More</a>
         </Flex>
      
       </div>
