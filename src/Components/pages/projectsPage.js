@@ -101,21 +101,15 @@ class Projects extends Component {
                 reduceHeight={1/3.7}
                 src={require('../../Assets/Synth.jpeg')}/>
                 
-                <WhenInView>
-                  {({ isInView }) => 
+                <div className="SideTextSynth">
+                  {/* <SlideSideTextLeft hide={!isInView}> */}
+                    <h6 className="leftSideText">Look closely...</h6>
+                  {/* </SlideSideTextLeft> */}
 
-                    <div className="SideTextSynth">
-                      <SlideSideTextLeft hide={!isInView}>
-                        <h6 className="leftSideText">Look closely...</h6>
-                      </SlideSideTextLeft>
-
-                      <SlideSideTextRight hide={!isInView}>
-                        <h6 className="rightSideText">See the parallax?</h6>
-                      </SlideSideTextRight>
-                    </div>
-
-                  }
-                </WhenInView>
+                  {/* <SlideSideTextRight hide={!isInView}> */}
+                    <h6 className="rightSideText">See the parallax?</h6>
+                  {/* </SlideSideTextRight> */}
+                </div>
               
             </div>
           </Flex>
