@@ -7,9 +7,11 @@ import Routes from './routes';
 import './Assets/css/header.min.css';
 import './Assets/css/home.min.css';
 import './Assets/css/projects.min.css';
+import './Assets/css/burgerMenu.min.css';
 
 //Components
 import Header from './Components/headerComponents/header';
+import BurgerMenu from './Components/headerComponents/burgerMenu';
 
 //Really Smooth Scroll
 import ReallySmoothScroll from 'really-smooth-scroll';
@@ -30,14 +32,22 @@ history.listen(() => {
 class App extends Component {  
   render() {
     return (
-      <Router history={history} >
-
+      <Router history={history}>
         <div className="App">
 
-          <div className="Main-Background" />
+          <div id="outer-container">
 
-          <Routes />
-          <Header />
+              <BurgerMenu className="BurgerMenu" pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }/>
+
+              <main id="page-wrap" >
+
+                <div className="Main-Background" />
+                <Routes />
+                <Header />
+
+              </main>
+          </div>
+
 
         </div>  
       </Router>    

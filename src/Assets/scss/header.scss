@@ -3,12 +3,44 @@
 header{
     
     position: fixed;
-    top: 2em; left: 65%; right: 2em;
+    top: 2em; left: 62%; right: 2em;
     display: block;
     background: $white;
     color: $white;
     height: 50px;
     transform: scaleY(1.2);
+
+    @media(max-width: $laptopL){
+        left: 60%;
+    }
+
+    @media(max-width: $laptopM){
+        left: 59%;
+    }
+
+    @media(max-width: 1063px){
+        left: 55%;
+    }
+
+    @media(max-width: $laptop){
+        left: 57%;
+    }
+
+    @media(max-width: 1021px){
+        left: 56%;
+    }
+
+    @media(max-width: 998px){
+        left: 55%;
+    }
+
+    @media(max-width: $desktop){
+        left: 53%;
+    }
+
+    @media(max-width: 936px){
+        visibility: hidden;
+    }
 
     nav,
     nav ul,
@@ -29,6 +61,10 @@ header{
             display: inline-block;
             margin-right: 15px;
 
+            @media(max-width: $laptop){
+                margin: 0;
+            }
+
             &.last{
                 margin: 0;
             }
@@ -39,6 +75,14 @@ header{
                 font-weight: 500;
                 color: $uclaBlue;
                 position: relative;
+
+                @media(max-width: 1063px){
+                    font-size: 11px;
+                }
+
+                @media(max-width: $laptop){
+                    font-size: 12px;
+                }
             
                 &:hover{
                     color: $white;

@@ -1,0 +1,98 @@
+@import '_config.scss';
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    left: 36px;
+    top: 36px;
+
+    visibility: hidden;
+
+    @media(max-width: 936px){
+        visibility: visible;
+        left: 84%;
+        top: 39px;
+    }
+
+    @media(max-width: $tablet){
+        visibility: visible;
+        transform: scale(0.7);
+        left: 89%;
+        top: 12px;
+    }
+  }
+  
+  /* Color/shape of burger icon bars */
+  .bm-burger-bars {
+    background: $uclaBlue;
+  }
+  
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+  
+  /* Color/shape of close button cross */
+  .bm-cross {
+    background: #cce4f5;
+  }
+  
+  /* General sidebar styles */
+  .bm-menu {
+    background: #373a47;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.4em;
+    
+  }
+  
+  /* Morph shape necessary with bubble or elastic */
+  .bm-morph-shape {
+    fill: #373a47;
+    width: 130px;
+  }
+  
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: #b8b7ad;
+    padding: 0.8em;
+  }
+  
+  /* Individual item */
+  .bm-item{
+    display: inline-block;
+    margin-bottom: 20px;
+    text-align: center;  
+  }
+
+  a.bm-item {
+  
+    color: $white;
+    position: relative;
+    
+    &:hover{
+        color: $robineggBlue;
+        text-decoration: none;
+        text-decoration-line: none;
+    }
+    
+  }
+
+  h2.bm-item{
+      color: $uclaGold;
+      outline: none;
+      text-align: center;
+      line-height: 24px;
+      margin-bottom: 2em;
+
+      span{
+          font-size: 17px;
+      }
+  }
+  
+  /* Styling of overlay */
+  .bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+  }

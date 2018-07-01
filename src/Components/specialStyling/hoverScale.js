@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 //Create a Image button tag that comes with a hover scale animation 
 //that scales the image thumbnail within its container when you hover over it
