@@ -18,7 +18,7 @@ class Header extends Component {
                          <Link to="/Projects">Projects</Link>
                      </li>
                      <li className = "last">
-                         <Link to="/Resume">Resume</Link>
+                         <a href="https://standardresume.co/amaurilopez">Resume</a>
                      </li>
                  </ul>
               </nav>
