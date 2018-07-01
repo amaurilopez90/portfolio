@@ -30,10 +30,11 @@ class BurgerMenu extends Component{
     render(){
         return(
             <div>
-                <Menu 
+                
+                <Menu className="burgerMenu" 
                 isOpen={this.state.menuOpen}
                 onStateChange={(state) => this.handleStateChange(state)}
-                right >
+                right pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>
 
                     <h2 className="bm-item">
                         <span>Amauri Lopez</span>
@@ -46,6 +47,8 @@ class BurgerMenu extends Component{
                     
 
                 </Menu>
+
+
             </div>
         );
     }

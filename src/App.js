@@ -33,13 +33,13 @@ class App extends Component {
   render() {
     return (
       <Router history={history}>
-        <div className="App">
+        <div className="App" style={{height: '100%'}}>
 
-          <div id="outer-container">
+          <div id="outer-container" style={{height: '100%'}}>
 
-              <BurgerMenu className="BurgerMenu" pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }/>
+            <BurgerMenu />
 
-              <main id="page-wrap" >
+              <main id="page-wrap" style={{height: '100%'}} >
 
                 <div className="Main-Background" />
                 <Routes />

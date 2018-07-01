@@ -9,10 +9,12 @@ export const Slidep = styled.div`
     ${({ direction }) => direction && css`
         ${direction}: 0;
 
-        transition: ${direction} 1.5s;
+        transition: ${direction} 1.5s, visibility 1.5s;
         
         ${({ hide }) => hide && css`
-            ${direction}: 2000px;
+            ${direction}: 60em;
+            visibility: hidden;
+            
         `}
 
     `}
