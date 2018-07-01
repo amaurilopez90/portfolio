@@ -43,7 +43,7 @@ class BurgerMenu extends Component{
                     <a className="bm-item" href="/" onClick={() => this.closeMenu()}>Home</a>
                     <a className="bm-item" href="/AboutMe" onClick={() => this.closeMenu()}>About Me</a>
                     <a className="bm-item" href="/Projects" onClick={() => this.closeMenu()}>Projects</a>
-                    <a className="bm-item" href="/Resume" onClick={() => this.closeMenu()}>Resume</a>
+                    <a className="bm-item" href="https://standardresume.co/amaurilopez" onClick={() => this.closeMenu()}>Resume</a>
                     
 
                 </Menu>
