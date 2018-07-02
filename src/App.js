@@ -8,10 +8,12 @@ import './Assets/css/header.min.css';
 import './Assets/css/home.min.css';
 import './Assets/css/projects.min.css';
 import './Assets/css/burgerMenu.min.css';
+import './Assets/css/sideBar.min.css';
 
 //Components
 import Header from './Components/headerComponents/header';
 import BurgerMenu from './Components/headerComponents/burgerMenu';
+import SocialMediaBar from './Components/sideBar';
 
 //Really Smooth Scroll
 import ReallySmoothScroll from 'really-smooth-scroll';
@@ -43,6 +45,7 @@ class App extends Component {
 
                 <div className="Main-Background" />
                 <Routes />
+                <SocialMediaBar />
                 <Header />
 
               </main>

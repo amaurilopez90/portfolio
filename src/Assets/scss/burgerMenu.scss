@@ -38,7 +38,7 @@
   
   /* Color/shape of close button cross */
   .bm-cross {
-    background: #cce4f5;
+    background: white;
   }
   
   /* General sidebar styles */
@@ -72,6 +72,7 @@
   
     color: $white;
     position: relative;
+    transition: color .2s;
     
     &:hover{
         color: $robineggBlue;

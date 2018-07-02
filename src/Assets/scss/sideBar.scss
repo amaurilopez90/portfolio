@@ -1,0 +1,54 @@
+@import '_config.scss';
+
+div.SideBar{
+    color: $uclaBlue;
+    font-size: 10px;
+    display: -webkit-inline-box;
+    position: fixed;
+    bottom: 25vh;
+    transform: rotate(-90deg);
+
+    @media(max-width: $laptop){
+        left: -5vw;
+        font-size: 8px;
+    }
+
+    @media(max-width: $tablet){
+        visibility: hidden;
+    }
+
+    p{
+        transform: scaleY(1.2);
+        margin-bottom: 0;
+    }
+
+    .SocialMediaBar{
+
+        a.facebook{
+            position: relative;
+            left: 3vh;
+            i{
+                color: $uclaBlue;
+                transform: scale(2) rotate(90deg);
+                transition: .2s;
+                &:hover{
+                    color: $robineggBlue;
+                }
+            }
+
+        }
+
+        a.instagram{
+            position: relative;
+            left: 6vh;
+            i{
+                color: $uclaBlue;
+                transform: scale(2) rotate(90deg);
+                transition: .2s;
+                &:hover{
+                    color: red;
+                }
+            }
+        }
+    }
+}
