@@ -47,7 +47,7 @@ div.SideBar{
                 transform: scale(2) rotate(90deg);
                 transition: .2s;
                 &:hover{
-                    color: red;
+                    color: $uclaGold;
                 }
             }
         }

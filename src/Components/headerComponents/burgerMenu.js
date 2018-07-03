@@ -34,17 +34,23 @@ class BurgerMenu extends Component{
                 <Menu className="burgerMenu" 
                 isOpen={this.state.menuOpen}
                 onStateChange={(state) => this.handleStateChange(state)}
-                right pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>
-
-                    <h2 className="bm-item">
-                        <span>Amauri Lopez</span>
-                    </h2> 
+                right pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }
+                > 
                     
-                    <a className="bm-item" href="/" onClick={() => this.closeMenu()}>Home</a>
-                    <a className="bm-item" href="/AboutMe" onClick={() => this.closeMenu()}>About Me</a>
-                    <a className="bm-item" href="/Projects" onClick={() => this.closeMenu()}>Projects</a>
-                    <a className="bm-item" href="https://standardresume.co/amaurilopez" onClick={() => this.closeMenu()}>Resume</a>
-                    
+                    <i className="fa fa-gamepad" aria-hidden="true"></i>
+                    <a className="bm-item" href="/" onClick={() => this.closeMenu()}>HOME</a>
+                    <a className="bm-item" href="/AboutMe" onClick={() => this.closeMenu()}>ABOUT ME</a>
+                    <a className="bm-item" href="/Projects" onClick={() => this.closeMenu()}>PROJECTS</a>
+                    <a id="Resume" className="bm-item" href="https://standardresume.co/amaurilopez" onClick={() => this.closeMenu()}>RESUME</a>
+                    <p>
+                        FOLLOW AMAURI LOPEZ
+                        <a className= "facebook" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/amauri.lopez.50">
+                            <i className="fa fa-facebook"/>
+                        </a>
+                        <a className= "instagram" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/amauri64">
+                            <i className="fa fa-instagram"/>
+                        </a>
+                    </p>
 
                 </Menu>
 

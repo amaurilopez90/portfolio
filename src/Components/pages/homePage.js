@@ -11,7 +11,7 @@ class Homepage extends Component {
     return (
       <div className = "container-fluid">
 
-       <h1 className="Title"></h1>
+       <h1 className="Title">Home</h1>
 
         <br/><br/><br/><br/><br/><br/>
         <br/><br/><br/><br/><br/><br/>
