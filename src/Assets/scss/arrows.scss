@@ -1,0 +1,98 @@
+@import '_config.scss';
+
+div.PreviousPageIcon{
+    position: fixed;
+    bottom: 1rem;
+    left: 6rem;
+    
+    @media(max-width: $laptop){
+        left: 2.5rem;
+    }
+    @media(max-width: $tablet){
+        visibility: hidden;
+    }
+    
+    a{
+        text-decoration: none;
+        text-decoration-line: none;
+    }
+
+    p{
+        transition: .2s;
+        position: relative;
+        left: 1.5rem;
+        margin-bottom: 0;
+        font-size: 8px;
+        transform: scaleY(1.2);
+        color: $charcoalBlack;
+    }
+
+    i{
+        transition: .2s;
+        position: relative;
+        left: 3rem;
+        font-size: 30px;
+        transform: scaleX(4);
+        color: $red;
+        
+    }
+
+    &:hover{
+
+        p{
+            left: 2.5rem;
+        }
+
+        i{
+            left: 2rem;
+        }
+    }
+
+
+}
+
+div.NextPageIcon{
+    position: fixed;
+    bottom: 0.4rem;
+    left: 82rem;
+    
+    @media(max-width: $laptop){
+        left: 53.5rem;
+    }
+    @media(max-width: $tablet){
+        visibility: hidden;
+    }
+    
+    p{
+        transition: .2s;
+        position: relative;
+        left: -0.8rem;
+        margin-bottom: 0;
+        font-size: 8px;
+        transform: scaleY(1.2);
+        color: $charcoalBlack;
+    }
+
+    i{
+        transition: .2s;
+        position: relative;
+        left: 3rem;
+        font-size: 30px;
+        transform: scaleX(4);
+        color: $red;
+        
+    }
+
+    &:hover{
+
+        p{
+            left: -1.8rem;
+        }
+
+        i{
+            left: 4rem;
+        }
+    }
+
+
+}

@@ -18,7 +18,7 @@ class Projects extends Component {
         <h1 className="Title">Projects</h1>
         <Flex justify={'center'} align={'center'} column>
           <p className="Description">
-            "I sit down and think of tasks that would challenge and expand my creative mind. And then I do them. What's the most important quality of the projects I work towards presenting? That they are fun for me, and more importantly, fun for you!"
+            "I sit down and think of projects that would challenge my creative mind. And then I do them. What's the most important quality of the projects I work towards presenting? That they are fun for me, and more importantly, fun for you!"
           </p>
         </Flex>
         
@@ -195,13 +195,21 @@ class Projects extends Component {
             marginTop: '9vh',
             fontSize: '13px',
             color: 'rgb(150, 141, 141)',
-          }}>Like what you see? Click to view the source! ^</h6>
+          }}>Like what you see? Click to view the source!</h6>
 
         </div>
 
         <Flex justify={'center'} align={"center"}>
           <a className="ViewMore" href="https://github.com/amaurilopez90" target="_blank" rel="noopener noreferrer">View More</a>
         </Flex>
+
+        <div className="PreviousPageIcon">
+          <a className="Arrow" href="/AboutMe">
+            <p>Get to know me</p>
+          </a>
+          <i className="fa fa-long-arrow-left" aria-hidden="true"></i>
+        </div>
+
      
       </div>
     );
