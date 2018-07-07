@@ -31,8 +31,8 @@ history.listen(() => {
   window.scrollTo(0, 0);
 });
 
-
 class App extends Component {  
+
   render() {
     return (
       <Router history={history}>

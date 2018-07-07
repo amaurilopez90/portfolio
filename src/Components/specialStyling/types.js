@@ -19,3 +19,16 @@ export const Rotatep = styled.p`
     `}
     
 `;
+
+export const Div = styled.div`
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s;
+
+
+    ${({ isDoneLoading }) => isDoneLoading && css`
+        visibility: visible;
+        opacity: 1;
+    `}
+
+`;
