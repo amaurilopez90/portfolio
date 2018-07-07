@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 //Special Styling components
 import ProgressText, { ProgressContainer } from '../specialStyling/progressText';
 import { Div } from '../specialStyling/types';
+import Video from '../specialStyling/video';
 
 class Homepage extends Component {
   constructor(props){
@@ -35,7 +36,7 @@ class Homepage extends Component {
   render() {
     const springOptions = { stiffness: 34, damping: 11};
     const { progress, isDoneLoading } = this.state;
-
+    
     return (
       <div>
 
@@ -52,16 +53,8 @@ class Homepage extends Component {
         </ProgressContainer>
 
         <Div isDoneLoading={isDoneLoading}>
+          <Video videoUrl={require('../../Assets/myPortfolioHome.mp4')} />
           <div className = "container-fluid">
-
-            <br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/>
-
 
             <div className="NextPageIcon">
               <a className="Arrow" href="/AboutMe">
@@ -74,6 +67,7 @@ class Homepage extends Component {
           </div>
 
         </Div>
+
       </div>
     );
   }
