@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import { Link} from 'react-router-dom';
 
 //Special Styling components
 import ProgressText, { ProgressContainer } from '../specialStyling/progressText';
 import { Div } from '../specialStyling/types';
 import Video from '../specialStyling/video';
+import { Flex } from '../specialStyling/flexBox';
+import { Revealp } from '../specialStyling/revealAnimation';
+import WhenInView from '../specialStyling/whenInView';
 
 class Homepage extends Component {
   constructor(props){
@@ -53,8 +57,47 @@ class Homepage extends Component {
         </ProgressContainer>
 
         <Div isDoneLoading={isDoneLoading}>
-          <Video videoUrl={require('../../Assets/myPortfolioHome.mp4')} />
+          <Video videoUrl={require('../../Assets/myPortfolioHome.mp4')}/>
           <div className = "container-fluid">
+          
+            <div className="SideTextHome">
+                <h6 className="SideText">Click to Zoom!</h6>
+            </div>
+
+            <Flex justify={'left'}>
+              <nav className="HomeNav">
+                <ul>
+                  <WhenInView>
+                    {({ isInView }) => 
+                      <Revealp transform={'right'} hide={!isInView}>
+                        <li>
+                            <Link to="/AboutMe">About Me</Link>
+                        </li>
+                      </Revealp>
+                    }
+                  </WhenInView>
+                  <WhenInView>
+                    {({ isInView }) => 
+                      <Revealp transform={'right'} hide={!isInView}>
+                        <li>
+                            <Link to="/Projects">Projects</Link>
+                        </li>
+                      </Revealp>
+                    }
+                  </WhenInView>
+                  <WhenInView>
+                    {({ isInView }) => 
+                      <Revealp transform={'right'} hide={!isInView}>
+                        <li>
+                        <a href="https://standardresume.co/amaurilopez">Resume</a>
+                        </li>
+                      </Revealp>
+                    }
+                  </WhenInView>
+                        
+                  </ul>
+                </nav>
+            </Flex>
 
             <div className="NextPageIcon">
               <a className="Arrow" href="/AboutMe">

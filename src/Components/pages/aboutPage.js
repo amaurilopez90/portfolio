@@ -22,13 +22,13 @@ class AboutMe extends Component {
     }, 800);
     setTimeout(() => {
       this.setState({ progress: 90 });
-    }, 1600);
+    }, 1200);
     setTimeout(() => {
       this.setState({ progress: 100 });
-    }, 2400);
+    }, 1800);
     setTimeout(() => {
       this.setState({ isDoneLoading: !this.state.isDoneLoading });
-    }, 3200);
+    }, 2200);
   }
 
   //When using render(), we should wrap all of our main elements under our div

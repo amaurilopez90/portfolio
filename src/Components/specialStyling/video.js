@@ -49,7 +49,6 @@ export default class Video extends Component {
     super(props);
     this.state = {
       zoom: false,
-      volume: 0,
       hover: false,
       moveDown: 0,
       cursorPosition: {
@@ -60,7 +59,7 @@ export default class Video extends Component {
   }
 
   toggleZoom = () => {
-    const { zoom, volume } = this.state;
+    const { zoom } = this.state;
 
     // When the video is zoom. Disable scrolling
     document.querySelector('html').style.overflowY = zoom ?
@@ -72,7 +71,6 @@ export default class Video extends Component {
     this.setState({
       zoom: !zoom,
       moveDown: !zoom ? moveDown : 0,
-      volume: zoom ? 0 : 1
     });
   };
 
@@ -99,7 +97,7 @@ export default class Video extends Component {
 
   render() {
     const { videoUrl } = this.props;
-    const { zoom, volume, hover, cursorPosition, moveDown } = this.state;
+    const { zoom, hover, cursorPosition, moveDown } = this.state;
     const motionStyle = zoom ? {
       videoSize: spring(100),
       triangleLeft: spring(-100)
@@ -126,7 +124,9 @@ export default class Video extends Component {
                     style={{
                       width: `${videoSize}%`,
                       cursor: zoom ? 'none' : 'pointer',
-                      zIndex: zoom ? 1 : 0
+                      zIndex: zoom ? 1 : 0,
+                      marginBottom: 0
+                      
                       // Hide the cursor when it's zoomed.
                     }}>
                     <StyledSquareCursor show={zoom} style={{
@@ -143,7 +143,8 @@ export default class Video extends Component {
                       height={'auto'}
                       playing
                       loop
-                      volume={volume}
+                      volume={1}
+                      muted={!zoom}
                       url={videoUrl} />
                   </PlayerContainer>
                 }

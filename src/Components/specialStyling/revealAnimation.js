@@ -61,7 +61,7 @@ export const Revealp = styled.p`
         position: absolute;
         top: 0; left: 0;
         width: 100%; height: 100%;
-        background-color: black;
+        background-color: #EDDE6D;
         
         ${({ transform }) => transform && css`
             transform-origin: ${transform};

@@ -8,6 +8,7 @@ div.SideBar{
     left: -3vw;
     bottom: 25vh;
     transform: rotate(-90deg);
+    z-index: 0;
 
     @media(max-width: $laptop){
         left: -5vw;

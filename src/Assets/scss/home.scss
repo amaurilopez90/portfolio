@@ -17,5 +17,50 @@
         
     }
 
+    div.SideTextHome{
+        transform: rotate(90deg);
+        position: relative;
+        left: 33rem;
+
+        @media(max-width: $laptopL){
+            left: 31rem;
+            transform: translateY(-7rem) rotate(90deg);
+        }
+        @media(max-width: $laptop){
+            left: 22.5rem;
+            transform: translateY(-10rem) rotate(90deg);
+        }
+
+        @media(max-width: $tablet){
+            left: 17rem;
+        }
+
+        .SideText{
+            font-size: 11px;
+            transform: scaleY(1.2);
+            color: $charcoalBlack;
+
+            @media(max-width: $laptop){
+                font-size: 9px;
+            }
+        }
+
+    }
+
+    nav.HomeNav{
+        position: relative;
+        @include translateY(-13vh);
+        left: 7vw;
+
+        ul li{
+            margin: 0;
+            padding: 5vh;
+            text-decoration: none;
+            list-style-type: none;
+            font-size: 35px;
+            transform: scaleY(1.2);
+        }
+    }
+
 
 }
