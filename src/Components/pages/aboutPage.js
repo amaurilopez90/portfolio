@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 //Import special styling components
 import ProgressText, { ProgressContainer } from '../specialStyling/progressText';
 import { Div } from '../specialStyling/types';
-import { Flex } from '../specialStyling/flexBox';
-import { MusicPlayerContainer, PlayButton, AudioLine } from '../specialStyling/types';
+import AudioPlayer from '../specialStyling/music';
 
 class AboutMe extends Component {
   constructor(props){
@@ -59,23 +58,7 @@ class AboutMe extends Component {
 
             <h1 className="Title">About Me</h1>
 
-            <MusicPlayerContainer>
-              <PlayButton >
-                <p>
-                  {/* { !playing && <i className="fa fa-play"></i>}
-                  { playing && <i className="fa fa-pause"></i>} */}
-                  <i className="fa fa-play"></i>
-                </p>
-              </PlayButton>
-              <div style={{position: 'relative', bottom: '6vh', left: '5vw'}}>
-                <p style={{ margin: '0 0 10px 0', color: '#424242', transform: 'scaleY(1.2)' }}>
-                  Hip-Hop Soulchef - Blind Man See
-                </p>
-                <AudioLine>
-                  <span className="mainLine"></span>
-                </AudioLine>
-              </div>
-            </MusicPlayerContainer>
+            <AudioPlayer />
 
             <div className="PreviousPageIcon">
               <a className="Arrow" href="/">
