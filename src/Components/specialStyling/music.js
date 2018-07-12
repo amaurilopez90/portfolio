@@ -80,21 +80,41 @@ export default class AudioPlayer extends Component{
         this.state={
             isPlaying: false,
         };
-
+        
         this.playing = [false, false, false];
         this.audio = new Audio();
         this.playingTrack = "";
         this.playingTrack = "";
-    }
 
+        this.audio.addEventListener('ended', this.onEnded);
+        this.audio.addEventListener('timeupdate', this.onTimeUpdate);
+
+    }
 
     get(id){
         return document.getElementById(id);
     }
 
+    resetAudioLine = () =>{
+        this.get(this.playingTrack+'Line').style.width = '0%';
+    };
+
+    onEnded = () =>{
+        var index = document.getElementById(this.playingTrack).getAttribute('data-index');
+        this.playing[index] = false;
+        this.playingTrack = "";
+        this.setState({isPlaying: false});
+        this.resetAudioLine();
+    };
+
+    onTimeUpdate = () =>{
+        this.get(this.playingTrack+'Line').style.width = (this.audio.currentTime/this.audio.duration * 100) + '%'; 
+    };
+
+
     switchTrack = (e) =>{
         const { isPlaying } = this.state;
-
+        
         var caller = e.currentTarget.id;
         var callerIndex = this.get(caller).getAttribute('data-index');
         var song = require('../../Assets/'+caller+'.mp3');
@@ -111,13 +131,15 @@ export default class AudioPlayer extends Component{
                     if(i == callerIndex){ this.playing[i] = true; }
                     else{ this.playing[i] = false; }
                 }
-    
+
+                this.resetAudioLine();
                 this.audio.src = song;
                 this.audio.play();
 
             } else{
                 this.audio.pause();
-                this.audio.currentTime=0;
+                this.audio.currentTime = 0;
+
                 this.setState({isPlaying: false});
                 this.playing[callerIndex] = false;
             }
@@ -133,14 +155,7 @@ export default class AudioPlayer extends Component{
         this.playingTrack = caller;
     }
 
-
     render(){
-        this.audio.addEventListener('ended', function(){
-            var index = document.getElementById(this.playingTrack).getAttribute('data-index');
-            this.playing[index] = false;
-            this.playingTrack = "";
-            this.setState({isPlaying: false});
-        });
 
         return(
             <div className="AudioPlayer">
@@ -156,8 +171,8 @@ export default class AudioPlayer extends Component{
                         <p style={{ margin: '0 0 10px 0', color: '#424242', transform: 'scaleY(1.2)' }}>
                             Prelow - Mistakes Like This
                         </p>
-                        <AudioLine>
-                            <span className="mainLine"></span>
+                        <AudioLine >
+                            <span className="mainLine" id="MistakesLikeThisLine"></span>
                         </AudioLine>
                     </div>
                 </MusicPlayerContainer>
@@ -174,7 +189,7 @@ export default class AudioPlayer extends Component{
                             Hip-Hop Soulchef - Blind Man See
                         </p>
                         <AudioLine>
-                            <span className="mainLine"></span>
+                            <span className="mainLine" id="BlindManSeeLine"></span>
                         </AudioLine>
                     </div>
                 </MusicPlayerContainer>
@@ -191,7 +206,7 @@ export default class AudioPlayer extends Component{
                             Kudasai - The Girl I Haven't Met
                         </p>
                         <AudioLine>
-                            <span className="mainLine"></span>
+                            <span className="mainLine" id="TheGirlIHaventMetLine"></span>
                         </AudioLine>
                     </div>
                 </MusicPlayerContainer>
