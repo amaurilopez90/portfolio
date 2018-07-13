@@ -2,6 +2,45 @@
 
 div.AudioPlayer{
     position: relative;
-    left: 10vw;
+    display: inline-block;
+    left: 9vw;
+    top: 10vh;
     transform: scale(0.9);
+
+    .SongTitle{
+        position: relative;
+        bottom: 6vh;
+        left: 5vw;
+        @media(max-width: $laptop){
+            left: 6.5vw;
+            bottom: 7.2vh;
+        }
+        @media(max-width: $tablet){
+            left: 7.5vw;
+            bottom: 7.5vh;
+        }
+    }
+}
+
+.ProductionReveal{
+    margin-bottom: 0px;
+    left: 30vw;
+    width: 55%;
+
+    @media(max-width: $laptop){
+        left: 35vw;
+        font-size: 12px;
+    }
+
+    @media(max-width: $tablet){
+        left: 39vw;
+        font-size: 12px;
+    }
+
+    .Production{
+        margin-Left: 1vw;
+        text-Align: right;
+        color: #5A6D87;
+    
+    }
 }

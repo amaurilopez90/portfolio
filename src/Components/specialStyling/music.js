@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Revealp } from '../specialStyling/revealAnimation';
+import WhenInView from '../specialStyling/whenInView';
 
 const AudioLine = styled.div`
   position: relative;
@@ -31,7 +33,6 @@ const MusicPlayerContainer = styled.div`
   width: 580px;
   height: 110px;
   position: relative;
-  top: 15vh;
   background-color: rgb(255, 251, 202);
   margin-bottom: 10px;
   
@@ -160,56 +161,76 @@ export default class AudioPlayer extends Component{
         return(
             <div className="AudioPlayer">
             
-                <MusicPlayerContainer>
-                    <PlayButton id={'MistakesLikeThis'} data-index={0} onClick={this.switchTrack}>
-                        <p>
-                            { !this.playing[0] && <i className="fa fa-play"></i>}
-                            { this.playing[0] && <i className="fa fa-pause"></i>}
-                        </p>
-                    </PlayButton>
-                    <div style={{position: 'relative', bottom: '6vh', left: '5vw'}}>
-                        <p style={{ margin: '0 0 10px 0', color: '#424242', transform: 'scaleY(1.2)' }}>
-                            Prelow - Mistakes Like This
-                        </p>
-                        <AudioLine >
-                            <span className="mainLine" id="MistakesLikeThisLine"></span>
-                        </AudioLine>
-                    </div>
-                </MusicPlayerContainer>
+                <WhenInView>
+                    {({ isInView }) => 
+                        <Revealp transform={'left'} hide={!isInView} >
+                            <MusicPlayerContainer>
+                                <PlayButton id={'MistakesLikeThis'} data-index={0} onClick={this.switchTrack}>
+                                    <p>
+                                        { !this.playing[0] && <i className="fa fa-play"></i>}
+                                        { this.playing[0] && <i className="fa fa-pause"></i>}
+                                    </p>
+                                </PlayButton>
+                                <div className="SongTitle">
+                                    <p style={{ margin: '0 0 10px 0', color: '#424242', transform: 'scaleY(1.2)' }}>
+                                        Prelow - Mistakes Like This
+                                    </p>
+                                    <AudioLine >
+                                        <span className="mainLine" id="MistakesLikeThisLine"></span>
+                                    </AudioLine>
+                                </div>
+                            </MusicPlayerContainer>
+                        
+                        </Revealp>
+                    }
+                </WhenInView>
 
-                <MusicPlayerContainer>
-                    <PlayButton id={'BlindManSee'} data-index={1} onClick={this.switchTrack}>
-                        <p>
-                            { !this.playing[1] && <i className="fa fa-play"></i>}
-                            { this.playing[1] && <i className="fa fa-pause"></i>}
-                        </p>
-                    </PlayButton>
-                    <div style={{position: 'relative', bottom: '6vh', left: '5vw'}}>
-                        <p style={{ margin: '0 0 10px 0', color: '#424242', transform: 'scaleY(1.2)' }}>
-                            Hip-Hop Soulchef - Blind Man See
-                        </p>
-                        <AudioLine>
-                            <span className="mainLine" id="BlindManSeeLine"></span>
-                        </AudioLine>
-                    </div>
-                </MusicPlayerContainer>
+                <WhenInView>
+                    {({ isInView }) => 
+                        <Revealp transform={'left'} hide={!isInView}>
+                            <MusicPlayerContainer>
+                                <PlayButton id={'BlindManSee'} data-index={1} onClick={this.switchTrack}>
+                                    <p>
+                                        { !this.playing[1] && <i className="fa fa-play"></i>}
+                                        { this.playing[1] && <i className="fa fa-pause"></i>}
+                                    </p>
+                                </PlayButton>
+                                <div className="SongTitle">
+                                    <p style={{ margin: '0 0 10px 0', color: '#424242', transform: 'scaleY(1.2)' }}>
+                                        Hip-Hop Soulchef - Blind Man See
+                                    </p>
+                                    <AudioLine>
+                                        <span className="mainLine" id="BlindManSeeLine"></span>
+                                    </AudioLine>
+                                </div>
+                            </MusicPlayerContainer>
+                        </Revealp>
+                    }
+                </WhenInView>
 
-                <MusicPlayerContainer>
-                    <PlayButton id={'TheGirlIHaventMet'} data-index={2} onClick={this.switchTrack}>
-                        <p>
-                            { !this.playing[2] && <i className="fa fa-play"></i>}
-                            { this.playing[2] && <i className="fa fa-pause"></i>}
-                        </p>
-                    </PlayButton>
-                    <div style={{position: 'relative', bottom: '6vh', left: '5vw'}}>
-                        <p style={{ margin: '0 0 10px 0', color: '#424242', transform: 'scaleY(1.2)' }}>
-                            Kudasai - The Girl I Haven't Met
-                        </p>
-                        <AudioLine>
-                            <span className="mainLine" id="TheGirlIHaventMetLine"></span>
-                        </AudioLine>
-                    </div>
-                </MusicPlayerContainer>
+                <WhenInView>
+                    {({ isInView }) => 
+                        <Revealp transform={'left'} hide={!isInView}>
+                            <MusicPlayerContainer>
+                                <PlayButton id={'TheGirlIHaventMet'} data-index={2} onClick={this.switchTrack}>
+                                    <p>
+                                        { !this.playing[2] && <i className="fa fa-play"></i>}
+                                        { this.playing[2] && <i className="fa fa-pause"></i>}
+                                    </p>
+                                </PlayButton>
+                                <div className="SongTitle">
+                                    <p style={{ margin: '0 0 10px 0', color: '#424242', transform: 'scaleY(1.2)' }}>
+                                        Kudasai - The Girl I Haven't Met
+                                    </p>
+                                    <AudioLine>
+                                        <span className="mainLine" id="TheGirlIHaventMetLine"></span>
+                                    </AudioLine>
+                                </div>
+                            </MusicPlayerContainer>
+                        </Revealp>
+                    }
+                </WhenInView>
+
             </div>
         );
     }

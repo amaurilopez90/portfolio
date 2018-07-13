@@ -43,7 +43,6 @@ class Projects extends Component {
 
     return (
       <div>
-        <h1 className="Title">Projects</h1>
 
         <ProgressContainer isDoneLoading={isDoneLoading}>
           <div className ="ProgressText" >
@@ -59,6 +58,9 @@ class Projects extends Component {
 
         <Div isDoneLoading={isDoneLoading}>
           <div className = "container-fluid">
+
+            <h1 className="Title">Projects</h1>
+            
             <Flex justify={'center'} align={'center'} column>
               <p className="Description">
                 "I sit down and think of projects that would challenge my creative mind. And then I do them. What's the most important quality of the projects I work towards presenting? That they are fun for me, and more importantly, fun for you!"
