@@ -85,11 +85,14 @@ export default class AudioPlayer extends Component{
         this.playing = [false, false, false];
         this.audio = new Audio();
         this.playingTrack = "";
-        this.playingTrack = "";
 
         this.audio.addEventListener('ended', this.onEnded);
         this.audio.addEventListener('timeupdate', this.onTimeUpdate);
 
+        this.resetAudioLine = this.resetAudioLine.bind(this);
+        this.onEnded = this.onEnded.bind(this);
+        this.onTimeUpdate = this.onTimeUpdate.bind(this);
+        this.switchTrack = this.switchTrack.bind(this);
     }
 
     get(id){
@@ -165,7 +168,7 @@ export default class AudioPlayer extends Component{
                     {({ isInView }) => 
                         <Revealp transform={'left'} hide={!isInView} >
                             <MusicPlayerContainer>
-                                <PlayButton id={'MistakesLikeThis'} data-index={0} onClick={this.switchTrack}>
+                                <PlayButton id={'BlindManSee'} data-index={0} onClick={this.switchTrack}>
                                     <p>
                                         { !this.playing[0] && <i className="fa fa-play"></i>}
                                         { this.playing[0] && <i className="fa fa-pause"></i>}
@@ -173,10 +176,10 @@ export default class AudioPlayer extends Component{
                                 </PlayButton>
                                 <div className="SongTitle">
                                     <p style={{ margin: '0 0 10px 0', color: '#424242', transform: 'scaleY(1.2)' }}>
-                                        Prelow - Mistakes Like This
+                                        Hip-Hop Soulchef - Blind Man See
                                     </p>
                                     <AudioLine >
-                                        <span className="mainLine" id="MistakesLikeThisLine"></span>
+                                        <span className="mainLine" id="BlindManSeeLine"></span>
                                     </AudioLine>
                                 </div>
                             </MusicPlayerContainer>
@@ -189,7 +192,7 @@ export default class AudioPlayer extends Component{
                     {({ isInView }) => 
                         <Revealp transform={'left'} hide={!isInView}>
                             <MusicPlayerContainer>
-                                <PlayButton id={'BlindManSee'} data-index={1} onClick={this.switchTrack}>
+                                <PlayButton id={'MistakesLikeThis'} data-index={1} onClick={this.switchTrack}>
                                     <p>
                                         { !this.playing[1] && <i className="fa fa-play"></i>}
                                         { this.playing[1] && <i className="fa fa-pause"></i>}
@@ -197,10 +200,10 @@ export default class AudioPlayer extends Component{
                                 </PlayButton>
                                 <div className="SongTitle">
                                     <p style={{ margin: '0 0 10px 0', color: '#424242', transform: 'scaleY(1.2)' }}>
-                                        Hip-Hop Soulchef - Blind Man See
+                                        Prelow - Mistakes Like This
                                     </p>
                                     <AudioLine>
-                                        <span className="mainLine" id="BlindManSeeLine"></span>
+                                        <span className="mainLine" id="MistakesLikeThisLine"></span>
                                     </AudioLine>
                                 </div>
                             </MusicPlayerContainer>

@@ -8,7 +8,7 @@ import { Flex } from '../specialStyling/flexBox';
 import { Revealp } from '../specialStyling/revealAnimation';
 import WhenInView from '../specialStyling/whenInView';
 import { Slidep } from '../specialStyling/revealAnimation';
-import { relative } from 'path';
+import ContactForm from '../contactForm/contact';
 
 class AboutMe extends Component {
   constructor(props){
@@ -148,13 +148,15 @@ class AboutMe extends Component {
               {({ isInView }) => 
                 <Revealp className="ProductionReveal" transform={'right'} hide={!isInView} barColor = '#424242'>
                   <p className = "Production" >
-                    I'm a musician and bass guitarist of 6 years.
+                    I'm a musician and bass guitarist of 7 years.
                     Here's a short video of me in action. 
                   </p>
                 </Revealp>
               }
             </WhenInView>
 
+            <ContactForm />
+            
 
             <div className="PreviousPageIcon">
               <a className="Arrow" href="/">
