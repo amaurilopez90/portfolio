@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Button from './button';
 
 const FormContainer = styled.div`
     position: relative;
@@ -21,47 +21,87 @@ const FieldContainer = styled.div`
 `;
 
 export default class ContactForm extends Component {
-  constructor(props) {
-      super(props);
-      this.state = {
-          name: '',
-          email: '',
-          message: '',
-      };
+    static propTypes = {
+        targetEmail: PropTypes.string.isRequired
+    };
 
-      this.updateField = this.updateField.bind(this);
-      this.submitForm = this.submitForm.bind(this);
-  }
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            email: '',
+            message: '',
+        };
 
-  get(id){
-      return document.getElementById(id);
-  }
+        this.updateField = this.updateField.bind(this);
+        this.submitForm = this.submitForm.bind(this);
+        this.checkForEmptyFields = this.checkForEmptyFields.bind(this);
+        this.componentDidUpdate = this.componentDidUpdate.bind(this);
+        this.validateEmail = this.validateEmail.bind(this);
+        
+    }
 
-  updateField(field, value) {
-      this.setState({ [field]: value });
-  }
+    componentDidUpdate = () =>{
+        this.checkForEmptyFields();
+    }
 
-  submitForm = () =>{
+    get(id){
+        return document.getElementById(id);
+    }
 
-  }
+    updateField(field, value) {
+        this.setState({ [field]: value });
+    }
 
-  render() {
-    const { formName, formEmail, formMessage } = this.state;
+    checkForEmptyFields = () =>{
+        if(this.state.name=='' || this.state.email =='' || this.state.message ==''){
+            this.get('submitButton').disabled = true;
+        } else{
+            this.get('submitButton').disabled = false;
+        }
+    }
 
-    return (
-        <FormContainer>
-            <div id="contactForm">
-                <FieldContainer>
-                    <div><label>Name</label><p><input id="name"  onChange={(e) => this.updateField('name', e.target.value)} value={formName} required /></p></div>
-                    <div><label>Email</label><p><input id="email"  type="email" onChange={(e) => this.updateField('email', e.target.value)} value={formEmail} required /></p></div>
-                    <div><label>Message</label><p><textarea id="message"  rows="5" onChange={(e) => this.updateField('message', e.target.value)} value={formMessage} required /></p></div>
-                    <Button
-                        email="amaurilopez90@gmail.com"
-                        formValues={this.state}
-                    />
-                </FieldContainer>
-            </div>
-        </FormContainer>
-    );
-  }
+    validateEmail(email){
+        var validated = true;
+
+        //Check for valid email using regular expression
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if(!re.test(String(email).toLowerCase())){
+            validated = false;
+            console.log("invalid email");
+            window.alert('Please enter a valid email address');
+            this.get('email').style.color = "Red";
+        } 
+
+        return validated;
+
+
+    }
+
+    submitForm = () =>{
+        const recipient = `mailto:${this.props.targetEmail}`;
+        const subject = '?subject=Interested%20Viewer%20From%20Your%20Portfolio';
+        const body = this.state.message + "\n My Preferred Contact Address is: " + this.state.email;
+        const encodedBody = `&body=${encodeURIComponent(body)}`;
+
+        if(this.validateEmail(this.state.email)){
+            window.location.href = recipient+subject+encodedBody;
+        }
+    }
+
+    render() {
+
+        return (
+            <FormContainer>
+                <div id="contactForm">
+                    <FieldContainer>
+                        <div><p><input id="name"  placeholder="Name" onChange={(e) => this.updateField('name', e.target.value)} value={this.state.name} required /></p></div>
+                        <div><p><input id="email" placeholder="Preferred Contact Email" type="email" onChange={(e) => this.updateField('email', e.target.value)} value={this.state.email} required /></p></div>
+                        <div><p><textarea id="message" placeholder="Message" rows="5" onChange={(e) => this.updateField('message', e.target.value)} value={this.state.message} required /></p></div>
+                        <button id="submitButton" onClick={this.submitForm} >Contact Me</button>
+                    </FieldContainer>
+                </div>
+            </FormContainer>
+        );
+    }
 }

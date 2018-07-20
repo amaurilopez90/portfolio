@@ -155,7 +155,7 @@ class AboutMe extends Component {
               }
             </WhenInView>
 
-            <ContactForm />
+            <ContactForm targetEmail="amaurilopez90@gmail.com"/>
             
 
             <div className="PreviousPageIcon">
