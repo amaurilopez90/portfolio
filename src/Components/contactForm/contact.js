@@ -81,7 +81,7 @@ export default class ContactForm extends Component {
     submitForm = () =>{
         const recipient = `mailto:${this.props.targetEmail}`;
         const subject = '?subject=Interested%20Viewer%20From%20Your%20Portfolio';
-        const body = this.state.message + "\n My Preferred Contact Address is: " + this.state.email;
+        const body = "Hello Amauri,\n\n" + "My name is " + this.state.name + "\n\n" + this.state.message + "\n\n My Preferred Contact Address is: " + this.state.email + "\n\n";
         const encodedBody = `&body=${encodeURIComponent(body)}`;
 
         if(this.validateEmail(this.state.email)){
