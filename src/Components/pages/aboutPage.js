@@ -131,6 +131,7 @@ class AboutMe extends Component {
                   </Slidep>
                 }
               </WhenInView>
+
               <WhenInView>
                 {({ isInView }) => 
                   <Slidep direction={'left'} hide={!isInView}>
@@ -149,6 +150,48 @@ class AboutMe extends Component {
                   <p className = "Production" >
                     I'm a musician and bass guitarist of 7 years.
                     Here's a short video of me in action. 
+                  </p>
+                </Revealp>
+              }
+            </WhenInView>
+            
+            <div className="project-item">
+
+              <WhenInView>
+                {({ isInView }) => 
+                  <Slidep direction={'bottom'} hide={!isInView}>
+
+                    <div className="Index">
+                      <h1 style={{marginLeft: '-0.8em'}}>
+                        <i className="fa fa-heartbeat"/>
+                      </h1>
+                    </div>
+                    
+                  </Slidep>
+                }
+              </WhenInView>
+              <WhenInView>
+                {({ isInView }) => 
+                  <Slidep direction={'right'} hide={!isInView}>
+
+                    <h1 className="left" style={{marginLeft: '5.5em'}}>
+                      Health and Exersice
+                    </h1>
+                  </Slidep>
+                }
+              </WhenInView>
+            </div>
+
+            <WhenInView>
+              {({ isInView }) => 
+                <Revealp transform={'left'} hide={!isInView} barColor = '#424242'style={{
+                  marginBottom: '0px',
+                  left: '7em',
+                  width: '55%'
+                }}>
+                  <p style={{ color: '#5A6D87'}}>
+                    Another part of my life is centered around Health and Exercise.
+                    I love pushing myself to become better and stronger everyday! 
                   </p>
                 </Revealp>
               }

@@ -23,6 +23,7 @@
         text-align: center;
         border: 2px solid #424242;
         background-color: rgb(255, 251, 202);
+        color: #424242;
 
     }
 }
@@ -52,6 +53,7 @@
         text-align: center;
         border: 2px solid #424242;
         background-color: rgb(255, 251, 202);
+        color: #424242;
         @media(max-width: $laptop){
             width: 29vw;
         }
@@ -84,6 +86,7 @@
         width: 40vw;
         border: 2px solid #424242;
         background-color: rgb(255, 251, 202);
+        color: #424242;
     }
 }
 
@@ -96,6 +99,9 @@
     .ContactButton{
         border-radius: 8px;
         transition: .3s;
+
+        color: #424242;
+        background-color: #AD2626;
         
     }
     

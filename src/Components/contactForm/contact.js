@@ -43,86 +43,43 @@ export default class ContactForm extends Component {
         this.updateField = this.updateField.bind(this);
         this.submitForm = this.submitForm.bind(this);
         this.checkForEmptyFields = this.checkForEmptyFields.bind(this);
-        this.componentDidUpdate = this.componentDidUpdate.bind(this);
         this.validateEmail = this.validateEmail.bind(this);
-        this.handleDisabledEvent = this.handleDisabledEvent.bind(this);
-    }
-
-    componentDidUpdate = () =>{
-        this.checkForEmptyFields();
+        this.componentDidUpdate = this.componentDidUpdate.bind(this);
+        this.updateSubmitButton = this.updateSubmitButton.bind(this);
     }
 
     get(id){
         return document.getElementById(id);
     }
-
+    
     updateField(field, value) {
         this.setState({ [field]: value });
     }
-
+    
     checkForEmptyFields = () =>{
-        var button = this.get('submitButton');
-        if(this.state.name=='' || this.state.email =='' || this.state.message ==''){
-            button.disabled = true;
-            button.style.color = '#424242';
-            button.style.backgroundColor = "#AD2626"
+        return(this.state.name=="" || this.state.email == "" || this.state.message == "");
+    }
+
+    updateSubmitButton = () =>{
+        //Update state of submit button
+        var button  = this.get('submitButton');
+
+        if(this.checkForEmptyFields()){
+            button.style.color = "#424242";
+            button.style.backgroundColor = '#AD2626';
         } else{
-            button.disabled = false;
             button.style.color = '#1DD3CC';
             button.style.backgroundColor = '#FFF689';
         }
     }
 
-    handleDisabledEvent = () =>{
-        var button = this.get('submitButton');
-        console.log('Button press detected');
-        
-        if( button.disabled ){
-            //cache the state
-            const { name, email, message } = this.state;
-    
-            //Get submit button and input labels
-            
-            var labelName = this.get('NameLabel');
-            var labelEmail = this.get('EmailLabel');
-            var labelMessage = this.get('MessageLabel');
-
-            window.alert('Please fill out all required fields');
-
-            //Check which fields have not yet been filled out
-
-            //Name Field
-            if(name == "") {
-                labelName.innerHTML = "Name (Required)";
-                labelName.style.color = "Red";
-            }else{
-                labelName.innerHTML = "Name";
-                labelName.style.color = "#5A6D87"
-            }
-
-            //Email Field
-            if(email == "") {
-                labelEmail.innerHTML = "Contact Email (Required)";
-                labelEmail.style.color = "Red";
-            }else{
-                labelEmail.innerHTML = "Contact Email";
-                labelEmail.style.color = '#5A6D87';
-            }
-
-            //Message Field
-            if(message == "") {
-                labelMessage.innerHTML = "Message (Required)";
-                labelMessage.style.color = "Red";
-            }else{
-                labelMessage.innerHTML = "Message";
-                labelMessage.style.color = '#5A6D87';
-            }
-
-        }
+    componentDidUpdate = () =>{
+        this.updateSubmitButton();
     }
-
+    
     validateEmail(email){
         var validated = true;
+        var emailInput = this.get('email');
 
         //Check for valid email using regular expression
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -130,23 +87,60 @@ export default class ContactForm extends Component {
             validated = false;
             console.log("invalid email");
             window.alert('Please enter a valid email address');
-            this.get('email').style.color = "Red";
-        } 
+            emailInput.style.color = "Red";
+        } else { emailInput.style.color = "#424242"; }
 
         return validated;
-
-
     }
 
     submitForm = () =>{
-        const recipient = `mailto:${this.props.targetEmail}`;
-        const subject = '?subject=Interested%20Viewer%20From%20Your%20Portfolio';
-        const body = "Hello Amauri,\n\n" + "My name is " + this.state.name + "\n\n" + this.state.message + "\n\n My Preferred Contact Address is: " + this.state.email + "\n\n";
-        const encodedBody = `&body=${encodeURIComponent(body)}`;
+        //Cache the state and contact elements
+        const { name, email, message } = this.state;
+        var labelName = this.get('NameLabel');
+        var labelEmail = this.get('EmailLabel');
+        var labelMessage = this.get('MessageLabel');
 
-        if(this.validateEmail(this.state.email)){
-            window.location.href = recipient+subject+encodedBody;
+        const validColor = '#5A6D87';
+        const invalidColor = "Red"
+
+        //Only proceed if there aren't any empty fields
+        if(!this.checkForEmptyFields()){
+
+            //Update Contact UI Labels to correct
+            labelName.innerHTML = "Name"; labelName.style.color = validColor;
+            labelEmail.innerHTML = "Contact Email"; labelEmail.style.color = validColor;
+            labelMessage.innerHTML = "Message"; labelMessage.style.color = validColor;       
+
+            //Only submit if email is validated
+            if(this.validateEmail(this.state.email)){
+
+                
+                //Set up 'Mailto' app call
+                const recipient = `mailto:${this.props.targetEmail}`;
+                const subject = '?subject=Interested%20Viewer%20From%20Your%20Portfolio';
+                const body = "Hello Amauri,\n\n" + "My name is " + this.state.name + "\n\n" + this.state.message + "\n\n My Preferred Contact Address is: " + this.state.email + "\n\n";
+                const encodedBody = `&body=${encodeURIComponent(body)}`;
+
+                //Call mail app
+                window.location.href = recipient+subject+encodedBody;
+            }
+        }else{
+            //Update Contact UI Labels
+
+            //Name
+            if(name=="") { labelName.innerHTML = "Name (Required)"; labelName.style.color = invalidColor; }
+            else { labelName.innerHTML = "Name"; labelName.style.color = validColor; }
+
+            //Email
+            if(email=="") { labelEmail.innerHTML = "Contact Email (Required)"; labelEmail.style.color = invalidColor; }
+            else { labelEmail.innerHTML = "Contact Email"; labelEmail.style.color = validColor; }
+
+            //Message
+            if(message=="") { labelMessage.innerHTML = "Message (Required)"; labelMessage.style.color = invalidColor; }
+            else { labelMessage.innerHTML = "Message"; labelMessage.style.color = validColor; }
+
         }
+       
     }
 
     render() {
@@ -169,7 +163,7 @@ export default class ContactForm extends Component {
                             <WhenInView>
                                 {({ isInView }) => 
                                     <Revealp transform={'left'} hide={!isInView} barColor = '#424242' >
-                                        <label id="ContactLabel">Contact Email</label>
+                                        <label id="EmailLabel">Contact Email</label>
                                         <p><input className="EmailField" id="email" type="email" onChange={(e) => this.updateField('email', e.target.value)} value={this.state.email} required /></p>
                                     </Revealp>
                                 }
@@ -185,7 +179,7 @@ export default class ContactForm extends Component {
                                 }
                             </WhenInView>
                         </div>
-                        <div className = "ContactDiv" onClick={this.handleDisabledEvent} style={{zIndex: '1'}}>
+                        <div className = "ContactDiv" style={{zIndex: '1'}}>
                             <WhenInView>
                                 {({ isInView }) => 
                                     <Revealp transform={'left'} hide={!isInView} barColor = '#424242' >
