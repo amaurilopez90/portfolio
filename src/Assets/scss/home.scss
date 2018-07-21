@@ -52,6 +52,16 @@
         @include translateY(-13vh);
         left: 7vw;
 
+        @media(max-width: $laptopL){
+            @include translateY(-15vh);
+        }
+        
+        @media(max-width: $laptop){
+            left: 19.3vw;
+            @include translateY(-20vh);
+            text-align: center;
+        }
+
         ul li{
             margin: 0;
             padding: 5vh;

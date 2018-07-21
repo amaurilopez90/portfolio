@@ -1,15 +1,22 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { Revealp } from '../specialStyling/revealAnimation';
+import WhenInView from '../specialStyling/whenInView';
 
 const FormContainer = styled.div`
     position: relative;
     display: inline-block;
-    left: 34%;
+    left: 17.5%;
+    width: 63%;
     background-color: rgb(255, 251, 202);
     margin: 20px 5px 20px 5px;
-    border: 2px solid #424242;
+    border: 20px solid #424242;
     padding: 20px;
+    color: #5A6D87;
+    @media(max-width: 1024px){
+        transform: scale(0.9);
+    }
 
 `;
 
@@ -38,7 +45,7 @@ export default class ContactForm extends Component {
         this.checkForEmptyFields = this.checkForEmptyFields.bind(this);
         this.componentDidUpdate = this.componentDidUpdate.bind(this);
         this.validateEmail = this.validateEmail.bind(this);
-        
+        this.handleDisabledEvent = this.handleDisabledEvent.bind(this);
     }
 
     componentDidUpdate = () =>{
@@ -54,10 +61,63 @@ export default class ContactForm extends Component {
     }
 
     checkForEmptyFields = () =>{
+        var button = this.get('submitButton');
         if(this.state.name=='' || this.state.email =='' || this.state.message ==''){
-            this.get('submitButton').disabled = true;
+            button.disabled = true;
+            button.style.color = '#424242';
+            button.style.backgroundColor = "#AD2626"
         } else{
-            this.get('submitButton').disabled = false;
+            button.disabled = false;
+            button.style.color = '#1DD3CC';
+            button.style.backgroundColor = '#FFF689';
+        }
+    }
+
+    handleDisabledEvent = () =>{
+        var button = this.get('submitButton');
+        console.log('Button press detected');
+        
+        if( button.disabled ){
+            //cache the state
+            const { name, email, message } = this.state;
+    
+            //Get submit button and input labels
+            
+            var labelName = this.get('NameLabel');
+            var labelEmail = this.get('EmailLabel');
+            var labelMessage = this.get('MessageLabel');
+
+            window.alert('Please fill out all required fields');
+
+            //Check which fields have not yet been filled out
+
+            //Name Field
+            if(name == "") {
+                labelName.innerHTML = "Name (Required)";
+                labelName.style.color = "Red";
+            }else{
+                labelName.innerHTML = "Name";
+                labelName.style.color = "#5A6D87"
+            }
+
+            //Email Field
+            if(email == "") {
+                labelEmail.innerHTML = "Contact Email (Required)";
+                labelEmail.style.color = "Red";
+            }else{
+                labelEmail.innerHTML = "Contact Email";
+                labelEmail.style.color = '#5A6D87';
+            }
+
+            //Message Field
+            if(message == "") {
+                labelMessage.innerHTML = "Message (Required)";
+                labelMessage.style.color = "Red";
+            }else{
+                labelMessage.innerHTML = "Message";
+                labelMessage.style.color = '#5A6D87';
+            }
+
         }
     }
 
@@ -95,10 +155,45 @@ export default class ContactForm extends Component {
             <FormContainer>
                 <div id="contactForm">
                     <FieldContainer>
-                        <div><p><input id="name"  placeholder="Name" onChange={(e) => this.updateField('name', e.target.value)} value={this.state.name} required /></p></div>
-                        <div><p><input id="email" placeholder="Preferred Contact Email" type="email" onChange={(e) => this.updateField('email', e.target.value)} value={this.state.email} required /></p></div>
-                        <div><p><textarea id="message" placeholder="Message" rows="5" onChange={(e) => this.updateField('message', e.target.value)} value={this.state.message} required /></p></div>
-                        <button id="submitButton" onClick={this.submitForm} >Contact Me</button>
+                        <div className="NameDiv">
+                            <WhenInView>
+                                {({ isInView }) => 
+                                    <Revealp transform={'left'} hide={!isInView} barColor = '#424242' >
+                                        <label id="NameLabel">Name</label>
+                                        <p><input className="NameField" id="name" onChange={(e) => this.updateField('name', e.target.value)} value={this.state.name} required /></p>
+                                    </Revealp>
+                                }
+                            </WhenInView>
+                        </div>
+                        <div className="EmailDiv">
+                            <WhenInView>
+                                {({ isInView }) => 
+                                    <Revealp transform={'left'} hide={!isInView} barColor = '#424242' >
+                                        <label id="ContactLabel">Contact Email</label>
+                                        <p><input className="EmailField" id="email" type="email" onChange={(e) => this.updateField('email', e.target.value)} value={this.state.email} required /></p>
+                                    </Revealp>
+                                }
+                            </WhenInView>
+                        </div>
+                        <div className="MessageDiv">
+                            <WhenInView>
+                                {({ isInView }) => 
+                                    <Revealp transform={'left'} hide={!isInView} barColor = '#424242' >
+                                        <label id="MessageLabel">Message</label>
+                                        <p><textarea className="MessageField" id="message" rows="5" onChange={(e) => this.updateField('message', e.target.value)} value={this.state.message} required /></p>
+                                    </Revealp>
+                                }
+                            </WhenInView>
+                        </div>
+                        <div className = "ContactDiv" onClick={this.handleDisabledEvent} style={{zIndex: '1'}}>
+                            <WhenInView>
+                                {({ isInView }) => 
+                                    <Revealp transform={'left'} hide={!isInView} barColor = '#424242' >
+                                        <button className="ContactButton" id="submitButton" onClick={this.submitForm} >Contact Me</button>
+                                    </Revealp>
+                                }
+                            </WhenInView>
+                        </div>
                     </FieldContainer>
                 </div>
             </FormContainer>

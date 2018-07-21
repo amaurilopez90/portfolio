@@ -19,19 +19,19 @@ export default class Triangle extends Component {
         {({ offset }) =>
           <svg
             {...others} // To inherit any props
-            width="57px"
-            height="106px"
+            width="120px"
+            height="120px"
             viewBox="-4 -10 57 106">
             <polygon
               strokeDasharray={271} // Oh. I did the math. Turns out, stroke-dasharray can be >= the perimeter of the triangle, or you know, any shape.
               strokeDashoffset={offset}
-              stroke="#ff1755"
+              stroke="#1DD3CC"
               strokeWidth="10"
               fill="none"
               points="0 42.9371985 0 -0.125603023 46.9776016 42.9371985 0 86">
             </polygon>
             <polygon
-              stroke="#ff1755"
+              stroke="#1DD3CC"
               strokeWidth="3"
               fill="none"
               points="0 42.9371985 0 -0.125603023 46.9776016 42.9371985 0 86">

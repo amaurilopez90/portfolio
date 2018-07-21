@@ -11,6 +11,7 @@ import './Assets/css/burgerMenu.min.css';
 import './Assets/css/sideBar.min.css';
 import './Assets/css/arrows.min.css';
 import './Assets/css/aboutme.min.css';
+import './Assets/css/contactForm.min.css';
 
 //Components
 import Header from './Components/headerComponents/header';

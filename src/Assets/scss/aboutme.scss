@@ -7,6 +7,15 @@ div.AudioPlayer{
     top: 10vh;
     transform: scale(0.9);
 
+    @media(max-width: $laptop){
+        left: 13vw;
+    }
+
+    @media(max-width: $tablet){
+        left: 10vw;
+        transform: scale(0.8);
+    }
+
     .SongTitle{
         position: relative;
         bottom: 6vh;

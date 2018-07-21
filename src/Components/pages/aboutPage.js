@@ -44,8 +44,7 @@ class AboutMe extends Component {
 
     return (
       <div>
-
-
+        
         <ProgressContainer isDoneLoading={isDoneLoading}>
           <div className ="ProgressText">
             <ProgressText

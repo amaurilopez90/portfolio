@@ -1,0 +1,111 @@
+@import '_config.scss';
+
+.NameDiv{
+    position: relative;
+    left: -8.7vw;
+    transform: scale(1.1) translateY(2.5vh);
+    
+    @media(max-width: $laptopL){
+        left: -9vw;
+    }
+    
+    @media(max-width: $laptop){
+        transform: scale(1);
+        left: 0;
+        display: -webkit-inline-box;
+    }
+
+    @media(max-width: $tablet){
+        left: 2vw;
+    }
+
+    .NameField{
+        text-align: center;
+        border: 2px solid #424242;
+        background-color: rgb(255, 251, 202);
+
+    }
+}
+
+.EmailDiv{
+    position: relative;
+    left: 15.5vw;
+    transform: scale(1.1) translateY(-6.3vh);
+    
+    @media(max-width: $laptopL){
+        transform: scale(1.1) translateY(-5.4vh);
+        left: 15.5vw;
+    }
+    
+    @media(max-width: $laptop){
+        transform: scale(1);
+        left: 0;
+        display: -webkit-inline-box;
+    }
+
+    @media(max-width: $tablet){
+        left: 2vw;
+    }
+
+    .EmailField{
+        width: 22vw;
+        text-align: center;
+        border: 2px solid #424242;
+        background-color: rgb(255, 251, 202);
+        @media(max-width: $laptop){
+            width: 29vw;
+        }
+
+        @media(max-width: $tablet){
+            width: 39vw;
+        }
+
+        
+    }
+
+}
+
+.MessageDiv{
+    position: relative;
+    transform: scale(1.1) translateY(-2vh);
+    left: 3.8vw;
+    
+    @media(max-width: $laptop){
+        transform: scale(1);
+        left: 0;
+        display: -webkit-inline-box;
+    }
+    
+    @media(max-width: $tablet){
+        left: 2vw;
+    }
+
+    .MessageField{
+        width: 40vw;
+        border: 2px solid #424242;
+        background-color: rgb(255, 251, 202);
+    }
+}
+
+.ContactDiv{
+    position: relative;
+    transform: scale(1.1) translateY(-1vh);
+    left: 3vw;
+    transition: color .5s;
+    
+    .ContactButton{
+        border-radius: 8px;
+        transition: .3s;
+        
+    }
+    
+    @media(max-width: $laptop){
+        left: 0;
+        transform: scale(1);
+        display: -webkit-inline-box;
+    }
+    @media(max-width: $tablet){
+        left: 2vw;
+    }
+
+}

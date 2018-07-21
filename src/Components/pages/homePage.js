@@ -60,6 +60,8 @@ class Homepage extends Component {
           <Video videoUrl={require('../../Assets/myPortfolioHome.mp4')}/>
           <div className = "container-fluid">
           
+            <h1 className="Title">Home</h1>
+
             <div className="SideTextHome">
                 <h6 className="SideText">Click to Zoom!</h6>
             </div>
