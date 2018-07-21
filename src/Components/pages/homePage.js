@@ -57,10 +57,10 @@ class Homepage extends Component {
         </ProgressContainer>
 
         <Div isDoneLoading={isDoneLoading}>
+          <h1 className="Title">Home</h1>
           <Video videoUrl={require('../../Assets/myPortfolioHome.mp4')}/>
           <div className = "container-fluid">
           
-            <h1 className="Title">Home</h1>
 
             <div className="SideTextHome">
                 <h6 className="SideText">Click to Zoom!</h6>
