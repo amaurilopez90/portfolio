@@ -8,7 +8,8 @@ div.AudioPlayer{
     transform: scale(0.9);
 
     @media(max-width: $laptop){
-        left: 13vw;
+        left: 12vw;
+        transform: scale(0.8);
     }
 
     @media(max-width: $tablet){
@@ -31,9 +32,79 @@ div.AudioPlayer{
     }
 }
 
+.para1{
+    transform: translateY(1.2vh);
+    margin-left: 1vw;
+
+    @media(max-width: $laptop){
+        font-size: 13px;
+    }
+
+}
+
+.para2{
+    transform: translateY(1.2vh);
+    margin-left: 1vw;
+    color: #5A6D87;
+
+    @media(max-width: $laptop){
+        font-size: 13px;
+    }
+}
+
+.para3{
+    margin-left: 1vw;
+
+    @media(max-width: $laptop){
+        font-size: 13px;
+    }
+}
+
+.project-item{
+
+    .rightAboutMe{
+        text-align: end;
+        margin-right: 10vw;
+    
+        @media(max-width: $laptopL){
+            margin-right: 9.5vw;
+        }
+    
+        @media(max-width: $laptop){
+            margin-right: 1em;
+        }
+    
+        //Desktop
+        @media(max-width: $desktop){
+            
+        }
+        
+        //Tablet
+        @media(max-width: $tablet){
+            
+        }
+    
+        //Phone
+        @media(max-width: $phone){
+            
+        }
+    }
+
+    .Index{
+
+        .HealthIcon{
+            margin-left: -0.8em;
+    
+            @media(max-width: $laptop){
+                margin-left: 1em;
+            }
+        }
+    }
+}
+
 .ProductionReveal{
     margin-bottom: 0px;
-    left: 30vw;
+    left: 31.5vw;
     width: 55%;
 
     @media(max-width: $laptop){
@@ -56,7 +127,32 @@ div.AudioPlayer{
 
 .HealthAndExerciseReveal{
     margin-bottom: 0px;
+    left: 7em;
+    width: 55%;
+
+    @media(max-width: $laptop){
+        font-size: 12px;
+        left: 5em;
+
+    }
+
     .HealthAndExercise{
         color: #5A5D87;
+    }
+}
+
+.Exercise{
+    left: 7em;
+    
+    .SideTextExercise{
+        position: relative;
+        transform: rotate(-90deg) scale(0.8) translateX(36rem);
+        left: -8rem;
+        transition: .3s;
+        display: inline-flex;
+    }
+    
+    &:hover > .SideTextExercise{
+        transform: rotate(-90deg) scale(0.8) translateX(40rem);
     }
 }

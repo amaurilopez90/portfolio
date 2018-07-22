@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
+import ReactZoomy from 'react-zoomy';
 
 //Import special styling components
 import ProgressText, { ProgressContainer } from '../specialStyling/progressText';
 import { Div } from '../specialStyling/types';
 import AudioPlayer from '../specialStyling/music';
 import { Flex } from '../specialStyling/flexBox';
-import { Revealp } from '../specialStyling/revealAnimation';
+import { Revealp, Slidep } from '../specialStyling/revealAnimation';
 import WhenInView from '../specialStyling/whenInView';
-import { Slidep } from '../specialStyling/revealAnimation';
 import ContactForm from '../contactForm/contact';
+import { ImageButton } from '../specialStyling/hoverScale';
 
 class AboutMe extends Component {
   constructor(props){
@@ -76,7 +77,7 @@ class AboutMe extends Component {
                   top: '3em',
                   width: '70%'
                 }}>
-                  <p style={{transform: 'translateY(1.2vh)', marginLeft: '1vw'}}>
+                  <p className="para1">
                     You're here! That means you want to know more about me. If you viewed the video on my home
                     page then you should know my name is Amauri Lopez. 
                   </p>
@@ -92,7 +93,7 @@ class AboutMe extends Component {
                   top: '3em',
                   width: '70%'
                 }}>
-                  <p style={{transform: 'translateY(1.2vh)', marginLeft: '1vw', color: '#5A6D87'}}>
+                  <p className="para2">
                     I feel like learning about someone's music interest is a great way to start to get to know someone. In fact, music plays a very important role in my life.
                     Here are a couple of my favorite songs (currently). 
                   </p>
@@ -109,7 +110,7 @@ class AboutMe extends Component {
                   left: '9.5em',
                   width: '55%'
                 }}>
-                  <p style={{ marginLeft: '1vw'}}>
+                  <p className="para3">
                     You can play a song while learning more about me. 
                   </p>
                 </Revealp>
@@ -136,7 +137,7 @@ class AboutMe extends Component {
                 {({ isInView }) => 
                   <Slidep direction={'left'} hide={!isInView}>
 
-                    <h1 className="right">
+                    <h1 className="rightAboutMe">
                       Production
                     </h1>
                   </Slidep>
@@ -162,7 +163,7 @@ class AboutMe extends Component {
                   <Slidep direction={'bottom'} hide={!isInView}>
 
                     <div className="Index">
-                      <h1 style={{marginLeft: '-0.8em'}}>
+                      <h1 className="HealthIcon" >
                         <i className="fa fa-heartbeat"/>
                       </h1>
                     </div>
@@ -174,8 +175,8 @@ class AboutMe extends Component {
                 {({ isInView }) => 
                   <Slidep direction={'right'} hide={!isInView}>
 
-                    <h1 className="left" style={{marginLeft: '5.5em'}}>
-                      Health and Exersice
+                    <h1 className="left" style={{marginLeft: '5em'}}>
+                      Health and Exercise
                     </h1>
                   </Slidep>
                 }
@@ -184,12 +185,8 @@ class AboutMe extends Component {
 
             <WhenInView>
               {({ isInView }) => 
-                <Revealp transform={'left'} hide={!isInView} barColor = '#424242'style={{
-                  marginBottom: '0px',
-                  left: '7em',
-                  width: '55%'
-                }}>
-                  <p style={{ color: '#5A6D87'}}>
+                <Revealp className="HealthAndExerciseReveal" transform={'left'} hide={!isInView} barColor = '#424242'>
+                  <p className="HealthAndExercise" >
                     Another part of my life is centered around Health and Exercise.
                     I love pushing myself to become better and stronger everyday! 
                   </p>
@@ -197,9 +194,38 @@ class AboutMe extends Component {
               }
             </WhenInView>
 
+            <div className="Exercise" style={{
+                display: 'inline-block',
+                position: 'relative',
+              }}>
+
+              <ReactZoomy className="Zoomy"
+                imageUrl={require('../../Assets/Exercise.gif')}
+                renderThumbnail={({ showImage }) => 
+                <ImageButton onClick={showImage}>
+                  <img className="ZoomyThumbnail" src={require('../../Assets/ExerciseThumbnail.JPG')} alt="Exercise" />
+                </ImageButton>
+                }
+                scale={[1, 1]}
+                imageProps={{
+                  style: {
+                    width: '100vw',
+                    height: 'auto'
+                  }
+                }}
+                />
+
+                <div className="SideTextExercise">
+                  <h6 className="SideText">Click to Zoom!</h6>
+              
+                </div>
+
+            </div>
+
+            <br/><br/>
+
             <ContactForm targetEmail="amaurilopez90@gmail.com"/>
             
-
             <div className="PreviousPageIcon">
               <a className="Arrow" href="/">
                 <p>Home</p>
