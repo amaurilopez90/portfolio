@@ -7,7 +7,7 @@ import WhenInView from '../specialStyling/whenInView';
 const FormContainer = styled.div`
     position: relative;
     display: inline-block;
-    left: 17.5%;
+    left: 18.5%;
     width: 63%;
     background-color: rgb(255, 251, 202);
     margin: 20px 5px 20px 5px;
@@ -18,6 +18,11 @@ const FormContainer = styled.div`
         transform: scale(0.9);
     }
 
+    @media(max-width: 768px){
+        left: 22%;
+        transform: scale(1.1, 0.8);
+    }
+
 `;
 
 const FieldContainer = styled.div`
@@ -25,6 +30,9 @@ const FieldContainer = styled.div`
     text-align: center;
     display: inline-block;
     margin: 2px;
+    @media(max-width: 768px){
+        left: -1em;
+    }
 `;
 
 export default class ContactForm extends Component {

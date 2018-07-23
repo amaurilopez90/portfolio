@@ -104,13 +104,12 @@
             }
         }
 
-        
-
         .SynthImage{
             width: 800px;
 
             @media(max-width: $laptop){
-                margin-left: 3vw;
+                margin-left: 4vw;
+                width: 700px;
             }
 
             @media(max-width: $tablet){
@@ -136,7 +135,7 @@
 
                     @media(max-width: $laptop){
                         transform: translateY(-58vh) rotate(-90deg);
-                        right: 40.5vw;
+                        right: 36.5vw;
                     }
 
                     @media(max-width: $tablet){
@@ -162,7 +161,7 @@
 
                     @media(max-width: $laptop){
                         transform: translateY(-7vh) rotate(90deg);
-                        left: 40.5vw;
+                        left: 36.5vw;
                     }
                     
                     @media(max-width: $tablet){
@@ -208,7 +207,8 @@
             
             //Laptop
             @media(max-width: $laptop){
-                margin-left: 1vw;
+                margin-left: 4vw;
+                width: 800px;
             }
 
             //Tablet
@@ -228,7 +228,7 @@
             &.left{
                 margin-left: 8em;
                 @media(max-width: $laptop){
-                    margin-left: 4em;   
+                    margin-left: 2em;   
                 }
     
                 //Desktop
@@ -257,7 +257,7 @@
                 }
 
                 @media(max-width: $laptop){
-                    margin-right: 3vw;
+                    margin-right: -2vw;
                 }
     
                 //Desktop
@@ -267,7 +267,7 @@
                 
                 //Tablet
                 @media(max-width: $tablet){
-                    
+                    margin-right: 3vw;
                 }
     
                 //Phone
@@ -284,7 +284,7 @@
             //Tablet
             @media(max-width: $tablet){
                 font-size: 12px;
-                margin-bottom: 40px;
+                margin-bottom: 30px;
             }
             //Phone
             @media(max-width: $phone){
@@ -303,7 +303,7 @@
 
             //Laptop
             @media(max-width: $laptop){
-                margin-left: 5em;
+                margin-left: 2em;
             }
             //Tablet
             @media(max-width: $tablet){
@@ -325,7 +325,7 @@
                     text-align: start;
                     
                     @media(max-width: $laptop){
-                           
+                        margin-left: 15em;
                     }
         
                     //Desktop

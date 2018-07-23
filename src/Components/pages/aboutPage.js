@@ -71,12 +71,7 @@ class AboutMe extends Component {
 
             <WhenInView>
               {({ isInView }) => 
-                <Revealp transform={'right'} hide={!isInView} barColor = '#5A6D87'style={{
-                  marginBottom: '0px',
-                  left: '9.5em',
-                  top: '3em',
-                  width: '70%'
-                }}>
+                <Revealp className="para1Reveal" transform={'right'} hide={!isInView} barColor = '#5A6D87'>
                   <p className="para1">
                     You're here! That means you want to know more about me. If you viewed the video on my home
                     page then you should know my name is Amauri Lopez. 
@@ -87,12 +82,7 @@ class AboutMe extends Component {
             <br/><br/>
             <WhenInView>
               {({ isInView }) => 
-                <Revealp transform={'right'} hide={!isInView} barColor = '#424242'style={{
-                  marginBottom: '0px',
-                  left: '9.5em',
-                  top: '3em',
-                  width: '70%'
-                }}>
+                <Revealp className="para2Reveal" transform={'right'} hide={!isInView} barColor = '#424242'>
                   <p className="para2">
                     I feel like learning about someone's music interest is a great way to start to get to know someone. In fact, music plays a very important role in my life.
                     Here are a couple of my favorite songs (currently). 
@@ -105,11 +95,7 @@ class AboutMe extends Component {
             <br/><br/><br/><br/>
             <WhenInView>
               {({ isInView }) => 
-                <Revealp transform={'left'} hide={!isInView} barColor = '#5A6D87'style={{
-                  marginBottom: '0px',
-                  left: '9.5em',
-                  width: '55%'
-                }}>
+                <Revealp className="para3Reveal" transform={'left'} hide={!isInView} barColor = '#5A6D87'>
                   <p className="para3">
                     You can play a song while learning more about me. 
                   </p>
@@ -175,7 +161,7 @@ class AboutMe extends Component {
                 {({ isInView }) => 
                   <Slidep direction={'right'} hide={!isInView}>
 
-                    <h1 className="left" style={{marginLeft: '5em'}}>
+                    <h1 className="leftAboutMe" >
                       Health and Exercise
                     </h1>
                   </Slidep>
@@ -222,9 +208,21 @@ class AboutMe extends Component {
 
             </div>
 
+            <br/><br/><br/><br/>
+
+            <WhenInView>
+              {({ isInView }) => 
+                <Revealp className="ContactStatementReveal" transform={'right'} hide={!isInView} barColor = '#424242'>
+                  <h5>
+                    Want to contact me? Set up an email below and let's get in touch! 
+                  </h5>
+                </Revealp>
+              }
+            </WhenInView>
+
             <br/><br/>
 
-            <ContactForm targetEmail="amaurilopez90@gmail.com"/>
+            <ContactForm  targetEmail="amaurilopez90@gmail.com"/>
             
             <div className="PreviousPageIcon">
               <a className="Arrow" href="/">
