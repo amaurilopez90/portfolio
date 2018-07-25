@@ -67,37 +67,6 @@ div.AudioPlayer{
 }
 
 .para2Reveal{
-    margin-bottom: '0px';
-    left: 9.5em;
-    top: 3em;
-    width: 80%;
-
-    @media(max-width: $laptop){
-        width: 85%;
-        left: 6.5em;
-    }
-
-    @media (max-width: $tablet){
-        width: 80%;
-    }
-
-    .para2{
-        transform: translateY(1.2vh);
-        margin-left: 1vw;
-        color: #5A6D87;
-    
-        @media(max-width: $laptop){
-            font-size: 12px;
-        }
-
-        @media (max-width: $tablet){
-            font-size: 10px;
-            margin-left: 0.5vw;
-        }
-    }
-}
-
-.para3Reveal{
     margin-bottom: 0px;
     left: 9.5em;
     width: 55%;
@@ -111,7 +80,7 @@ div.AudioPlayer{
         left: 8.5em;
     }
 
-    .para3{
+    .para2{
         margin-left: 1vw;
     
         @media(max-width: $laptop){
@@ -208,7 +177,7 @@ div.AudioPlayer{
     }
 }
 
-.ProductionReveal{
+.RightDescriptionReveal{
     margin-bottom: 0px;
     left: 31.5vw;
     width: 55%;
@@ -223,7 +192,7 @@ div.AudioPlayer{
         font-size: 11px;
     }
 
-    .Production{
+    .RightDescription{
         margin-Left: 1vw;
         text-Align: right;
         color: #5A6D87;
@@ -231,7 +200,7 @@ div.AudioPlayer{
     }
 }
 
-.HealthAndExerciseReveal{
+.LeftDescriptionReveal{
     margin-bottom: 0px;
     left: 7em;
     width: 55%;
@@ -245,7 +214,7 @@ div.AudioPlayer{
         font-size: 11px;
     }
 
-    .HealthAndExercise{
+    .LeftDescription{
         color: #5A5D87;
     }
 }
@@ -391,32 +360,54 @@ figure.effect-sadie h2 {
         font-size: 20px;
         top: 75%;
     }
+
+    & > h1{
+        position: relative;
+        color:$upsdellRed;
+        opacity: 0.8;
+        transition: transform 0.35s, color 0.35s, opacity 0.35s;
+
+        @media(max-width: $laptop){
+            font-size: 30px;
+        }
+        
+    }
 }
 
 figure.effect-sadie figcaption::before,
 figure.effect-sadie p {
-	transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
 }
 
 figure.effect-sadie p {
 	position: absolute;
-	bottom: 5vh;
+	bottom: 4vh;
 	left: 0;
 	padding: 2em;
 	width: 100%;
 	opacity: 0;
     transform: translate3d(0,10px,0);
     color: $peach;
+
+    @media(max-width: $laptopL){
+        bottom: 2vh;
+    }
     
     @media(max-width: $laptop){
-        bottom: 0;
+        bottom: -2vh;
         font-size: 12px;
     }
 }
 
 figure.effect-sadie:hover h2 {
 	color: #fff;
-	transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+    transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+    
+    & > h1{
+        color: #fff;
+        opacity: 0;
+        @include translateY(20%);
+    }
 }
 
 figure.effect-sadie:hover figcaption::before ,

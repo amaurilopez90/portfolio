@@ -45,7 +45,8 @@ export const SlideSideTextRight = styled.div`
 export const FadeIn = styled.div`
     position: relative;
 
-    transition: opacity 1.7s
+    transition: opacity 1.7s;
+    transition-delay: 0.2s;
 
     ${({ hide }) => hide && css`
         opacity: 0;

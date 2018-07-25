@@ -79,36 +79,42 @@ class Projects extends Component {
               
               </h1>
 
-              <div className="Alienz" style={{
-                display: 'inline-flex',
-                position: 'relative',
-              }}>
-              
-                <ReactZoomy className="Zoomy"
-                  imageUrl={require('../../Assets/Alienz.gif')}
-                  renderThumbnail={({ showImage }) => 
-                  <ImageButton onClick={showImage}>
-                    <img className="ZoomyThumbnail" src={require('../../Assets/Alienz_thumbnail_bigger.jpg')} alt="Alienz" />
-                  </ImageButton>
-                  }
-                  scale={[1.1, 1.1]}
-                  imageProps={{
-                    style: {
-                      width: '100vw',
-                      height: 'auto'
-                    }
-                  }}
-                  />
-              
-              </div>
+              <WhenInView>
+                {({ isInView }) => 
+                  <FadeIn  hide={!isInView} >
+                    <div>
+                      <div className="Alienz" style={{
+                        display: 'inline-flex',
+                        position: 'relative',
+                      }}>
+                      
+                        <ReactZoomy className="Zoomy"
+                          imageUrl={require('../../Assets/Alienz.gif')}
+                          renderThumbnail={({ showImage }) => 
+                          <ImageButton onClick={showImage}>
+                            <img className="ZoomyThumbnail" src={require('../../Assets/Alienz_thumbnail_bigger.jpg')} alt="Alienz" />
+                          </ImageButton>
+                          }
+                          scale={[1.1, 1.1]}
+                          imageProps={{
+                            style: {
+                              width: '100vw',
+                              height: 'auto'
+                            }
+                          }}
+                          />
+                      
+                      </div>
 
-              <div className="SideTextAlienzNew">
-                <h6 className="SideText">Click to Zoom!</h6>
-              
-              </div>
-
+                      <div className="SideTextAlienzNew">
+                        <h6 className="SideText">Click to Zoom!</h6>
+                      
+                      </div>
+                    </div>
+                  </FadeIn>
+                }
+              </WhenInView>
             </div>
-
 
             <div className="project-item">
 
@@ -139,25 +145,26 @@ class Projects extends Component {
                 }
               </WhenInView>
 
-              <Flex justify={'center'}>
-                <div className="SynthImage">
-                
-                  <ParallaxImage
-                    reduceHeight={1/3.7}
-                    src={require('../../Assets/Synth.jpeg')}/>
-                    
-                    <div className="SideTextSynth">
-                      {/* <SlideSideTextLeft hide={!isInView}> */}
-                        <h6 className="leftSideText">Look closely...</h6>
-                      {/* </SlideSideTextLeft> */}
-
-                      {/* <SlideSideTextRight hide={!isInView}> */}
-                        <h6 className="rightSideText">See the parallax?</h6>
-                      {/* </SlideSideTextRight> */}
-                    </div>
-                  
-                </div>
-              </Flex>
+              <WhenInView>
+                {({ isInView }) => 
+                  <FadeIn hide={!isInView} >
+                    <Flex justify={'center'}>
+                      <div className="SynthImage">
+                      
+                        <ParallaxImage
+                          reduceHeight={1/3.7}
+                          src={require('../../Assets/Synth.jpeg')}/>
+                          
+                          <div className="SideTextSynth">
+                              <h6 className="leftSideText">Look closely...</h6>
+                              <h6 className="rightSideText">See the parallax?</h6>
+                          </div>
+                        
+                      </div>
+                    </Flex>
+                  </FadeIn>
+                }
+              </WhenInView>
 
             </div>
 
@@ -189,16 +196,23 @@ class Projects extends Component {
                 }
               </WhenInView>
 
-
-              <Flex justify={'center'}>
-                <img className="BattleSpheresImage" src={require('../../Assets/BattleSpheresGif.gif')} alt=""/>
-              </Flex>
-
               <WhenInView>
                 {({ isInView }) => 
-                  <FadeIn hide={!isInView}>
-                    <div className="SideTextSpheres">
-                      <h6 className="topSideText">«This one's my favorite!»</h6>
+                  <FadeIn hide={!isInView} >
+                    <div>
+                      <Flex justify={'center'}>
+                        <img className="BattleSpheresImage" src={require('../../Assets/BattleSpheresGif.gif')} alt=""/>
+                      </Flex>
+
+                      <WhenInView>
+                        {({ isInView }) => 
+                          <FadeIn hide={!isInView}>
+                            <div className="SideTextSpheres">
+                              <h6 className="topSideText">«This one's my favorite!»</h6>
+                            </div>
+                          </FadeIn>
+                        }
+                      </WhenInView>
                     </div>
                   </FadeIn>
                 }

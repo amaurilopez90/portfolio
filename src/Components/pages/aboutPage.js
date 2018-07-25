@@ -6,7 +6,7 @@ import ProgressText, { ProgressContainer } from '../specialStyling/progressText'
 import { Div } from '../specialStyling/types';
 import AudioPlayer from '../specialStyling/music';
 import { Flex } from '../specialStyling/flexBox';
-import { Revealp, Slidep } from '../specialStyling/revealAnimation';
+import { Revealp, Slidep, FadeIn } from '../specialStyling/revealAnimation';
 import WhenInView from '../specialStyling/whenInView';
 import ContactForm from '../contactForm/contact';
 import { ImageButton } from '../specialStyling/hoverScale';
@@ -82,8 +82,8 @@ class AboutMe extends Component {
             <br/><br/>
             <WhenInView>
               {({ isInView }) => 
-                <Revealp className="para2Reveal" transform={'right'} hide={!isInView} barColor = '#424242'>
-                  <p className="para2">
+                <Revealp className="para1Reveal" transform={'right'} hide={!isInView} barColor = '#424242'>
+                  <p className="para1" style={{color: '#5A6D87'}}>
                     I feel like learning about someone's music interest is a great way to start to get to know someone. In fact, music plays a very important role in my life.
                     Here are a couple of my favorite songs (currently). 
                   </p>
@@ -95,8 +95,8 @@ class AboutMe extends Component {
             <br/><br/><br/><br/>
             <WhenInView>
               {({ isInView }) => 
-                <Revealp className="para3Reveal" transform={'left'} hide={!isInView} barColor = '#5A6D87'>
-                  <p className="para3">
+                <Revealp className="para2Reveal" transform={'left'} hide={!isInView} barColor = '#5A6D87'>
+                  <p className="para2">
                     You can play a song while learning more about me. 
                   </p>
                 </Revealp>
@@ -132,8 +132,8 @@ class AboutMe extends Component {
 
             <WhenInView>
               {({ isInView }) => 
-                <Revealp className="HealthAndExerciseReveal" transform={'left'} hide={!isInView} barColor = '#424242'>
-                  <p className="HealthAndExercise" >
+                <Revealp className="LeftDescriptionReveal" transform={'left'} hide={!isInView} barColor = '#424242'>
+                  <p className="LeftDescription" >
                     Another part of my life is centered around Health and Exercise.
                     I love pushing myself to become better and stronger everyday! 
                   </p>
@@ -141,37 +141,47 @@ class AboutMe extends Component {
               }
             </WhenInView>
 
-            <div className="Exercise" style={{
-                display: 'inline-block',
-                position: 'relative',
-              }}>
+            <WhenInView>
+              {({ isInView }) => 
+                <FadeIn  hide={!isInView}>
+                  <div>
+                    <div className="Exercise" style={{
+                        display: 'inline-block',
+                        position: 'relative',
+                      }}>
 
-              <ReactZoomy className="Zoomy" 
-                imageUrl={require('../../Assets/Exercise.gif')}
-                renderThumbnail={({ showImage }) => 
-                <ImageButton onClick={showImage}>
-                  <img className="ZoomyThumbnail" src={require('../../Assets/ExerciseThumbnail.JPG')} alt="Exercise" />
-                </ImageButton>
-                }
-                scale={[1, 1]}
-                imageProps={{
-                  style: {
-                    width: '100vw',
-                    height: 'auto'
-                  }
-                }}
-                />
-                
-                <div className="SideTextExercise">
-                  <h6 className="SideText">Click to Zoom!</h6>
-                </div>
+                      <ReactZoomy className="Zoomy" 
+                        imageUrl={require('../../Assets/Exercise.gif')}
+                        renderThumbnail={({ showImage }) => 
+                        <ImageButton onClick={showImage}>
+                          <img className="ZoomyThumbnail" src={require('../../Assets/ExerciseThumbnail.JPG')} alt="Exercise" />
+                        </ImageButton>
+                        }
+                        scale={[1, 1]}
+                        imageProps={{
+                          style: {
+                            width: '100vw',
+                            height: 'auto'
+                          }
+                        }}
+                        />
+                        
+                        <div className="SideTextExercise">
+                          <h6 className="SideText">Click to Zoom!</h6>
+                        </div>
 
-            </div>
+                    </div>
+                    <div className="Motto">
+                      <h6 >"Strive for progress, not perfection."</h6>
+                    
+                    </div>
 
-            <div className="Motto">
-              <h6 >"Strive for progress, not perfection."</h6>
-            
-            </div>
+                  </div>
+                </FadeIn>
+              }
+            </WhenInView>
+
+
 
             <div className="project-item">
 
@@ -203,8 +213,8 @@ class AboutMe extends Component {
 
             <WhenInView>
               {({ isInView }) => 
-                <Revealp className="ProductionReveal" transform={'right'} hide={!isInView} barColor = '#424242'>
-                  <p className = "Production" >
+                <Revealp className="RightDescriptionReveal" transform={'right'} hide={!isInView} barColor = '#424242'>
+                  <p className = "RightDescription" >
                     I'm a musician and bass guitarist of 7 years.
                     Here's a short video of me in action. 
                   </p>
@@ -239,10 +249,22 @@ class AboutMe extends Component {
                   }
                 </WhenInView>
             </div>
+            
+            <WhenInView>
+              {({ isInView }) => 
+                <Revealp className="LeftDescriptionReveal" transform={'left'} hide={!isInView} barColor = '#424242'>
+                  <p className="LeftDescription" >
+                    It's strange to think that some people you haven't even met can have a strong influence in your life.
+                    Here are some of my greatest inspirations.    
+                  </p>
+                </Revealp>
+              }
+            </WhenInView>
+
 
             <WhenInView>
               {({ isInView }) => 
-                <Slidep direction={'left'} hide={!isInView}>
+                <FadeIn hide={!isInView}>
                   <div className="gridTylerCarter">
                     <ReactZoomy className="Zoomy" 
                       imageUrl={require('../../Assets/tyler-carter.jpg')}
@@ -251,7 +273,7 @@ class AboutMe extends Component {
                         <figure className="effect-sadie">
                           <img className = "ImageTylerCarter" src={require('../../Assets/tyler-carter.jpg')} alt="tylercarter" />
                           <figcaption>
-                            <h2>Tyler <span>Carter</span></h2>
+                            <h2><h1 >01</h1>Tyler <span>Carter</span></h2>
                             <p>Singer - Songwriter - Musician - Record Producer</p>
                           </figcaption>			
                         </figure>
@@ -268,7 +290,7 @@ class AboutMe extends Component {
                       }}
                       />
                   </div>
-                </Slidep>
+                </FadeIn>
               }
               </WhenInView>
 
