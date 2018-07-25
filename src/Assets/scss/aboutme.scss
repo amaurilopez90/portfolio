@@ -104,6 +104,10 @@ div.AudioPlayer{
         width: 70%;
         left: 10em;
     }
+
+    @media(max-width: $tablet){
+        left: 8em;
+    }
     h5{
         text-align: center;
         color: #5A6D87;
@@ -182,6 +186,17 @@ div.AudioPlayer{
     left: 31.5vw;
     width: 55%;
 
+    &.Project{
+        left: 28.5vw;
+        @media(max-width: $laptop){
+            left: 37.5vw;
+        }
+
+        @media(max-width: $tablet){
+            left: 38vw;
+        }
+    }
+
     @media(max-width: $laptop){
         left: 37vw;
         font-size: 12px;
@@ -204,6 +219,13 @@ div.AudioPlayer{
     margin-bottom: 0px;
     left: 7em;
     width: 55%;
+
+    &.Project{
+        left: 11em;
+        @media(max-width: $laptop){
+            left: 3em;
+        }
+    }
 
     @media(max-width: $laptop){
         font-size: 12px;
@@ -262,6 +284,8 @@ div.AudioPlayer{
 }
 
 .Exercise{
+    display: inline-block;
+    position: relative;
     left: 7em;
 
     @media(max-width: $laptop){
@@ -269,7 +293,8 @@ div.AudioPlayer{
     }
 
     @media(max-width: $tablet){
-        left: 10em;
+        left: 11.2em;
+        
     }
     
     .SideTextExercise{
@@ -331,6 +356,25 @@ div.AudioPlayer{
     }
 }
 
+.gridJaredLeto{
+    position: relative;
+    display: inline-block;
+    left: 27rem;
+    width: 61%;
+
+    img.ImageJaredLeto{
+        width: 100%;
+    }
+
+    @media(max-width: $laptop){
+        left: 21rem;
+    }
+
+    @media(max-width: $tablet){
+        left: 16rem;
+    }
+}
+
 figure.effect-sadie{
     margin: 0 0 0rem;
 }
@@ -355,6 +399,10 @@ figure.effect-sadie h2 {
 	color: #484c61;
 	transition: transform 0.35s, color 0.35s;
     transform: translate3d(0,-50%,0);
+
+    &.right{
+        text-align: right;
+    }
     
     @media(max-width: $laptop){
         font-size: 20px;
@@ -388,6 +436,10 @@ figure.effect-sadie p {
 	opacity: 0;
     transform: translate3d(0,10px,0);
     color: $peach;
+
+    &.right{
+        text-align: right;
+    }
 
     @media(max-width: $laptopL){
         bottom: 2vh;

@@ -95,11 +95,11 @@ class AboutMe extends Component {
             <br/><br/><br/><br/>
             <WhenInView>
               {({ isInView }) => 
-                <Revealp className="para2Reveal" transform={'left'} hide={!isInView} barColor = '#5A6D87'>
+                <FadeIn className="para2Reveal"  hide={!isInView}>
                   <p className="para2">
                     You can play a song while learning more about me. 
                   </p>
-                </Revealp>
+                </FadeIn>
               }
             </WhenInView>
             
@@ -145,10 +145,7 @@ class AboutMe extends Component {
               {({ isInView }) => 
                 <FadeIn  hide={!isInView}>
                   <div>
-                    <div className="Exercise" style={{
-                        display: 'inline-block',
-                        position: 'relative',
-                      }}>
+                    <div className="Exercise">
 
                       <ReactZoomy className="Zoomy" 
                         imageUrl={require('../../Assets/Exercise.gif')}
@@ -243,7 +240,7 @@ class AboutMe extends Component {
                     <Slidep direction={'right'} hide={!isInView}>
 
                       <h1 className="leftAboutMe" >
-                        My Inspirations
+                        Inspirations
                       </h1>
                     </Slidep>
                   }
@@ -260,7 +257,6 @@ class AboutMe extends Component {
                 </Revealp>
               }
             </WhenInView>
-
 
             <WhenInView>
               {({ isInView }) => 
@@ -292,15 +288,78 @@ class AboutMe extends Component {
                   </div>
                 </FadeIn>
               }
-              </WhenInView>
+            </WhenInView>
+            <br/>
 
             <WhenInView>
               {({ isInView }) => 
-                <Revealp className="ContactStatementReveal" transform={'right'} hide={!isInView} barColor = '#424242'>
+                <Revealp className="LeftDescriptionReveal" transform={'left'} hide={!isInView} barColor = '#424242'>
+                  <p className="LeftDescription" style={{color: '#424242'}}>
+                    Tyler Carter is one of my favorite singers and songwriters within his genre. 
+                    The reason he stands out to me is because he was not afraid to bring a style of RnB and Pop way out of its arena into 
+                    the metal/post-hardcore scene.        
+                  </p>
+                  
+                </Revealp>
+              }
+            </WhenInView>
+
+            <WhenInView>
+              {({ isInView }) => 
+                <Revealp className="LeftDescriptionReveal" transform={'left'} hide={!isInView} barColor = '#424242'>
+                  <p className="LeftDescription" style={{color: '#424242'}}>
+                      In a <a href="https://www.youtube.com/watch?v=AP1eO6e5OhA" target="_blank" rel="noopener noreferrer">short documentary </a>
+                      Tyler explains his struggles with the loss of loved ones as well as his battles with his own sexuality that may have made
+                      anyone else quit.
+                             
+                  </p>
+                  
+                </Revealp>
+              }
+            </WhenInView>
+
+            <br/><br/><br/><br/>
+
+            <WhenInView>
+              {({ isInView }) => 
+                <FadeIn hide={!isInView}>
+                  <div className="gridJaredLeto">
+                    <ReactZoomy className="Zoomy" 
+                      imageUrl={require('../../Assets/jared-leto.jpg')}
+                      renderThumbnail={({ showImage }) => 
+                      <ImageButton onClick={showImage}>
+                        <figure className="effect-sadie">
+                          <img className = "ImageJaredLeto" src={require('../../Assets/jared-leto.jpg')} alt="jaredleto" />
+                          <figcaption>
+                            <h2 className="right"><h1>02</h1>Jared <span>Leto</span></h2>
+                            <p className="right" >Actor - Singer - Songwriter - Director</p>
+                          </figcaption>			
+                        </figure>
+                      </ImageButton>
+                      }
+                      scale={[1, 1]}
+                      imageProps={{
+                        style: {
+                          position: 'relative',
+                          width: '110vw',
+                          left: '-5vw',
+                          height: 'auto'
+                        }
+                      }}
+                      />
+                  </div>
+                </FadeIn>
+              }
+            </WhenInView>
+
+            <br/><br/><br/><br/>
+            <WhenInView>
+              {({ isInView }) => 
+                <FadeIn className="ContactStatementReveal" hide={!isInView} >
                   <h5>
                     Want to contact me? Set up an email below and let's get in touch! 
                   </h5>
-                </Revealp>
+                </FadeIn>
               }
             </WhenInView>
 

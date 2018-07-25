@@ -5,7 +5,7 @@ import ParallaxImage from 'react-image-parallax2';
 //Import special Styling components
 import { ImageButton } from '../specialStyling/hoverScale';
 import { Flex } from '../specialStyling/flexBox';
-import { Slidep, FadeIn } from '../specialStyling/revealAnimation';
+import { Slidep, FadeIn, Revealp } from '../specialStyling/revealAnimation';
 import WhenInView from '../specialStyling/whenInView';
 
 import ProgressText, { ProgressContainer } from '../specialStyling/progressText';
@@ -81,6 +81,16 @@ class Projects extends Component {
 
               <WhenInView>
                 {({ isInView }) => 
+                  <Revealp className="LeftDescriptionReveal Project" transform={'left'} hide={!isInView} barColor = '#424242'>
+                    <p className="LeftDescription" >
+                      A tile based survival shooter made with Pygame 
+                    </p>
+                  </Revealp>
+                }
+              </WhenInView>
+
+              <WhenInView>
+                {({ isInView }) => 
                   <FadeIn  hide={!isInView} >
                     <div>
                       <div className="Alienz" style={{
@@ -147,6 +157,17 @@ class Projects extends Component {
 
               <WhenInView>
                 {({ isInView }) => 
+                  <Revealp className="RightDescriptionReveal Project" transform={'right'} hide={!isInView} barColor = '#424242'>
+                    <p className="RightDescription" >
+                      Polyphonic music synthesizer using Numpy and Scipy
+                      for Digital Signal Processing and .WAV manipulation  
+                    </p>
+                  </Revealp>
+                }
+              </WhenInView>
+
+              <WhenInView>
+                {({ isInView }) => 
                   <FadeIn hide={!isInView} >
                     <Flex justify={'center'}>
                       <div className="SynthImage">
@@ -193,6 +214,16 @@ class Projects extends Component {
                     </h1>
 
                   </Slidep>
+                }
+              </WhenInView>
+
+              <WhenInView>
+                {({ isInView }) => 
+                  <Revealp className="LeftDescriptionReveal Project" transform={'left'} hide={!isInView} barColor = '#424242'>
+                    <p className="LeftDescription" >
+                      A multiplayer sci-fi first person shooter made with Unity 3D 
+                    </p>
+                  </Revealp>
                 }
               </WhenInView>
 
@@ -245,6 +276,16 @@ class Projects extends Component {
                     </h1>
 
                   </Slidep>
+                }
+              </WhenInView>
+
+              <WhenInView>
+                {({ isInView }) => 
+                  <Revealp className="RightDescriptionReveal Project" transform={'right'} hide={!isInView} barColor = '#424242'>
+                    <p className="RightDescription" >
+                      Web-application made with ReactJS to showcase design projects and creativity  
+                    </p>
+                  </Revealp>
                 }
               </WhenInView>
 
