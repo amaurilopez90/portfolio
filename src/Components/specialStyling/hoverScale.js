@@ -10,10 +10,18 @@ export const ImageButton = styled.div`
     & > img {
         transition: transform .3s;
     }
+
+    & > figure > img{
+        transition: transform .3s;
+    }
     
     
     &:hover{
         & > img {
+            transform: scale(1.2);
+        }
+
+        & > figure > img{
             transform: scale(1.2);
         }
     }

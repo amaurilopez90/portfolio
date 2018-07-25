@@ -14,8 +14,14 @@ const FormContainer = styled.div`
     border: 20px solid #424242;
     padding: 20px;
     color: #5A6D87;
+
+    @media(max-width: 1440px){
+        left: 20%;
+    }
+
     @media(max-width: 1024px){
         transform: scale(0.9);
+        left: 21%;
     }
 
     @media(max-width: 768px){

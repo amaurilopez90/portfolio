@@ -16,7 +16,7 @@ class AboutMe extends Component {
     super(props);
     this.state = {
       progress: 0,
-      isDoneLoading: false
+      isDoneLoading: false,
     };
   }
 
@@ -110,45 +110,6 @@ class AboutMe extends Component {
                   <Slidep direction={'bottom'} hide={!isInView}>
 
                     <div className="Index">
-                      <h1 className="right">
-                        <i className="fa fa-headphones"/>
-                      </h1>
-                    </div>
-                    
-                  </Slidep>
-                }
-              </WhenInView>
-
-              <WhenInView>
-                {({ isInView }) => 
-                  <Slidep direction={'left'} hide={!isInView}>
-
-                    <h1 className="rightAboutMe">
-                      Production
-                    </h1>
-                  </Slidep>
-                }
-              </WhenInView>
-            </div>
-
-            <WhenInView>
-              {({ isInView }) => 
-                <Revealp className="ProductionReveal" transform={'right'} hide={!isInView} barColor = '#424242'>
-                  <p className = "Production" >
-                    I'm a musician and bass guitarist of 7 years.
-                    Here's a short video of me in action. 
-                  </p>
-                </Revealp>
-              }
-            </WhenInView>
-            
-            <div className="project-item">
-
-              <WhenInView>
-                {({ isInView }) => 
-                  <Slidep direction={'bottom'} hide={!isInView}>
-
-                    <div className="Index">
                       <h1 className="HealthIcon" >
                         <i className="fa fa-heartbeat"/>
                       </h1>
@@ -185,7 +146,7 @@ class AboutMe extends Component {
                 position: 'relative',
               }}>
 
-              <ReactZoomy className="Zoomy"
+              <ReactZoomy className="Zoomy" 
                 imageUrl={require('../../Assets/Exercise.gif')}
                 renderThumbnail={({ showImage }) => 
                 <ImageButton onClick={showImage}>
@@ -200,15 +161,116 @@ class AboutMe extends Component {
                   }
                 }}
                 />
-
+                
                 <div className="SideTextExercise">
                   <h6 className="SideText">Click to Zoom!</h6>
-              
                 </div>
 
             </div>
 
+            <div className="Motto">
+              <h6 >"Strive for progress, not perfection."</h6>
+            
+            </div>
+
+            <div className="project-item">
+
+              <WhenInView>
+                {({ isInView }) => 
+                  <Slidep direction={'bottom'} hide={!isInView}>
+
+                    <div className="Index">
+                      <h1 className="right">
+                        <i className="fa fa-headphones"/>
+                      </h1>
+                    </div>
+                    
+                  </Slidep>
+                }
+              </WhenInView>
+
+              <WhenInView>
+                {({ isInView }) => 
+                  <Slidep direction={'left'} hide={!isInView}>
+
+                    <h1 className="rightAboutMe">
+                      Production
+                    </h1>
+                  </Slidep>
+                }
+              </WhenInView>
+            </div>
+
+            <WhenInView>
+              {({ isInView }) => 
+                <Revealp className="ProductionReveal" transform={'right'} hide={!isInView} barColor = '#424242'>
+                  <p className = "Production" >
+                    I'm a musician and bass guitarist of 7 years.
+                    Here's a short video of me in action. 
+                  </p>
+                </Revealp>
+              }
+            </WhenInView>
+            
             <br/><br/><br/><br/>
+
+            <div className="project-item">
+              <WhenInView>
+                  {({ isInView }) => 
+                    <Slidep direction={'bottom'} hide={!isInView}>
+
+                      <div className="Index">
+                        <h1 className="InspirationsIcon" >
+                          <i className="fa fa-users" aria-hidden="true"/>
+                        </h1>
+                      </div>
+                      
+                    </Slidep>
+                  }
+                </WhenInView>
+                <WhenInView>
+                  {({ isInView }) => 
+                    <Slidep direction={'right'} hide={!isInView}>
+
+                      <h1 className="leftAboutMe" >
+                        My Inspirations
+                      </h1>
+                    </Slidep>
+                  }
+                </WhenInView>
+            </div>
+
+            <WhenInView>
+              {({ isInView }) => 
+                <Slidep direction={'left'} hide={!isInView}>
+                  <div className="gridTylerCarter">
+                    <ReactZoomy className="Zoomy" 
+                      imageUrl={require('../../Assets/tyler-carter.jpg')}
+                      renderThumbnail={({ showImage }) => 
+                      <ImageButton onClick={showImage}>
+                        <figure className="effect-sadie">
+                          <img className = "ImageTylerCarter" src={require('../../Assets/tyler-carter.jpg')} alt="tylercarter" />
+                          <figcaption>
+                            <h2>Tyler <span>Carter</span></h2>
+                            <p>Singer - Songwriter - Musician - Record Producer</p>
+                          </figcaption>			
+                        </figure>
+                      </ImageButton>
+                      }
+                      scale={[1, 1]}
+                      imageProps={{
+                        style: {
+                          position: 'relative',
+                          width: '110vw',
+                          left: '-5vw',
+                          height: 'auto'
+                        }
+                      }}
+                      />
+                  </div>
+                </Slidep>
+              }
+              </WhenInView>
 
             <WhenInView>
               {({ isInView }) => 

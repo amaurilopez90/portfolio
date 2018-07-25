@@ -133,11 +133,12 @@ div.AudioPlayer{
 
     @media(max-width: $laptop){
         width: 70%;
-        left: 9em;
+        left: 10em;
     }
     h5{
         text-align: center;
         color: #5A6D87;
+        font-size: 18px;
     }
     
 }
@@ -187,6 +188,23 @@ div.AudioPlayer{
                 margin-left: 0;
             }
         }
+
+        .InspirationsIcon{
+            margin-left: -0.8em;
+
+            i{
+                @include translateY(-10%);
+            }
+
+            @media(max-width: $laptop){
+                margin-left: 1em;
+            }
+
+            @media(max-width: $tablet){
+                margin-left: 0;
+            }
+            
+        }
     }
 }
 
@@ -232,6 +250,48 @@ div.AudioPlayer{
     }
 }
 
+.Motto{
+    position: relative;
+    display: inline-block;
+    text-align: right;
+    width: 27.5%;
+    transform: translateY(-15rem) scale(1, 1.3);
+    color: $uclaBlue;
+    transition: .3s;
+
+    @media(max-width: $laptopL){
+        width: 30%;
+    }
+
+    @media(max-width: $laptop){
+        width: 42%;
+    }
+
+    @media(max-width: $tablet){
+        text-align: left;
+        transform: translateY(-15rem) scale(1, 1.1);
+        left: 5%;
+        width: 32%;
+    }
+
+    &:after{
+        content: ' ';
+        position: absolute;
+        background-color: $peach;
+        z-index: -1;
+        width: 85%;
+        height: 90%;
+        left: -3%; bottom: 40%;
+        transition: .3s;
+
+        @media(max-width: $tablet){
+            left: -3%; bottom: 0;
+            width: 100%; height: 100%;
+        }
+    }
+    
+}
+
 .Exercise{
     left: 7em;
 
@@ -244,14 +304,123 @@ div.AudioPlayer{
     }
     
     .SideTextExercise{
+        
         position: relative;
         transform: rotate(-90deg) scale(0.8) translateX(36rem);
         left: -8rem;
         transition: .3s;
         display: inline-flex;
+
     }
     
     &:hover > .SideTextExercise{
         transform: rotate(-90deg) scale(0.8) translateX(40rem);
     }
+
+    &:hover + .Motto{
+
+        width: 29%;
+        color: $robineggBlue;
+
+        @media(max-width: $laptopL){
+            width: 32%;
+        }
+        
+        @media(max-width: $laptop){
+            width: 45%;
+        }
+        
+        @media(max-width: $tablet){
+            left: -3%;
+            width: 32%;
+        }
+
+        &:after{
+            left: -5%;
+            width: 75%;
+
+            @media(max-width: $tablet){
+                left: -3%; bottom: 0;
+                width: 100%; height: 100%;
+            }
+        }
+    }
+}
+
+.gridTylerCarter{
+    position: relative;
+    left: 6rem;
+    width: 55%;
+    display: inline-block;
+
+    img.ImageTylerCarter{
+        width: 100%;
+    }
+
+    @media(max-width: $laptop){
+        left: 4rem;
+    }
+}
+
+figure.effect-sadie{
+    margin: 0 0 0rem;
+}
+
+figure.effect-sadie figcaption::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 110%);
+	content: '';
+	opacity: 0;
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-sadie h2 {
+	position: absolute;
+	top: 70%;
+	left: 5%;
+	width: 90%;
+	color: #484c61;
+	transition: transform 0.35s, color 0.35s;
+    transform: translate3d(0,-50%,0);
+    
+    @media(max-width: $laptop){
+        font-size: 20px;
+        top: 75%;
+    }
+}
+
+figure.effect-sadie figcaption::before,
+figure.effect-sadie p {
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-sadie p {
+	position: absolute;
+	bottom: 5vh;
+	left: 0;
+	padding: 2em;
+	width: 100%;
+	opacity: 0;
+    transform: translate3d(0,10px,0);
+    color: $peach;
+    
+    @media(max-width: $laptop){
+        bottom: 0;
+        font-size: 12px;
+    }
+}
+
+figure.effect-sadie:hover h2 {
+	color: #fff;
+	transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+}
+
+figure.effect-sadie:hover figcaption::before ,
+figure.effect-sadie:hover p {
+	opacity: 1;
+	transform: translate3d(0,0,0);
 }
