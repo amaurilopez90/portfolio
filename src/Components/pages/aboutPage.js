@@ -158,7 +158,7 @@ class AboutMe extends Component {
                         imageProps={{
                           style: {
                             width: '100vw',
-                            height: 'auto'
+                            height: 'auto',
                           }
                         }}
                         />

@@ -132,7 +132,7 @@ export default class ContactForm extends Component {
                 //Set up 'Mailto' app call
                 const recipient = `mailto:${this.props.targetEmail}`;
                 const subject = '?subject=Interested%20Viewer%20From%20Your%20Portfolio';
-                const body = "Hello Amauri,\n\n" + "My name is " + this.state.name + "\n\n" + this.state.message + "\n\n My Preferred Contact Address is: " + this.state.email + "\n\n";
+                const body = "Hello Amauri,\r\n" + "My name is " + this.state.name + "\r\n" + this.state.message + "\r\n My Preferred Contact Address is: " + this.state.email + "\r\n";
                 const encodedBody = `&body=${encodeURIComponent(body)}`;
 
                 //Call mail app
