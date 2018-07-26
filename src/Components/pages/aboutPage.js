@@ -269,7 +269,7 @@ class AboutMe extends Component {
                         <figure className="effect-sadie">
                           <img className = "ImageTylerCarter" src={require('../../Assets/tyler-carter.jpg')} alt="tylercarter" />
                           <figcaption>
-                            <h2><h1 >01</h1>Tyler <span>Carter</span></h2>
+                            <h2><div><h1>01</h1></div>Tyler <span>Carter</span></h2>
                             <p>Singer - Songwriter - Musician - Record Producer</p>
                           </figcaption>			
                         </figure>
@@ -289,6 +289,10 @@ class AboutMe extends Component {
                 </FadeIn>
               }
             </WhenInView>
+            <div className="InspirationsSideText Tyler">
+              <h6 className="SideText">Click to zoom!</h6>
+            </div>
+
             <br/>
 
             <WhenInView>
@@ -299,7 +303,6 @@ class AboutMe extends Component {
                     The reason he stands out to me is because he was not afraid to bring a style of RnB and Pop way out of its arena into 
                     the metal/post-hardcore scene.        
                   </p>
-                  
                 </Revealp>
               }
             </WhenInView>
@@ -310,8 +313,7 @@ class AboutMe extends Component {
                   <p className="LeftDescription" style={{color: '#424242'}}>
                       In a <a href="https://www.youtube.com/watch?v=AP1eO6e5OhA" target="_blank" rel="noopener noreferrer">short documentary </a>
                       Tyler explains his struggles with the loss of loved ones as well as his battles with his own sexuality that may have made
-                      anyone else quit.
-                             
+                      anyone else quit.       
                   </p>
                   
                 </Revealp>
@@ -331,7 +333,7 @@ class AboutMe extends Component {
                         <figure className="effect-sadie">
                           <img className = "ImageJaredLeto" src={require('../../Assets/jared-leto.jpg')} alt="jaredleto" />
                           <figcaption>
-                            <h2 className="right"><h1>02</h1>Jared <span>Leto</span></h2>
+                            <h2 className="right"><div><h1>02</h1></div>Jared <span>Leto</span></h2>
                             <p className="right" >Actor - Singer - Songwriter - Director</p>
                           </figcaption>			
                         </figure>
@@ -349,6 +351,22 @@ class AboutMe extends Component {
                       />
                   </div>
                 </FadeIn>
+              }
+            </WhenInView>
+            <div className="InspirationsSideText Jared" >
+              <h6 className="SideText">Click to zoom!</h6>
+            </div>
+
+            <WhenInView>
+              {({ isInView }) => 
+                <Revealp className="RightDescriptionReveal" transform={'left'} hide={!isInView} barColor = '#424242'>
+                  <p className="RightDescription" style={{color: '#424242'}}>
+                      The famous Jared Leto has also been another inspiration for me even from a young age. I've watched him go from
+                      being the front-man vocalist of '30 Seconds to Mars' to one of my favorite American actors and director of my personal favorite '
+                      <a href="https://www.youtube.com/watch?v=iJAP8q_iPOw" target="_blank" rel="noopener noreferrer">Mr. Nobody</a>' masterpiece.          
+                  </p>
+                  
+                </Revealp>
               }
             </WhenInView>
 

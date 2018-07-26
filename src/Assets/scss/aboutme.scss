@@ -341,6 +341,49 @@ div.AudioPlayer{
     }
 }
 
+.InspirationsSideText{
+    position: relative;
+    display: inline-block;
+
+    &.Tyler{
+        transform: rotate(90deg) translate(-20vw, -91vh);
+    
+        @media(max-width: $laptopL){
+            transform: rotate(90deg) translate(-20vw, -76vh);
+        }
+    
+        @media(max-width: $laptop){
+            h6{
+                font-size: 12px;
+            }
+            transform: rotate(90deg) translate(-20vw, -62vh);
+        }
+    
+        @media(max-width: $tablet){
+            transform: rotate(90deg) translate(-20vw, -52vh);
+        }
+    }
+
+    &.Jared{
+        transform: rotate(90deg) translate(-18vw, -140vh);
+
+        @media(max-width: $laptopL){
+            transform: rotate(90deg) translate(-18vw, -120vh);
+        }
+    
+        @media(max-width: $laptop){
+            h6{
+                font-size: 12px;
+            }
+            transform: rotate(90deg) translate(-18vw, -106vh);
+        }
+    
+        @media(max-width: $tablet){
+            transform: rotate(90deg) translate(-18vw, -84vh);
+        }
+    }
+}
+
 .gridTylerCarter{
     position: relative;
     left: 6rem;
@@ -354,12 +397,13 @@ div.AudioPlayer{
     @media(max-width: $laptop){
         left: 4rem;
     }
+
 }
 
 .gridJaredLeto{
     position: relative;
     display: inline-block;
-    left: 27rem;
+    left: 26rem;
     width: 61%;
 
     img.ImageJaredLeto{
@@ -409,7 +453,7 @@ figure.effect-sadie h2 {
         top: 75%;
     }
 
-    & > h1{
+    & > div > h1{
         position: relative;
         color:$upsdellRed;
         opacity: 0.8;
@@ -455,7 +499,7 @@ figure.effect-sadie:hover h2 {
 	color: #fff;
     transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
     
-    & > h1{
+    & > div > h1{
         color: #fff;
         opacity: 0;
         @include translateY(20%);

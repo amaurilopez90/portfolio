@@ -104,11 +104,13 @@ export default class AudioPlayer extends Component{
     };
 
     onEnded = () =>{
+        //Reset audio line first
+        this.resetAudioLine();
+        
         var index = document.getElementById(this.playingTrack).getAttribute('data-index');
         this.playing[index] = false;
         this.playingTrack = "";
         this.setState({isPlaying: false});
-        this.resetAudioLine();
     };
 
     onTimeUpdate = () =>{
