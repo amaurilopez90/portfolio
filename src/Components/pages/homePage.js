@@ -58,7 +58,11 @@ class Homepage extends Component {
 
         <Div isDoneLoading={isDoneLoading}>
           <h1 className="Title">Home</h1>
-          <Video videoUrl={require('../../Assets/myPortfolioHome.mp4')}/>
+          
+          <div className="HomeVideo">
+            <Video videoUrl={require('../../Assets/myPortfolioHome.mp4')}/>
+          </div>
+
           <div className = "container-fluid">
           
 

@@ -1,5 +1,15 @@
 @import '_config.scss';
 
+
+.HomeVideo{
+    .theContainer{
+        display: inline-flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+}
+
 .container-fluid{
     line-height: 24px;
     font-size: 14px;

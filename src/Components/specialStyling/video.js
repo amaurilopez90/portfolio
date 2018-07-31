@@ -9,17 +9,10 @@ import SquareCursor from './squareCursor';
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  // Flex-box is awesome :)
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
 `;
 
 const PlayerContainer = styled.div`
   position: relative;
-  // We need this because we're gonna
-  // have elements with "position: absolute"
   cursor: pointer;
   display: inline-block;
   margin-left: auto;
@@ -102,21 +95,21 @@ export default class Video extends Component {
       videoSize: spring(100),
       triangleLeft: spring(-100)
     } : {
-      videoSize: spring(65),
+      videoSize: spring(60),
       triangleLeft: spring(-50)
     };
 
     return (
-      <Container innerRef={(elem) => this.container = elem}>
+      <Container className="theContainer" innerRef={(elem) => this.container = elem}>
         <Motion style={{ containerTop: spring(moveDown) }}>
           {({ containerTop }) =>
-            <Container style={{
-              position: 'absolute',
-              top: containerTop
+            <Container className="theContainer" style={{
+              position: 'relative',
+              top: containerTop,
             }}>
               <Motion style={motionStyle}>
                 {({ videoSize, triangleLeft }) =>
-                  <PlayerContainer
+                  <PlayerContainer className="thePlayerContainer"
                     onMouseMove={this.onMouseMove}
                     onMouseOver={this.onMouseOver}
                     onMouseLeave={this.onMouseLeave}
@@ -124,8 +117,8 @@ export default class Video extends Component {
                     style={{
                       width: `${videoSize}%`,
                       cursor: zoom ? 'none' : 'pointer',
-                      zIndex: zoom ? 1 : 0,
-                      marginBottom: 0
+                      zIndex: zoom ? 2 : 0,
+                      marginBottom: 0,
                       
                       // Hide the cursor when it's zoomed.
                     }}>

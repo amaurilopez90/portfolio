@@ -134,7 +134,7 @@ div.ProgressText{
 h1.Title{
     position: fixed;
     color: $red;
-    z-index: -1;
+    z-index: -100;
     font-size: 27px;
     transform: scaleY(1.4);
     left: 10%;

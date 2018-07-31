@@ -5,6 +5,7 @@ import ReactZoomy from 'react-zoomy';
 import ProgressText, { ProgressContainer } from '../specialStyling/progressText';
 import { Div } from '../specialStyling/types';
 import AudioPlayer from '../specialStyling/music';
+import Video from '../specialStyling/video';
 import { Flex } from '../specialStyling/flexBox';
 import { Revealp, Slidep, FadeIn } from '../specialStyling/revealAnimation';
 import WhenInView from '../specialStyling/whenInView';
@@ -37,12 +38,12 @@ class AboutMe extends Component {
       this.setState({ isDoneLoading: !this.state.isDoneLoading });
     }, 2200);
   }
-
+  
   //When using render(), we should wrap all of our main elements under our div
   render() {
     const springOptions = { stiffness: 34, damping: 11};
     const { progress, isDoneLoading } = this.state;
-
+    
     return (
       <div>
         
@@ -59,10 +60,10 @@ class AboutMe extends Component {
         </ProgressContainer>
 
         <Div isDoneLoading={isDoneLoading}>
-          <div className = "container-fluid">
+          <h1 className="Title">About Me</h1>
 
-            <h1 className="Title">About Me</h1>
-            
+          <div className = "container-fluid">
+  
             <Flex justify={'center'} align={'center'} column>
               <p className="Description">
                 "It's nice to know someone wants to know more about me than just my engineering background. People connect with people, not machines. This is who I am."
@@ -178,8 +179,6 @@ class AboutMe extends Component {
               }
             </WhenInView>
 
-
-
             <div className="project-item">
 
               <WhenInView>
@@ -219,8 +218,10 @@ class AboutMe extends Component {
               }
             </WhenInView>
             
-            <br/><br/><br/><br/>
-
+            <div className="BassPlaythrough">
+              <Video className="BassVideo" videoUrl={require('../../Assets/Bassplaythrough.mov')}/> 
+            </div>
+            
             <div className="project-item">
               <WhenInView>
                   {({ isInView }) => 
