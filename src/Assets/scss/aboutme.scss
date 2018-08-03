@@ -284,6 +284,13 @@ div.AudioPlayer{
             }
         }
 
+        @media(max-width: 1600px){
+            @media(min-height: 900px){
+                left: 33vw;
+            }
+        }
+
+
         @media(max-width: $laptopL){
             @media(min-height: 900px){
                 left: 35vw;
@@ -493,6 +500,12 @@ div.AudioPlayer{
 
     &.Tyler{
         transform: rotate(90deg) translate(-20vw, -91vh);
+
+        @media(max-width: 1600px){
+            @media(min-height: 900px){
+                transform: rotate(90deg) translate(-20vw, -86vh);
+            }
+        }
     
         @media(max-width: $laptopL){
             transform: rotate(90deg) translate(-20vw, -76vh);
