@@ -11,6 +11,13 @@
         color: $darkGrey;
         transform: scaleY(1.4);
 
+        //Giant 1920 screen
+        @media(max-width: $giant){
+            @media(min-height: 1080px){
+                width: 78%;
+            }
+        }
+
         //Laptop
         @media(max-width: $laptop){
             margin-left: 18%;

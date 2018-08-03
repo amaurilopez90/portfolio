@@ -4,6 +4,18 @@
     position: relative;
     left: -8.7vw;
     transform: scale(1.1) translateY(2.5vh);
+
+    @media(max-width: $giant){
+        @media(min-height: 1080px){
+            left: -5vw;
+        }
+    }
+
+    @media(max-width: 1600px){
+        @media(min-height: 900px){
+            left: -7vw;
+        }
+    }
     
     @media(max-width: $laptopL){
         left: -9vw;
@@ -32,10 +44,33 @@
     position: relative;
     left: 15.5vw;
     transform: scale(1.1) translateY(-6.3vh);
+
+    @media(max-width: $giant){
+        @media(min-height: 1080px){
+            left: 15vw;
+            transform: scale(1.1) translateY(-4vh);
+        }
+    }
+
+    @media(max-width: 1600px){
+        @media(min-height: 900px){
+            transform: scale(1.1) translateY(-5.2vh);
+        }
+    }
     
     @media(max-width: $laptopL){
         transform: scale(1.1) translateY(-5.4vh);
         left: 15.5vw;
+
+        @media(min-height: 768px){
+            transform: scale(1.1) translateY(-6.7vh);
+        }
+    }
+
+    @media(max-width: $laptopM){
+        @media(min-height: 768px){
+            transform: scale(1.1) translateY(-6.7vh);
+        }
     }
     
     @media(max-width: $laptop){
@@ -54,6 +89,12 @@
         border: 2px solid #424242;
         background-color: rgb(255, 251, 202);
         color: #424242;
+
+        @media(max-width: $giant){
+            @media(min-height: 1080px){
+                width: 18vw;
+            }
+        }
         @media(max-width: $laptop){
             width: 29vw;
         }
@@ -72,6 +113,18 @@
     transform: scale(1.1) translateY(-2vh);
     left: 3.8vw;
     
+    @media(max-width: $giant){
+        @media(min-height: 1080px){
+            left: 5vw;
+        }
+    }
+
+    @media(max-width: $laptopL){
+        @media(min-height: 900px){
+            left: 3.5vw;
+        }
+    }
+
     @media(max-width: $laptop){
         transform: scale(1);
         left: 0;
@@ -103,6 +156,12 @@
         color: #424242;
         background-color: #AD2626;
         
+    }
+
+    @media(max-width: $giant){
+        @media(min-height: 1080px){
+            left: 4.5vw;
+        }
     }
     
     @media(max-width: $laptop){

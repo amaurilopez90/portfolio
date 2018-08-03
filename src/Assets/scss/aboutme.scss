@@ -37,6 +37,12 @@ div.AudioPlayer{
     transform: scale(0.9);
     margin-bottom: 1vh;
 
+    @media(max-width: $giant){
+        @media(min-height: 1080px){
+            transform: scale(1);
+        }
+    }
+
     @media(max-width: $laptop){
         left: 6vw;
         transform: scale(0.8, 0.8);
@@ -52,6 +58,13 @@ div.AudioPlayer{
         position: relative;
         bottom: 6vh;
         left: 5vw;
+
+        @media(max-width: $giant){
+            @media(min-height: 1080px){
+                left: 4vw; bottom: 5vh;
+            }
+        }
+
         @media(max-width: $laptop){
             left: 6.5vw;
             bottom: 7.2vh;
@@ -68,6 +81,12 @@ div.AudioPlayer{
     left: 9.5em;
     top: 3em;
     width: 80%;
+
+    @media(max-width: $giant){
+        @media(min-height: 1080px){
+            width: 88%;    
+        }
+    }
 
     @media(max-width: $laptop){
         width: 85%;
@@ -99,6 +118,12 @@ div.AudioPlayer{
     margin-bottom: 0px;
     left: 9.5em;
     width: 55%;
+
+    @media(max-width: $giant){
+        @media(min-height: 1080px){
+            top: 3vh;    
+        }
+    }
 
     @media(max-width: $laptop){
         width: 75%;
@@ -150,6 +175,12 @@ div.AudioPlayer{
     .rightAboutMe{
         text-align: end;
         margin-right: 8vw;
+
+        @media(max-width: 1600px){
+            @media(min-height: 900px){
+                margin-right: 3vw;
+            }
+        }
     
         @media(max-width: $laptopL){
             margin-right: 9.5vw;
@@ -226,6 +257,12 @@ div.AudioPlayer{
         }
     }
 
+    @media(max-width: 1600px){
+        @media(min-height: 900px){
+            left: 37.5vw;
+        }
+    }
+
     @media(max-width: $laptop){
         left: 37vw;
         font-size: 12px;
@@ -256,6 +293,12 @@ div.AudioPlayer{
         }
     }
 
+    @media(max-width: $giant){
+        @media(min-height: 1080px){
+            width: 63%;    
+        }
+    }
+
     @media(max-width: $laptop){
         font-size: 12px;
         left: 4.3em;
@@ -281,6 +324,9 @@ div.AudioPlayer{
 
     @media(max-width: $laptopL){
         width: 30%;
+        @media(min-height: 900px){
+            width: 33%;
+        }
     }
 
     @media(max-width: $laptop){
@@ -317,6 +363,12 @@ div.AudioPlayer{
     position: relative;
     left: 7em;
 
+    @media(max-width: $giant){
+        @media(min-height: 1080px){    
+            left: 10em;
+        }
+    }
+
     @media(max-width: $laptop){
         left: 4em;
     }
@@ -347,6 +399,9 @@ div.AudioPlayer{
 
         @media(max-width: $laptopL){
             width: 32%;
+            @media(min-height: 900px){
+                width: 34%;
+            }
         }
         
         @media(max-width: $laptop){
@@ -379,6 +434,18 @@ div.AudioPlayer{
     
         @media(max-width: $laptopL){
             transform: rotate(90deg) translate(-20vw, -76vh);
+
+            @media(min-height: 768px){
+                transform: rotate(90deg) translate(-20vw, -89vh);
+            }
+        }
+
+        @media(max-width: $laptopM){
+            transform: rotate(90deg) translate(-20vw, -72vh);
+
+            @media(min-height: 768px){
+                transform: rotate(90deg) translate(-20vw, -85vh);
+            }
         }
     
         @media(max-width: $laptop){
@@ -396,8 +463,21 @@ div.AudioPlayer{
     &.Jared{
         transform: rotate(90deg) translate(-18vw, -140vh);
 
+
         @media(max-width: $laptopL){
             transform: rotate(90deg) translate(-18vw, -120vh);
+
+            @media(min-height: 768px){
+                transform: rotate(90deg) translate(-18vw, -140vh);
+            }
+        }
+
+        @media(max-width: $laptopM){
+            transform: rotate(90deg) translate(-18vw, -116vh);
+
+            @media(min-height: 768px){
+                transform: rotate(90deg) translate(-18vw, -135vh);
+            }
         }
     
         @media(max-width: $laptop){
@@ -437,6 +517,24 @@ div.AudioPlayer{
 
     img.ImageJaredLeto{
         width: 100%;
+    }
+
+    @media(max-width: $giant){
+        @media(min-height: 1080px){
+            left: 35rem;    
+        }
+    }
+
+    @media(max-width: 1600px){
+        @media(min-height: 900px){
+            left: 32rem;
+        }
+    }
+
+    @media(max-width: $laptopL){
+        @media(min-height: 900px){
+            left: 25rem;
+        }
     }
 
     @media(max-width: $laptop){
