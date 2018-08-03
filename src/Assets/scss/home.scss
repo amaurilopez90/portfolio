@@ -32,6 +32,12 @@
         position: relative;
         left: 33rem;
 
+        @media(max-width: $giant){
+            @media(min-height: 1080px){
+                left: 38rem;
+            }
+        }
+
         @media(max-width: $laptopL){
             left: 31rem;
             transform: translateY(-7rem) rotate(90deg);
@@ -50,6 +56,10 @@
             transform: scaleY(1.2);
             color: $charcoalBlack;
 
+            @media(max-width: $giant){
+                font-size: 13px;
+            }
+
             @media(max-width: $laptop){
                 font-size: 9px;
             }
@@ -61,6 +71,10 @@
         position: relative;
         @include translateY(-13vh);
         left: 7vw;
+
+        @media(max-width: $giant){
+            left: 12vw;
+        }
 
         @media(max-width: $laptopL){
             @include translateY(-15vh);

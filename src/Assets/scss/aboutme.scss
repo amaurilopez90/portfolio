@@ -39,6 +39,7 @@ div.AudioPlayer{
 
     @media(max-width: $giant){
         @media(min-height: 1080px){
+            left: 31vw; margin-bottom: 5vh;
             transform: scale(1);
         }
     }
@@ -101,6 +102,12 @@ div.AudioPlayer{
     .para1{
         transform: translateY(1.2vh);
         margin-left: 1vw;
+
+        @media(max-width: $giant){
+            @media(min-height: 1080px){
+                font-size: 14px;
+            }
+        }
     
         @media(max-width: $laptop){
             font-size: 12px;
@@ -136,6 +143,12 @@ div.AudioPlayer{
 
     .para2{
         margin-left: 1vw;
+
+        @media(max-width: $giant){
+            @media(min-height: 1080px){
+                font-size: 14px;
+            }
+        }
     
         @media(max-width: $laptop){
             font-size: 12px;
@@ -246,8 +259,22 @@ div.AudioPlayer{
     left: 31.5vw;
     width: 55%;
 
+    @media(max-width: $giant){
+        @media(min-height: 1080px){
+            left: 33vw;
+        }
+    }
+
+    //right description reveals on projects page
     &.Project{
         left: 28.5vw;
+
+        @media(max-width: $giant){
+            @media(min-height: 1080px){
+                left: 33vw;
+            }
+        }
+
         @media(max-width: $laptop){
             left: 37.5vw;
         }
@@ -286,8 +313,16 @@ div.AudioPlayer{
     left: 7em;
     width: 55%;
 
+    //for left description reveals on the project page
     &.Project{
         left: 11em;
+
+        @media(max-width: $giant){
+            @media(min-height: 1080px){
+                left: 16em;
+            }
+        }
+
         @media(max-width: $laptop){
             left: 3em;
         }

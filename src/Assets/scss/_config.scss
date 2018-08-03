@@ -63,6 +63,12 @@ div.Main-Background{
     top: 10vh; height: 100vh;
     opacity: 0.15;
 
+    @media(max-width: $giant){
+        @media(min-height: 1080px){
+            left: 12vw;
+        }
+    }
+
     //Laptop
     @media(max-width: $laptop){
         left: 14vw; width: 76vw; 
