@@ -69,6 +69,18 @@ div.Main-Background{
         }
     }
 
+    @media(max-width: $laptopL){
+        @media(min-height: 900px){
+            left: 13vw;
+        }
+    }
+
+    @media(max-width: $laptopM){
+        @media(min-height: 768px){
+            left: 14vw;
+        }
+    }
+
     //Laptop
     @media(max-width: $laptop){
         left: 14vw; width: 76vw; 

@@ -19,6 +19,12 @@
             }
         }
 
+        @media(max-width: $laptopL){
+            @media(min-height: 900px){
+                width: 75%;
+            }
+        }
+
         //Laptop
         @media(max-width: $laptop){
             margin-left: 18%;
@@ -70,6 +76,18 @@
                 }
             }
 
+            @media(max-width: $laptopL){
+                @media(min-height: 900px){
+                    margin-left: 8em;
+                }
+            }
+
+            @media(max-width: $laptopM){
+                @media(min-height: 768px){
+                    margin-left: 10em;
+                }
+            }
+
             @media(max-width: $laptop){
                 font-size: 10px;
                 margin-top: 10vh;
@@ -103,6 +121,12 @@
                 left: -25%;
             }
 
+            @media(max-width: $laptopM){
+                @media(min-height: 768px){
+                    left: -27%;
+                }
+            }
+
             @media(max-width: $laptop){
                 transform: translateY(-42vh) rotate(-90deg);
                 left: -63%;
@@ -134,6 +158,20 @@
                 }
             }
 
+            @media(max-width: $laptopL){
+                @media(min-height: 900px){
+                    margin-left: 5vw;
+                    width: 850px;
+                }
+            }
+
+            @media(max-width: $laptopM){
+                @media(min-height: 768px){
+                    width: 900px;
+                    margin-left: 7vw;
+                }
+            }
+
             @media(max-width: $laptop){
                 margin-left: 4vw;
                 width: 700px;
@@ -158,6 +196,17 @@
                     @media(max-width: $laptopL){
                         transform: translateY(-49vh) rotate(-90deg);
                         right: 29vw;
+
+                        @media(min-height: 900px){
+                            right: 31vw;
+                        }
+                    }
+
+                    @media(max-width: $laptopM){
+                        @media(min-height: 768px){
+                            transform: translateY(-65vh) rotate(-90deg);
+                            right: 35vw;
+                        }
                     }
 
                     @media(max-width: $laptop){
@@ -190,6 +239,18 @@
                     @media(max-width: $laptopL){
                         transform: translateY(-7vh) rotate(90deg);
                         left: 29vw;
+
+                        @media(min-height: 900px){
+                            transform: translateY(-3vh) rotate(90deg);
+                            left: 31vw;
+                        }
+                    }
+
+                    @media(max-width: $laptopM){
+                        @media(min-height: 768px){
+                            transform: rotate(90deg);
+                            left: 35vw;
+                        }
                     }
 
                     @media(max-width: $laptop){
@@ -221,6 +282,13 @@
                 transform: translateY(-57vh);
             }
 
+            @media(max-width: $laptopM){
+                @media(min-height: 768px){
+                    transform: translateY(-70vh);
+                    left: 62%;
+                }
+            }
+
             @media(max-width: $laptop){
                 transform: translateY(-71vh);
                 left: 61%;
@@ -243,6 +311,20 @@
                     margin-left: 7vw;
                     width: 1100px;
                     height: 100%;
+                }
+            }
+
+            @media(max-width: $laptopL){
+                @media(min-height: 900px){
+                    width: 1000px; height: 100%;
+                    margin-left: 5vw;
+                }
+            }
+
+            @media(max-width: $laptopM){
+                @media(min-height: 768px){
+                    width: 950px; height: 100%;
+                    margin-left: 7vw;
                 }
             }
             
@@ -297,6 +379,15 @@
 
                 @media(max-width: $laptopL){
                     margin-right: 9.5vw;
+                    @media(min-height: 900px){
+                        margin-right: 3vw;
+                    }
+                }
+
+                @media(max-width: $laptopM){
+                    @media(min-height: 768px){
+                        margin-right: 4vw;
+                    }
                 }
 
                 @media(max-width: $laptop){
@@ -406,6 +497,16 @@
             @media(max-width: $laptopL){
                 &:hover + .SideTextAlienzNew{
                     transform: translateY(-38vh) rotate(-90deg);
+                }
+
+                @media(min-height: 900px){
+                    left: 30%;
+                }
+            }
+
+            @media(max-width: $laptopM){
+                @media(min-height: 768px){
+                    left: 29%;
                 }
             }
 

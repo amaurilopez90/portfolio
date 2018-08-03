@@ -6,6 +6,24 @@ import { Motion, spring } from 'react-motion';
 const ProgressTextDiv = styled.div`
   position: relative;
   display: inline-block;
+  @media(max-width: 1920px){
+    @media(min-height: 1080px){
+      left: 7rem;
+    }
+  }
+
+  @media(max-width: 1440px){
+    @media(min-height: 900px){
+      left: 4rem;
+    }
+  }
+
+  @media(max-width: 1366px){
+    @media(min-height: 768px){
+      left: 4rem;
+    }
+  }
+
   color: ${({color}) => color};
 `;
 

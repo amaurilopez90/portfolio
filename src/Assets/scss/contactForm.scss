@@ -65,6 +65,10 @@
         @media(min-height: 768px){
             transform: scale(1.1) translateY(-6.7vh);
         }
+
+        @media(min-height: 900px){
+            transform: scale(1.1) translateY(-5.3vh);
+        }
     }
 
     @media(max-width: $laptopM){
@@ -95,6 +99,7 @@
                 width: 18vw;
             }
         }
+
         @media(max-width: $laptop){
             width: 29vw;
         }
