@@ -72,6 +72,12 @@ div.NextPageIcon{
     @media(max-width: $laptopL){
         left: 75.5rem;
     }
+
+    @media(max-width: 1280px){
+        @media(min-height: 800px){
+            left: 68rem;
+        }
+    }
     
     @media(max-width: $laptop){
         left: 54.5rem;

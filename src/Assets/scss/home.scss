@@ -42,6 +42,14 @@
             left: 31rem;
             transform: translateY(-7rem) rotate(90deg);
         }
+
+        @media(max-width: 1280px){
+            @media(min-height: 800px){
+                left: 26rem;
+
+            }
+        }
+
         @media(max-width: $laptop){
             left: 22.5rem;
             transform: translateY(-10rem) rotate(90deg);
@@ -78,6 +86,12 @@
 
         @media(max-width: $laptopL){
             @include translateY(-15vh);
+        }
+
+        @media(max-width: 1280px){
+            @media(min-height: 800px){
+                left: 7vw;
+            }
         }
         
         @media(max-width: $laptop){

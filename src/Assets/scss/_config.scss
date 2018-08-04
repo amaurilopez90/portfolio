@@ -93,6 +93,12 @@ div.Main-Background{
         }
     }
 
+    @media(max-width: 1280px){
+        @media(min-height: 800px){
+            left: 12vw;
+        }
+    }
+
     //Laptop
     @media(max-width: $laptop){
         left: 14vw; width: 76vw; 

@@ -29,6 +29,12 @@ div.BassPlaythrough{
             right: 100px;
         }
 
+        @media(max-width: 1280px){
+            @media(min-height: 800px){
+                right: 90px;
+            }
+        }
+
         @media(max-width: $tablet){
             right: 30px;
         }
@@ -120,6 +126,12 @@ div.AudioPlayer{
                 font-size: 14px;
             }
         }
+
+        @media(max-width: 1280px){
+            @media(min-height: 800px){
+                font-size: 12px;
+            }
+        }
     
         @media(max-width: $laptop){
             font-size: 12px;
@@ -159,6 +171,12 @@ div.AudioPlayer{
         @media(max-width: $giant){
             @media(min-height: 1080px){
                 font-size: 14px;
+            }
+        }
+
+        @media(max-width: 1280px){
+            @media(min-height: 800px){
+                font-size: 12px;
             }
         }
     
@@ -315,6 +333,12 @@ div.AudioPlayer{
             }
         }
 
+        @media(max-width: 1280px){
+            @media(min-height: 800px){
+                font-size: 12px;
+            }
+        }
+
         @media(max-width: $laptop){
             left: 37.5vw;
         }
@@ -339,6 +363,13 @@ div.AudioPlayer{
     @media(max-width: $laptopL){
         @media(min-height: 900px){
             left: 34vw;
+        }
+    }
+
+    @media(max-width: 1280px){
+        @media(min-height: 800px){
+            left: 37vw;
+            font-size: 12px;
         }
     }
 
@@ -375,6 +406,12 @@ div.AudioPlayer{
             }
         }
 
+        @media(max-width: 1280px){
+            @media(min-height: 800px){
+                font-size: 12px;
+            }
+        }
+
         @media(max-width: $laptop){
             left: 3em;
         }
@@ -383,6 +420,12 @@ div.AudioPlayer{
     @media(max-width: $giant){
         @media(min-height: 1080px){
             width: 63%;    
+        }
+    }
+
+    @media(max-width: 1280px){
+        @media(min-height: 800px){
+            font-size: 12px;
         }
     }
 
@@ -413,6 +456,12 @@ div.AudioPlayer{
         width: 30%;
         @media(min-height: 900px){
             width: 33%;
+        }
+    }
+
+    @media(max-width: 1280px){
+        @media(min-height: 800px){
+            width: 34%;
         }
     }
 
@@ -490,6 +539,12 @@ div.AudioPlayer{
                 width: 34%;
             }
         }
+
+        @media(max-width: 1280px){
+            @media(min-height: 800px){
+                width: 36%;
+            }
+        }
         
         @media(max-width: $laptop){
             width: 45%;
@@ -550,6 +605,12 @@ div.AudioPlayer{
                 transform: rotate(90deg) translate(-20vw, -85vh);
             }
         }
+
+        @media(max-width: 1280px){
+            @media(min-height: 800px){
+                transform: rotate(90deg) translate(-20vw, -76vh);
+            }
+        }
     
         @media(max-width: $laptop){
             h6{
@@ -584,6 +645,12 @@ div.AudioPlayer{
 
             @media(min-height: 768px){
                 transform: rotate(90deg) translate(-18vw, -135vh);
+            }
+        }
+
+        @media(max-width: 1280px){
+            @media(min-height: 800px){
+                transform: rotate(90deg) translate(-18vw, -121vh);
             }
         }
     

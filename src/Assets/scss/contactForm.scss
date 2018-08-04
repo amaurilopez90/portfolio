@@ -37,6 +37,12 @@
         background-color: rgb(255, 251, 202);
         color: #424242;
 
+        @media(max-width: 1280px){
+            @media(min-height: 800px){
+                width: 18vw;
+            }
+        }
+
     }
 }
 
@@ -82,6 +88,13 @@
             transform: scale(1.1) translateY(-6.7vh);
         }
     }
+
+    @media(max-width: 1280px){
+        @media(min-height: 800px){
+            left: 14vw;
+            transform: scale(1.1) translateY(-6.3vh);   
+        }
+    }
     
     @media(max-width: $laptop){
         transform: scale(1);
@@ -108,6 +121,12 @@
 
         @media(max-width: 1600px){
             @media(min-height: 900px){
+                width: 20vw;
+            }
+        }
+
+        @media(max-width: 1280px){
+            @media(min-height: 800px){
                 width: 20vw;
             }
         }
@@ -139,6 +158,12 @@
     @media(max-width: $laptopL){
         @media(min-height: 900px){
             left: 3.5vw;
+        }
+    }
+
+    @media(max-width: 1280px){
+        @media(min-height: 800px){
+            left: 3vw;
         }
     }
 

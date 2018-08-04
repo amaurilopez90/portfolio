@@ -25,6 +25,14 @@
             }
         }
 
+        @media(max-width: 1280px){
+            @media(min-height: 800px){
+                margin-left: 22%;
+                width: 65%;
+                font-size: 8px;
+            }
+        }
+
         //Laptop
         @media(max-width: $laptop){
             margin-left: 18%;
@@ -140,6 +148,12 @@
                 }
             }
 
+            @media(max-width: 1280px){
+                @media(min-height: 800px){
+                    left: -37%;
+                }
+            }
+
             @media(max-width: $laptop){
                 transform: translateY(-42vh) rotate(-90deg);
                 left: -63%;
@@ -189,6 +203,12 @@
                 @media(min-height: 768px){
                     width: 900px;
                     margin-left: 7vw;
+                }
+            }
+
+            @media(max-width: 1280px){
+                @media(min-height: 800px){
+                    width: 850px;
                 }
             }
 
@@ -335,6 +355,12 @@
                 }
             }
 
+            @media(max-width: 1280px){
+                @media(min-height: 800px){
+                    transform: translateY(-68vh);
+                }
+            }
+
             @media(max-width: $laptop){
                 transform: translateY(-71vh);
                 left: 61%;
@@ -386,6 +412,12 @@
                     margin-left: 7vw;
                 }
             }
+
+            @media(max-width: 1280px){
+                @media(min-height: 800px){
+                    height: 100%;
+                }
+            }
             
             //Laptop
             @media(max-width: $laptop){
@@ -412,6 +444,12 @@
                 @media(max-width: $giant){
                     @media(min-height: 1080px){
                         margin-left: 12em;
+                    }
+                }
+
+                @media(max-width: 1280px){
+                    @media(min-height: 800px){
+                        font-size: 15px;
                     }
                 }
 
@@ -452,6 +490,12 @@
                 @media(max-width: $laptopM){
                     @media(min-height: 768px){
                         margin-right: 4vw;
+                    }
+                }
+
+                @media(max-width: 1280px){
+                    @media(min-height: 800px){
+                        font-size: 15px;
                     }
                 }
 
@@ -505,10 +549,6 @@
             @media(max-width: $tablet){
                 margin-left: 3em;
             }
-            //Phone
-            @media(max-width: $phone){
-                
-            }
             
             h1{
                 font-size: 4.6em;
@@ -526,6 +566,12 @@
                 }
 
                 @include translateY(56%);
+
+                @media(max-width: 1280px){
+                    @media(min-height: 800px){
+                        font-size: 3.5em;
+                    }
+                }
 
                 //Laptop
                 @media(max-width: $laptop){
@@ -587,6 +633,12 @@
             @media(max-width: $laptopM){
                 @media(min-height: 768px){
                     left: 29%;
+                }
+            }
+
+            @media(max-width: 1280px){
+                @media(min-height: 800px){
+                    left: 26%;   
                 }
             }
 
