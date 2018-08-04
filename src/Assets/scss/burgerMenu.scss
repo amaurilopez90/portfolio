@@ -11,17 +11,22 @@
 
     visibility: hidden;
 
+    @media(max-width: 998px){
+      visibility: visible;
+      left: 85%; top: 30px;
+    }
+
     @media(max-width: 936px){
-        visibility: visible;
-        left: 84%;
-        top: 39px;
+      visibility: visible;
+      left: 84%;
+      top: 39px;
     }
 
     @media(max-width: $tablet){
-        visibility: visible;
-        transform: scale(0.7);
-        left: 89%;
-        top: 12px;
+      visibility: visible;
+      transform: scale(0.7);
+      left: 89%;
+      top: 12px;
     }
   }
   

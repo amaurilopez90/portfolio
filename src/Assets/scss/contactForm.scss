@@ -58,6 +58,13 @@
         }
     }
 
+    @media(max-width: 1680px){
+        @media(min-height: 1050px){
+            transform: scale(1.1) translateY(-4.2vh);
+            
+        }
+    }
+
     @media(max-width: 1600px){
         @media(min-height: 900px){
             transform: scale(1.1) translateY(-5.4vh);

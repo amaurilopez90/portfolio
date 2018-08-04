@@ -60,6 +60,10 @@ div.AudioPlayer{
         left: 6vw;
         transform: scale(0.8, 0.8);
         top: 8vh;
+
+        @media(min-height: 640px){
+            left: 14vw;
+        }
     }
 
     @media(max-width: $tablet){
@@ -153,6 +157,12 @@ div.AudioPlayer{
     @media(max-width: $giant){
         @media(min-height: 1080px){
             top: 3vh;    
+        }
+    }
+
+    @media(max-width: 1680px){
+        @media(min-height: 1050px){
+            top: 3vh;
         }
     }
 
@@ -345,6 +355,12 @@ div.AudioPlayer{
 
         @media(max-width: $tablet){
             left: 38vw;
+        }
+    }
+
+    @media(max-width: 1680px){
+        @media(min-height: 1050px){
+            left: 33vw;
         }
     }
 
@@ -574,6 +590,12 @@ div.AudioPlayer{
     &.Tyler{
         transform: rotate(90deg) translate(-20vw, -91vh);
 
+        @media(max-width: 1680px){
+            @media(min-height: 1050px){
+                transform: rotate(90deg) translate(-20vw, -78vh);
+            }
+        }
+
         @media(max-width: 1600px){
             @media(min-height: 900px){
                 transform: rotate(90deg) translate(-20vw, -86vh);
@@ -617,6 +639,9 @@ div.AudioPlayer{
                 font-size: 12px;
             }
             transform: rotate(90deg) translate(-20vw, -62vh);
+            @media(min-height: 640px){
+                transform: rotate(90deg) translate(-20vw, -68vh);
+            }
         }
     
         @media(max-width: $tablet){
@@ -627,6 +652,11 @@ div.AudioPlayer{
     &.Jared{
         transform: rotate(90deg) translate(-18vw, -140vh);
 
+        @media(max-width: 1680px){
+            @media(min-height: 1050px){
+                transform: rotate(90deg) translate(-18vw, -122vh);
+            }
+        }
 
         @media(max-width: $laptopL){
             transform: rotate(90deg) translate(-18vw, -120vh);
@@ -659,6 +689,9 @@ div.AudioPlayer{
                 font-size: 12px;
             }
             transform: rotate(90deg) translate(-18vw, -106vh);
+            @media(min-height: 640px){
+                transform: rotate(90deg) translate(-18vw, -120vh);
+            }
         }
     
         @media(max-width: $tablet){
@@ -696,6 +729,12 @@ div.AudioPlayer{
     @media(max-width: $giant){
         @media(min-height: 1080px){
             left: 35rem;    
+        }
+    }
+
+    @media(max-width: 1680px){
+        @media(min-height: 1050px){
+            left: 30rem;
         }
     }
 

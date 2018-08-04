@@ -12,6 +12,12 @@ const ProgressTextDiv = styled.div`
     }
   }
 
+  @media(max-width: 1680px){
+    @media(min-height: 1050px){
+        left: 4rem;
+    }
+  }
+
   @media(max-width: 1600px){
     @media(min-height: 900px){
         left: 3rem;

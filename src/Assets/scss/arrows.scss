@@ -63,6 +63,12 @@ div.NextPageIcon{
         }
     }
 
+    @media(max-width: 1680px){
+        @media(min-height: 1050px){
+            left: 90rem;
+        }
+    }
+
     @media(max-width: 1600px){
         @media(max-height: 900px){
             left: 84rem;

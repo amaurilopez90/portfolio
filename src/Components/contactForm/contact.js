@@ -15,6 +15,10 @@ const FormContainer = styled.div`
     padding: 20px;
     color: #5A6D87;
 
+    @media(max-width: 1680px){
+        left: 18%;
+    }
+
     @media(max-width: 1440px){
         left: 20%;
     }
