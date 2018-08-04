@@ -57,6 +57,12 @@
             transform: scale(1.1) translateY(-5.4vh);
         }
     }
+
+    @media(max-width: 1536px){
+        @media(min-height: 864px){
+              transform: scale(1.1) translateY(-5.7vh);
+        }
+    }
     
     @media(max-width: $laptopL){
         transform: scale(1.1) translateY(-5.4vh);

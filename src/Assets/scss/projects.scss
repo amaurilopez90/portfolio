@@ -317,6 +317,13 @@
                 }
             }
 
+            @media(max-width: 1536px){
+                @media(min-height: 864px){
+                    left: 65%;
+                    transform: translateY(-66vh); 
+                }
+            }
+
             @media(max-width: $laptopL){
                 transform: translateY(-57vh);
             }
@@ -357,6 +364,12 @@
                 @media(min-height: 900px){
                     margin-left: 6vw;
                     width: 1000px; height: 100%;   
+                }
+            }
+
+            @media(max-width: 1536px){
+                @media(min-height: 864px){
+                    width: 1000px; margin-left: 3vw; height: 100%;
                 }
             }
 
@@ -552,6 +565,12 @@
                     &:hover + .SideTextAlienzNew{
                         transform: translateY(-36vh) rotate(-90deg);
                     }
+                }
+            }
+
+            @media(max-width: 1536px){
+                @media(min-height: 864px){
+                      left: 30%;
                 }
             }
 

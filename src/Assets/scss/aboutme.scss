@@ -19,6 +19,12 @@ div.BassPlaythrough{
     .thePlayerContainer{
         right: 110px;
 
+        @media(max-width: 1536px){
+            @media(min-height: 864px){
+                right: 95px;    
+            }
+        }
+
         @media(max-width: $laptopL){
             right: 100px;
         }
@@ -200,6 +206,12 @@ div.AudioPlayer{
                 margin-right: 3vw;
             }
         }
+
+        @media(max-width: 1536px){
+            @media(min-height: 864px){
+                margin-right: 4vw;
+            }
+        }
     
         @media(max-width: $laptopL){
             margin-right: 9.5vw;
@@ -315,6 +327,12 @@ div.AudioPlayer{
     @media(max-width: 1600px){
         @media(min-height: 900px){
             left: 37.5vw;
+        }
+    }
+
+    @media(max-width: 1536px){
+        @media(min-height: 864px){
+            left: 35vw;
         }
     }
 
@@ -506,6 +524,12 @@ div.AudioPlayer{
                 transform: rotate(90deg) translate(-20vw, -86vh);
             }
         }
+
+        @media(max-width: 1536px){
+            @media(min-height: 864px){
+                transform: rotate(90deg) translate(-20vw, -84vh);
+            }
+        }
     
         @media(max-width: $laptopL){
             transform: rotate(90deg) translate(-20vw, -76vh);
@@ -611,6 +635,12 @@ div.AudioPlayer{
     @media(max-width: 1600px){
         @media(min-height: 900px){
             left: 32rem;
+        }
+    }
+
+    @media(max-width: 1536px){
+        @media(min-height: 864px){
+            left: 30rem;        
         }
     }
 
