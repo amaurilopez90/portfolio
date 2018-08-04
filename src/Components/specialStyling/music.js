@@ -170,7 +170,7 @@ export default class AudioPlayer extends Component{
                     {({ isInView }) => 
                         <Revealp transform={'left'} hide={!isInView} >
                             <MusicPlayerContainer>
-                                <PlayButton id={'BlindManSee'} data-index={0} onClick={this.switchTrack}>
+                                <PlayButton id={'TheGirlIHaventMet'} data-index={0} onClick={this.switchTrack}>
                                     <p>
                                         { !this.playing[0] && <i className="fa fa-play"></i>}
                                         { this.playing[0] && <i className="fa fa-pause"></i>}
@@ -178,10 +178,10 @@ export default class AudioPlayer extends Component{
                                 </PlayButton>
                                 <div className="SongTitle">
                                     <p style={{ margin: '0 0 10px 0', color: '#424242', transform: 'scaleY(1.2)' }}>
-                                        Hip-Hop Soulchef - Blind Man See
+                                        Kudasai - The Girl I Haven't Met
                                     </p>
                                     <AudioLine >
-                                        <span className="mainLine" id="BlindManSeeLine"></span>
+                                        <span className="mainLine" id="TheGirlIHaventMetLine"></span>
                                     </AudioLine>
                                 </div>
                             </MusicPlayerContainer>
@@ -194,7 +194,7 @@ export default class AudioPlayer extends Component{
                     {({ isInView }) => 
                         <Revealp transform={'left'} hide={!isInView}>
                             <MusicPlayerContainer>
-                                <PlayButton id={'MistakesLikeThis'} data-index={1} onClick={this.switchTrack}>
+                                <PlayButton id={'BlindManSee'} data-index={1} onClick={this.switchTrack}>
                                     <p>
                                         { !this.playing[1] && <i className="fa fa-play"></i>}
                                         { this.playing[1] && <i className="fa fa-pause"></i>}
@@ -202,10 +202,10 @@ export default class AudioPlayer extends Component{
                                 </PlayButton>
                                 <div className="SongTitle">
                                     <p style={{ margin: '0 0 10px 0', color: '#424242', transform: 'scaleY(1.2)' }}>
-                                        Prelow - Mistakes Like This
+                                        Hip-Hop Soulchef - Blind Man See
                                     </p>
                                     <AudioLine>
-                                        <span className="mainLine" id="MistakesLikeThisLine"></span>
+                                        <span className="mainLine" id="BlindManSeeLine"></span>
                                     </AudioLine>
                                 </div>
                             </MusicPlayerContainer>
@@ -217,7 +217,7 @@ export default class AudioPlayer extends Component{
                     {({ isInView }) => 
                         <Revealp transform={'left'} hide={!isInView}>
                             <MusicPlayerContainer>
-                                <PlayButton id={'TheGirlIHaventMet'} data-index={2} onClick={this.switchTrack}>
+                                <PlayButton id={'MistakesLikeThis'} data-index={2} onClick={this.switchTrack}>
                                     <p>
                                         { !this.playing[2] && <i className="fa fa-play"></i>}
                                         { this.playing[2] && <i className="fa fa-pause"></i>}
@@ -225,10 +225,10 @@ export default class AudioPlayer extends Component{
                                 </PlayButton>
                                 <div className="SongTitle">
                                     <p style={{ margin: '0 0 10px 0', color: '#424242', transform: 'scaleY(1.2)' }}>
-                                        Kudasai - The Girl I Haven't Met
+                                        Prelow - Mistakes Like This
                                     </p>
                                     <AudioLine>
-                                        <span className="mainLine" id="TheGirlIHaventMetLine"></span>
+                                        <span className="mainLine" id="MistakesLikeThisLine"></span>
                                     </AudioLine>
                                 </div>
                             </MusicPlayerContainer>
