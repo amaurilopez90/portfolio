@@ -28,6 +28,12 @@ const FormContainer = styled.div`
         left: 21%;
     }
 
+    @media(max-width: 840px){
+        @media(min-height: 1050px){
+            width: 75%;   
+        }
+    }
+
     @media(max-width: 768px){
         left: 22%;
         transform: scale(1.1, 0.8);

@@ -179,6 +179,9 @@
             @media(max-width: $laptop){
                 transform: translateY(-42vh) rotate(-90deg);
                 left: -63%;
+                @media(min-height: 1024px){
+                    transform: translateY(-28vh) rotate(-90deg);
+                }
             }
 
             @media(max-width: 998px){
@@ -188,8 +191,7 @@
             }
 
             @media(max-width: $tablet){
-                transform: translateY(-39vh) rotate(-90deg);
-                left: 0%;
+                visibility: hidden;
             }
             
 
@@ -299,12 +301,13 @@
                     @media(max-width: $laptop){
                         transform: translateY(-58vh) rotate(-90deg);
                         right: 36.5vw;
+                        @media(min-height: 1024px){
+                            transform: translateY(-40vh) rotate(-90deg);
+                        }
                     }
 
                     @media(max-width: $tablet){
-                        font-size: 10px;
-                        transform: translateY(-50vh) rotate(-90deg);
-                        right: 44.5vw;
+                        visibility: hidden;
                     }
                     
                 }
@@ -357,12 +360,13 @@
                     @media(max-width: $laptop){
                         transform: translateY(-7vh) rotate(90deg);
                         left: 36.5vw;
+                        @media(max-height: 1024px){
+                            transform: translateY(3vh) rotate(90deg);
+                        }
                     }
                     
                     @media(max-width: $tablet){
-                        font-size: 10px;
-                        transform: translateY(-17vh) rotate(90deg);
-                        left: 44.5vw;
+                        visibility: hidden;
                     }
                 }
             }
@@ -429,8 +433,9 @@
             }
 
             @media(max-width: $tablet){
-                transform: translateY(-62vh);
+                visibility: hidden;
             }
+            
         }
 
         img.BattleSpheresImage{
@@ -489,6 +494,9 @@
             @media(max-width: $laptop){
                 margin-left: 4vw;
                 width: 800px;
+            }
+            @media(max-width: 840px){
+                width: 750px;
             }
 
             //Tablet
@@ -629,6 +637,9 @@
                     @media(max-width: $laptop){
                         margin-left: 15em;
                     }
+                    @media(max-width: 840px){
+                        margin-left: 10em;
+                    }
                 }
 
                 @include translateY(56%);
@@ -722,6 +733,15 @@
                 &:hover + .SideTextAlienzNew{
                     transform: translateY(-46vh) rotate(-90deg);
                 }
+                &:hover + .SideTextAlienzNew{
+                    transform: translateY(-34vh) rotate(-90deg);
+                }
+            }
+
+            @media(max-width: 840px){
+                @media(min-height: 1050px){
+                    left: 7%;
+                }
             }
 
             @media(max-width: $tablet){
@@ -730,6 +750,10 @@
                 &:hover + .SideTextAlienzNew{
                     transform: translateY(-43vh) rotate(-90deg);
                 }
+            }
+
+            @media(max-width: 640px){
+                left: 1%;
             }
 
         }

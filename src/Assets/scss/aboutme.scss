@@ -55,20 +55,30 @@ div.AudioPlayer{
             transform: scale(1);
         }
     }
-
+    
     @media(max-width: $laptop){
         left: 6vw;
         transform: scale(0.8, 0.8);
         top: 8vh;
-
+        
         @media(min-height: 640px){
             left: 14vw;
         }
+    }
+    
+    @media(max-width: 840px){
+        @media(min-height: 1050px){
+            left: 3vw;
+        } 
     }
 
     @media(max-width: $tablet){
         left: 10vw;
         transform: scale(0.8);
+    }
+    
+    @media(max-width: 640px){
+        left: 3vw;
     }
 
     .SongTitle{
@@ -645,6 +655,15 @@ div.AudioPlayer{
             @media(min-height: 640px){
                 transform: rotate(90deg) translate(-20vw, -68vh);
             }
+            @media(min-height: 1024px){
+                transform: rotate(90deg) translate(-20vw, -45vh);
+            }
+        }
+
+        @media(max-width: 840px){
+            @media(min-height: 1050px){
+                transform: rotate(90deg) translate(-17vw, -30vh);
+            }
         }
     
         @media(max-width: $tablet){
@@ -697,6 +716,15 @@ div.AudioPlayer{
             transform: rotate(90deg) translate(-18vw, -106vh);
             @media(min-height: 640px){
                 transform: rotate(90deg) translate(-18vw, -120vh);
+            }
+            @media(min-height: 1024px){
+                transform: rotate(90deg) translate(-18vw, -75vh);
+            }
+        }
+
+        @media(max-width: 840px){
+            @media(min-height: 1050px){
+                transform: rotate(90deg) translate(-16vw, -55vh);
             }
         }
     
@@ -769,6 +797,11 @@ div.AudioPlayer{
 
     @media(max-width: $laptop){
         left: 21rem;
+    }
+    @media(max-width: 840px){
+        @media(min-height: 1050px){
+            left: 18rem;
+        }
     }
 
     @media(max-width: $tablet){

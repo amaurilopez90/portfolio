@@ -103,6 +103,10 @@
             text-align: center;
         }
 
+        @media(max-width: $tablet){
+            left: 20vw;
+        }
+
         ul li{
             margin: 0;
             padding: 5vh;
@@ -110,6 +114,9 @@
             list-style-type: none;
             font-size: 35px;
             transform: scaleY(1.2);
+            @media(max-width: $tablet){
+                font-size: 20px;
+            }
         }
     }
 
