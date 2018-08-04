@@ -313,8 +313,7 @@ class AboutMe extends Component {
                 <Revealp className="LeftDescriptionReveal" transform={'left'} hide={!isInView} barColor = '#424242'>
                   <p className="LeftDescription" style={{color: '#424242'}}>
                       In a <a href="https://www.youtube.com/watch?v=AP1eO6e5OhA" target="_blank" rel="noopener noreferrer">short documentary </a>
-                      Tyler explains his struggles with the loss of loved ones as well as his battles with his own sexuality that may have made
-                      anyone else quit.       
+                      Tyler explains his struggles with the loss of loved ones as well as his battles with his own sexuality that is truly inspiring.       
                   </p>
                   
                 </Revealp>
