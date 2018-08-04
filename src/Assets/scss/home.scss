@@ -92,6 +92,9 @@
             @media(min-height: 800px){
                 left: 7vw;
             }
+            @media(min-height: 1024px){
+                @include translateY(-25vh);
+            }
         }
         
         @media(max-width: $laptop){

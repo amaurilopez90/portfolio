@@ -632,6 +632,9 @@ div.AudioPlayer{
             @media(min-height: 800px){
                 transform: rotate(90deg) translate(-20vw, -76vh);
             }
+            @media(min-height: 1024px){
+                transform: rotate(90deg) translate(-20vw, -58vh);
+            }
         }
     
         @media(max-width: $laptop){
@@ -681,6 +684,9 @@ div.AudioPlayer{
         @media(max-width: 1280px){
             @media(min-height: 800px){
                 transform: rotate(90deg) translate(-18vw, -121vh);
+            }
+            @media(min-height: 1024px){
+                transform: rotate(90deg) translate(-18vw, -95vh);
             }
         }
     
@@ -753,6 +759,11 @@ div.AudioPlayer{
     @media(max-width: $laptopL){
         @media(min-height: 900px){
             left: 25rem;
+        }
+    }
+    @media(max-width: 1280px){
+        @media(min-height: 1024px){
+            left: 26rem;
         }
     }
 

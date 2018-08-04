@@ -101,6 +101,9 @@
             left: 14vw;
             transform: scale(1.1) translateY(-6.3vh);   
         }
+        @media(min-height: 1024px){
+            transform: scale(1.1) translateY(-4.5vh);
+        }
     }
     
     @media(max-width: $laptop){
