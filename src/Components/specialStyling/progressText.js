@@ -47,6 +47,14 @@ const ProgressTextDiv = styled.div`
       left: 0;       
     }
   }
+  @media(max-width: 800px){
+    @media(min-height: 900px){
+      left: -2rem;
+    }
+  }
+  @media(max-width: 768px){
+    left: 0rem;
+  }
 
   color: ${({color}) => color};
 `;

@@ -105,6 +105,10 @@
 
         @media(max-width: $tablet){
             left: 20vw;
+            @media(min-height: 900px){
+                left: 24vw;
+                @include translateY(-35vh);
+            }
         }
 
         ul li{

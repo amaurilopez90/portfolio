@@ -34,6 +34,11 @@ const FormContainer = styled.div`
         }
     }
 
+    @media(max-width: 800px){
+        @media(min-height: 900px){
+            width: 80%;
+        }
+    }
     @media(max-width: 768px){
         left: 22%;
         transform: scale(1.1, 0.8);

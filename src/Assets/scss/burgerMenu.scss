@@ -27,6 +27,12 @@
       transform: scale(0.7);
       left: 89%;
       top: 12px;
+      @media(min-height: 864px){
+        top: 30px; left: 85%;
+      }
+      @media(min-height: 900px){
+        top: 30px;
+      }
     }
   }
   
