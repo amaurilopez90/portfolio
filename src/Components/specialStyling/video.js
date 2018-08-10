@@ -9,6 +9,7 @@ import SquareCursor from './squareCursor';
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
+  margin: 0;
 `;
 
 const PlayerContainer = styled.div`
@@ -118,7 +119,7 @@ export default class Video extends Component {
                       width: `${videoSize}%`,
                       cursor: zoom ? 'none' : 'pointer',
                       zIndex: zoom ? 2 : 0,
-                      marginBottom: 0,
+                      marginBottom: 0, marginTop: 0,
                       
                       // Hide the cursor when it's zoomed.
                     }}>
