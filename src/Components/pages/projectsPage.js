@@ -7,6 +7,7 @@ import { ImageButton } from '../specialStyling/hoverScale';
 import { Flex } from '../specialStyling/flexBox';
 import { Slidep, FadeIn, Revealp } from '../specialStyling/revealAnimation';
 import WhenInView from '../specialStyling/whenInView';
+import Video from '../specialStyling/video';
 
 import ProgressText, { ProgressContainer } from '../specialStyling/progressText';
 import { Div } from '../specialStyling/types';
@@ -173,7 +174,7 @@ class Projects extends Component {
                       <div className="SynthImage">
                       
                         <ParallaxImage
-                          reduceHeight={1/3.7}
+                          reduceHeight={1/4}
                           src={require('../../Assets/Synth.jpeg')}/>
                           
                           <div className="SideTextSynth">
@@ -186,7 +187,10 @@ class Projects extends Component {
                   </FadeIn>
                 }
               </WhenInView>
+            </div>
 
+            <div className="SynthDemo">
+              <Video className="SynthVideo" videoUrl={require('../../Assets/FINAL_DEMO2.mov')}/> 
             </div>
 
             <div className="project-item">
@@ -234,16 +238,6 @@ class Projects extends Component {
                       <Flex justify={'center'}>
                         <img className="BattleSpheresImage" src={require('../../Assets/BattleSpheresGif.gif')} alt=""/>
                       </Flex>
-
-                      <WhenInView>
-                        {({ isInView }) => 
-                          <FadeIn hide={!isInView}>
-                            <div className="SideTextSpheres">
-                              <h6 className="topSideText">«This one's my favorite!»</h6>
-                            </div>
-                          </FadeIn>
-                        }
-                      </WhenInView>
                     </div>
                   </FadeIn>
                 }

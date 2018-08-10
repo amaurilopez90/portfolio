@@ -363,7 +363,7 @@ class AboutMe extends Component {
                   <p className="RightDescription" style={{color: '#424242'}}>
                       The famous Jared Leto has also been another inspiration for me even from a young age. I've watched him go from
                       being the front-man vocalist of '30 Seconds to Mars' to one of my favorite American actors and director of my personal favorite '
-                      <a href="https://www.youtube.com/watch?v=iJAP8q_iPOw" target="_blank" rel="noopener noreferrer">Mr. Nobody</a>' masterpiece.          
+                      <a href="https://www.youtube.com/watch?v=iJAP8q_iPOw" target="_blank" rel="noopener noreferrer">Mr. Nobody</a>' masterpiece film.          
                   </p>
                   
                 </Revealp>

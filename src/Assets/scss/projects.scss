@@ -1,5 +1,80 @@
 @import '_config.scss';
 
+div.SynthDemo{
+
+    .theContainer{
+        display: inline-flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        margin-bottom: -5vh;
+
+        @media(max-width: $giant){
+            @media(min-height: 1080px){
+                margin-top: -4.6vh;
+                width: 105vw;
+            }
+        }
+        @media(max-width: $laptopL){
+            height: 101vh;
+        }
+        @media(max-width: $laptop){
+            height: 100%;
+        }
+    }
+
+    .thePlayerContainer{
+        right: 100px;
+        @media(max-width: 1680px){
+            @media(min-height: 1050px){
+                transform: scale(1.1, 1.2);
+            }
+        }
+        @media(max-width: 1600px){
+            @media(min-height: 900px){
+                transform: scale(1.1, 1.15);
+                right: 80px;
+            }
+        }
+
+        @media(max-width: 1536px){
+            @media(min-height: 864px){
+                right: 95px; 
+                transform: scale(1.1, 1.2);   
+            }
+        }
+
+        @media(max-width: $laptopL){
+            right: 100px;
+            @media(min-height: 900px){
+                top:-3vh; right: 80px;
+                transform: scale(1.1, 1.3);
+            }
+        }
+        @media(max-width: $laptopM){
+            @media(min-height: 768px){
+                transform: scale(1.1, 1.2);
+                right: 60px;
+            }
+        }
+
+        @media(max-width: 1280px){
+            @media(min-height: 800px){
+                right: 80px; top: -5vh;
+                transform: scale(1.2, 1.2);
+            }
+            @media(min-height: 1024px){
+                transform: scale(1.2, 1.5);
+                right: 70px;
+            }
+        }
+
+        @media(max-width: $tablet){
+            right: 30px;
+        }
+    }
+}
+
 .container-fluid{
 
     p.Description{
@@ -132,8 +207,8 @@
     }
 
     div.project-item{
-        margin-bottom: 30px;
-        margin-top: 30px;
+        margin-bottom: 0px;
+        margin-top: 0px;
         
         .SideTextAlienzNew{
             position: relative;
@@ -144,7 +219,7 @@
             @media(max-width: $giant){
                 @media(min-height: 1080px){
                     transform: translateY(-26vh) rotate(-90deg);
-                    left: -1%;
+                    left: -2%;
                 }
             }
 
@@ -213,6 +288,8 @@
 
         .SynthImage{
             width: 800px;
+            margin-left: 2vw;
+            margin-bottom: -5vh;
 
             @media(max-width: $giant){
                 @media(min-height: 1080px){
@@ -251,7 +328,7 @@
 
             @media(max-width: 1280px){
                 @media(min-height: 800px){
-                    width: 850px;
+                    width: 800px;
                 }
             }
 
@@ -273,7 +350,7 @@
                     font-size: 13px;
                     color: $charcoalBlack;
 
-                    transform: translateY(-52vh) rotate(-90deg);
+                    transform: translateY(-56vh) rotate(-90deg);
                     right: 27vw;
 
                     @media(max-width: 1680px){
@@ -294,6 +371,7 @@
 
                         @media(min-height: 900px){
                             right: 31vw;
+                            transform: translateY(-54vh) rotate(-90deg);
                         }
                     }
 
@@ -378,72 +456,6 @@
             }
         }
 
-        .SideTextSpheres{
-            position: relative;
-            transform :translateY(-64vh);
-            left: 58%;
-            z-index: 1;
-            .topSideText{
-                color: $sheenGreen;
-                font-size: 10px;
-                transform: scaleY(1.2);
-            }
-
-            @media(max-width: 1680px){
-                @media(min-height: 1050px){
-                    transform: translateY(-60vh);
-                    left: 70%;
-                }
-            }
-
-            @media(max-width: 1600px){
-                @media(min-height: 900px){
-                    transform: translateY(-63vh);
-                }
-            }
-
-            @media(max-width: 1536px){
-                @media(min-height: 864px){
-                    left: 65%;
-                    transform: translateY(-66vh); 
-                }
-            }
-
-            @media(max-width: $laptopL){
-                transform: translateY(-57vh);
-            }
-
-            @media(max-width: $laptopM){
-                @media(min-height: 768px){
-                    transform: translateY(-70vh);
-                    left: 62%;
-                }
-            }
-
-            @media(max-width: 1280px){
-
-                @media(min-height: 800px){
-                    transform: translateY(-68vh);
-                }
-                @media(min-height: 1024px){
-                    transform: translateY(-53vh);    
-                }
-            }
-
-            @media(max-width: $laptop){
-                transform: translateY(-71vh);
-                left: 61%;
-                .topSideText{
-                    font-size: 8px;
-                }
-            }
-
-            @media(max-width: $tablet){
-                visibility: hidden;
-            }
-            
-        }
-
         img.BattleSpheresImage{
 
             width: 950px;
@@ -451,7 +463,7 @@
             @media(max-width: $giant){
                 @media(min-height: 1080px){
                     margin-left: 7vw;
-                    width: 1100px;
+                    width: 1200px;
                     height: 100%;
                 }
             }
@@ -466,7 +478,7 @@
             @media(max-width: 1600px){
                 @media(min-height: 900px){
                     margin-left: 6vw;
-                    width: 1000px; height: 100%;   
+                    width: 1100px; height: 100%;   
                 }
             }
 
@@ -485,14 +497,17 @@
 
             @media(max-width: $laptopM){
                 @media(min-height: 768px){
-                    width: 950px; height: 100%;
+                    width: 1000px; height: 100%;
                     margin-left: 7vw;
                 }
             }
 
             @media(max-width: 1280px){
                 @media(min-height: 800px){
-                    height: 100%;
+                    height: 100%; width: 1100px;
+                }
+                @media(min-height: 1024px){
+                    margin-left: 4vw;
                 }
             }
             
