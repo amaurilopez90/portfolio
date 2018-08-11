@@ -71,6 +71,7 @@ div.SynthDemo{
 
         @media(max-width: $tablet){
             right: 30px;
+            top: 5vh;
         }
     }
 }
@@ -244,7 +245,7 @@ div.SynthDemo{
 
             @media(max-width: $laptopM){
                 @media(min-height: 768px){
-                    left: -27%;
+                    left: -28%;
                 }
             }
 
