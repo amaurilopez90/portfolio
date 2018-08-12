@@ -10,7 +10,7 @@ div.SynthDemo{
         margin-bottom: -5vh;
 
         @media(max-width: $giant){
-            @media(min-height: 1080px){
+            @media(max-height: 1080px){
                 margin-top: -4.6vh;
                 width: 105vw;
             }
@@ -26,19 +26,22 @@ div.SynthDemo{
     .thePlayerContainer{
         right: 100px;
         @media(max-width: 1680px){
-            @media(min-height: 1050px){
+            @media(max-height: 1050px){
                 transform: scale(1.1, 1.2);
             }
         }
         @media(max-width: 1600px){
-            @media(min-height: 900px){
+            @media(max-height: 900px){
                 transform: scale(1.1, 1.15);
                 right: 80px;
+            }
+            @media(max-height: 803px){
+                right: 100px;
             }
         }
 
         @media(max-width: 1536px){
-            @media(min-height: 864px){
+            @media(max-height: 864px){
                 right: 95px; 
                 transform: scale(1.1, 1.2);   
             }
@@ -46,26 +49,26 @@ div.SynthDemo{
 
         @media(max-width: $laptopL){
             right: 100px;
-            @media(min-height: 900px){
+            @media(max-height: 900px){
                 top:-3vh; right: 80px;
                 transform: scale(1.1, 1.3);
             }
         }
         @media(max-width: $laptopM){
-            @media(min-height: 768px){
+            @media(max-height: 768px){
                 transform: scale(1.1, 1.2);
                 right: 60px;
             }
         }
 
         @media(max-width: 1280px){
-            @media(min-height: 800px){
+            @media(max-height: 1024px){
+                transform: scale(1.2, 1.5);
+                right: 75px;
+            }
+            @media(max-height: 800px){
                 right: 80px; top: -5vh;
                 transform: scale(1.2, 1.2);
-            }
-            @media(min-height: 1024px){
-                transform: scale(1.2, 1.5);
-                right: 70px;
             }
         }
 
@@ -89,23 +92,25 @@ div.SynthDemo{
 
         //Giant 1920 screen
         @media(max-width: $giant){
-            @media(min-height: 1080px){
+            @media(max-height: 1080px){
                 font-size: 12px;
                 width: 78%;
             }
         }
 
         @media(max-width: $laptopL){
-            @media(min-height: 900px){
+            @media(max-height: 900px){
                 width: 75%;
             }
         }
 
         @media(max-width: 1280px){
-            @media(min-height: 800px){
+            @media(max-height: 1024px){
+                font-size: 8px;
+            }
+            @media(max-height: 800px){
                 margin-left: 22%;
                 width: 65%;
-                font-size: 8px;
             }
         }
 
@@ -118,7 +123,7 @@ div.SynthDemo{
         //tablet
         @media(max-width: $tablet){
             margin-left: 16.5%;
-            @media(min-height: 900px){
+            @media(max-height: 900px){
                 margin-left: 22%;
             }
         }
@@ -157,38 +162,38 @@ div.SynthDemo{
             margin-top: 8vh; margin-bottom: 25vh;
 
             @media(max-width: $giant){
-                @media(min-height: 1080px){
+                @media(max-height: 1080px){
                     transform: scale(1,1.4);
                     margin-left: 15em;
                 }
             }
 
             @media(max-width: 1680px){
-                @media(min-height: 1050px){
+                @media(max-height: 1050px){
                     margin-left: 5em;
                 }
             }
 
             @media(max-width: 1600px){
-                @media(min-height: 900px){
+                @media(max-height: 900px){
                     margin-left: 7em;
                 }
             }
 
             @media(max-width: $laptopL){
-                @media(min-height: 900px){
+                @media(max-height: 900px){
                     margin-left: 8em;
                 }
             }
 
             @media(max-width: $laptopM){
-                @media(min-height: 768px){
+                @media(max-height: 768px){
                     margin-left: 10em;
                 }
             }
 
             @media(max-width: 1280px){
-                @media(min-height: 1024px){
+                @media(max-height: 1024px){
                     margin-left: 6em;
                 }
             }
@@ -196,7 +201,7 @@ div.SynthDemo{
             @media(max-width: $laptop){
                 font-size: 10px;
                 margin-top: 10vh;
-                @media(min-height: 640px){
+                @media(max-height: 640px){
                     margin-left: 7em;
                 }
             }
@@ -218,23 +223,26 @@ div.SynthDemo{
             transition: transform .2s;
 
             @media(max-width: $giant){
-                @media(min-height: 1080px){
+                @media(max-height: 1080px){
                     transform: translateY(-26vh) rotate(-90deg);
                     left: -2%;
                 }
             }
 
             @media(max-width: 1680px){
-                @media(min-height: 1050px){
+                @media(max-height: 1050px){
                     left: -14%;
                     transform: translateY(-27vh) rotate(-90deg);
                 }
             }
 
             @media(max-width: 1600px){
-                @media(min-height: 900px){
+                @media(max-height: 900px){
                     left: -17%;
                     transform: translateY(-32vh) rotate(-90deg);
+                }
+                @media(max-height: 803px){
+                    left: -22%;
                 }
             }
 
@@ -244,30 +252,31 @@ div.SynthDemo{
             }
 
             @media(max-width: $laptopM){
-                @media(min-height: 768px){
+                @media(max-height: 768px){
                     left: -28%;
                 }
             }
 
             @media(max-width: 1280px){
-                @media(min-height: 800px){
-                    left: -37%;
-                }
-                @media(min-height: 1024px){
+                @media(max-height: 1024px){
+                    left: -34%;
                     transform: translateY(-27vh) rotate(-90deg);
+                }
+                @media(max-height: 800px){
+                    left: -37%;
                 }
             }
 
             @media(max-width: $laptop){
                 transform: translateY(-42vh) rotate(-90deg);
                 left: -63%;
-                @media(min-height: 1024px){
+                @media(max-height: 1024px){
                     transform: translateY(-28vh) rotate(-90deg);
                 }
             }
 
             @media(max-width: 998px){
-                @media(min-height: 640px){
+                @media(max-height: 640px){
                     left: -66%
                 }
             }
@@ -293,43 +302,47 @@ div.SynthDemo{
             margin-bottom: -5vh;
 
             @media(max-width: $giant){
-                @media(min-height: 1080px){
+                @media(max-height: 1080px){
                     width: 1000px;
                     margin-left: 6vw;
                 }
             }
 
             @media(max-width: 1680px){
-                @media(min-height: 1050px){
+                @media(max-height: 1050px){
                     margin-left: 3vw;
                     width: 1000px;
                 }
             }
 
             @media(max-width: 1600px){
-                @media(min-height: 900px){
+                @media(max-height: 900px){
                     width: 875px;
                     margin-left: 5vw;    
+                }
+                @media(max-height: 803px){
+                    margin-left: 3vw;
                 }
             }
 
             @media(max-width: $laptopL){
-                @media(min-height: 900px){
+                @media(max-height: 900px){
                     margin-left: 5vw;
                     width: 850px;
                 }
             }
 
             @media(max-width: $laptopM){
-                @media(min-height: 768px){
+                @media(max-height: 768px){
                     width: 900px;
                     margin-left: 7vw;
                 }
             }
 
             @media(max-width: 1280px){
-                @media(min-height: 800px){
+                @media(max-height: 1024px){
                     width: 800px;
+                    margin-left: 8vw;
                 }
             }
 
@@ -355,14 +368,17 @@ div.SynthDemo{
                     right: 27vw;
 
                     @media(max-width: 1680px){
-                        @media(min-height: 1050px){
+                        @media(max-height: 1050px){
                             right: 31vw;
                         }
                     }
 
                     @media(max-width: 1600px){
-                        @media(min-height: 900px){
+                        @media(max-height: 900px){
                             right: 29vw;   
+                        }
+                        @media(max-height: 803px){
+                            right: 30vw;
                         }
                     }
 
@@ -370,23 +386,31 @@ div.SynthDemo{
                         transform: translateY(-49vh) rotate(-90deg);
                         right: 29vw;
 
-                        @media(min-height: 900px){
+                        @media(max-height: 900px){
                             right: 31vw;
                             transform: translateY(-54vh) rotate(-90deg);
                         }
                     }
 
                     @media(max-width: $laptopM){
-                        @media(min-height: 768px){
+                        @media(max-height: 768px){
                             transform: translateY(-65vh) rotate(-90deg);
                             right: 35vw;
+                        }
+                    }
+                    @media(max-width: 1280px){
+                        @media(max-height: 1024px){
+                            right: 34vw;
+                        }
+                        @media(max-height: 918px){
+                            transform: translateY(-60vh) rotate(-90deg);
                         }
                     }
 
                     @media(max-width: $laptop){
                         transform: translateY(-58vh) rotate(-90deg);
                         right: 36.5vw;
-                        @media(min-height: 1024px){
+                        @media(max-height: 1024px){
                             transform: translateY(-40vh) rotate(-90deg);
                         }
                     }
@@ -406,22 +430,25 @@ div.SynthDemo{
                     left: 27vw;
 
                     @media(max-width: $giant){
-                        @media(min-height: 1080px){
+                        @media(max-height: 1080px){
                             transform: translateY(5vh) rotate(90deg);
                         }
                     }
 
                     @media(max-width: 1680px){
-                        @media(min-height: 1050px){
+                        @media(max-height: 1050px){
                             transform: translateY(5vh) rotate(90deg);
                             left: 31vw;
                         }
                     }
 
                     @media(max-width: 1600px){
-                        @media(min-height: 900px){
+                        @media(max-height: 900px){
                             left: 29vw;
                             transform: rotate(90deg);
+                        }
+                        @media(max-height: 803px){
+                            left: 30vw;
                         }
                     }
 
@@ -429,16 +456,21 @@ div.SynthDemo{
                         transform: translateY(-7vh) rotate(90deg);
                         left: 29vw;
 
-                        @media(min-height: 900px){
+                        @media(max-height: 900px){
                             transform: translateY(-3vh) rotate(90deg);
                             left: 31vw;
                         }
                     }
 
                     @media(max-width: $laptopM){
-                        @media(min-height: 768px){
+                        @media(max-height: 768px){
                             transform: rotate(90deg);
                             left: 35vw;
+                        }
+                    }
+                    @media(max-width: 1280px){
+                        @media(max-height: 1024px){
+                            left: 34vw;
                         }
                     }
 
@@ -462,7 +494,7 @@ div.SynthDemo{
             width: 950px;
 
             @media(max-width: $giant){
-                @media(min-height: 1080px){
+                @media(max-height: 1080px){
                     margin-left: 7vw;
                     width: 1200px;
                     height: 100%;
@@ -470,45 +502,45 @@ div.SynthDemo{
             }
 
             @media(max-width: 1680px){
-                @media(min-height: 1050px){
+                @media(max-height: 1050px){
                     width: 1100px; height: 100%;
                     margin-left: 2vw;
                 }
             }
 
             @media(max-width: 1600px){
-                @media(min-height: 900px){
+                @media(max-height: 900px){
                     margin-left: 6vw;
                     width: 1100px; height: 100%;   
                 }
             }
 
             @media(max-width: 1536px){
-                @media(min-height: 864px){
+                @media(max-height: 864px){
                     width: 1000px; margin-left: 3vw; height: 100%;
                 }
             }
 
             @media(max-width: $laptopL){
-                @media(min-height: 900px){
+                @media(max-height: 900px){
                     width: 1000px; height: 100%;
                     margin-left: 5vw;
                 }
             }
 
             @media(max-width: $laptopM){
-                @media(min-height: 768px){
+                @media(max-height: 768px){
                     width: 1000px; height: 100%;
                     margin-left: 7vw;
                 }
             }
 
             @media(max-width: 1280px){
-                @media(min-height: 800px){
-                    height: 100%; width: 1100px;
+                @media(max-height: 1024px){
+                    margin-left: 6vw; width: 900px;
                 }
-                @media(min-height: 1024px){
-                    margin-left: 4vw;
+                @media(max-height: 800px){
+                    height: 100%; width: 1100px;
                 }
             }
             
@@ -538,13 +570,21 @@ div.SynthDemo{
             &.left{
                 margin-left: 8em;
                 @media(max-width: $giant){
-                    @media(min-height: 1080px){
+                    @media(max-height: 1080px){
                         margin-left: 12em;
+                    }
+                }
+                @media(max-width: 1600px){
+                    @media(max-height: 803px){
+                        margin-left: 8em;
                     }
                 }
 
                 @media(max-width: 1280px){
-                    @media(min-height: 800px){
+                    @media(max-height: 1024px){
+                        margin-left: 8em;
+                    }
+                    @media(max-height: 800px){
                         font-size: 15px;
                     }
                 }
@@ -565,32 +605,35 @@ div.SynthDemo{
                 margin-right: 10vw;
 
                 @media(max-width: $giant){
-                    @media(min-height: 1080px){
+                    @media(max-height: 1080px){
                         margin-right: 6vw;
                     }
                 }
 
                 @media(max-width: 1600px){
-                    @media(min-height: 900px){
+                    @media(max-height: 900px){
                         margin-right: 5vw;
                     }
                 }
 
                 @media(max-width: $laptopL){
                     margin-right: 9.5vw;
-                    @media(min-height: 900px){
+                    @media(max-height: 900px){
                         margin-right: 3vw;
                     }
                 }
 
                 @media(max-width: $laptopM){
-                    @media(min-height: 768px){
+                    @media(max-height: 768px){
                         margin-right: 4vw;
                     }
                 }
 
                 @media(max-width: 1280px){
-                    @media(min-height: 800px){
+                    @media(max-height: 1024px){
+                        margin-right: 0vw;
+                    }
+                    @media(max-height: 800px){
                         font-size: 15px;
                     }
                 }
@@ -632,8 +675,18 @@ div.SynthDemo{
             transform: scaleY(1.3);
 
             @media(max-width: $giant){
-                @media(min-height: 1080px){
+                @media(max-height: 1080px){
                     margin-left: 16em;
+                }
+            }
+            @media(max-width: 1600px){
+                @media(max-height: 803px){
+                    margin-left: 10em;
+                }
+            }
+            @media(max-width: 1280px){
+                @media(max-height: 1024px){
+                    margin-left: 12em;
                 }
             }
 
@@ -667,7 +720,7 @@ div.SynthDemo{
                 @include translateY(56%);
 
                 @media(max-width: 1280px){
-                    @media(min-height: 800px){
+                    @media(max-height: 800px){
                         font-size: 3.5em;
                     }
                 }
@@ -696,7 +749,7 @@ div.SynthDemo{
             }
 
             @media(max-width: $giant){
-                @media(min-height: 1080px){
+                @media(max-height: 1080px){
                     left: 37%;
                     &:hover + .SideTextAlienzNew{
                         transform: translateY(-30vh) rotate(-90deg);
@@ -705,7 +758,7 @@ div.SynthDemo{
             }
 
             @media(max-width: 1680px){
-                @media(min-height: 1050px){
+                @media(max-height: 1050px){
                     left: 32%;
                     &:hover + .SideTextAlienzNew{
                         transform: translateY(-30vh) rotate(-90deg);
@@ -714,16 +767,19 @@ div.SynthDemo{
             }
 
             @media(max-width: 1600px){
-                @media(min-height: 900px){
+                @media(max-height: 900px){
                     left: 32%;
                     &:hover + .SideTextAlienzNew{
                         transform: translateY(-36vh) rotate(-90deg);
                     }
                 }
+                @media(max-height: 803px){
+                    left: 28%;
+                }
             }
 
             @media(max-width: 1536px){
-                @media(min-height: 864px){
+                @media(max-height: 864px){
                       left: 30%;
                 }
             }
@@ -733,24 +789,30 @@ div.SynthDemo{
                     transform: translateY(-38vh) rotate(-90deg);
                 }
 
-                @media(min-height: 900px){
+                @media(max-height: 900px){
                     left: 30%;
                 }
             }
 
             @media(max-width: $laptopM){
-                @media(min-height: 768px){
+                @media(max-height: 768px){
                     left: 29%;
                 }
             }
 
             @media(max-width: 1280px){
-                @media(min-height: 800px){
+                @media(max-height: 1024px){
+                    left: 28%;
+                }
+                @media(max-height: 800px){
                     left: 26%;   
                 }
                 &:hover + .SideTextAlienzNew{
-                    @media(min-height: 1024px){
+                    @media(max-height: 1024px){
                         transform: translateY(-31vh) rotate(-90deg);
+                    }
+                    @media(max-height: 918px){
+                        transform: translateY(-30vh) rotate(-90deg);
                     }
                 }
             }
@@ -766,7 +828,7 @@ div.SynthDemo{
             }
 
             @media(max-width: 840px){
-                @media(min-height: 1050px){
+                @media(max-height: 1050px){
                     left: 7%;
                 }
             }

@@ -57,7 +57,7 @@ div.NextPageIcon{
     bottom: 0.4rem;
     left: 82rem;
 
-    @media(max-width: $giant){
+    @media(min-width: $giant){
         @media(min-height: 1080px){
             left: 105rem;
         }

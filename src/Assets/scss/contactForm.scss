@@ -5,19 +5,19 @@
     left: -8.7vw;
     transform: scale(1.1) translateY(2.5vh);
 
-    @media(max-width: $giant){
+    @media(min-width: $giant){
         @media(min-height: 1080px){
             left: -5vw;
         }
     }
     @media(max-width: 1680px){
-        @media(min-height: 1050px){
+        @media(max-height: 1050px){
             left: -7vw;
         }
     }
 
     @media(max-width: 1600px){
-        @media(min-height: 900px){
+        @media(max-height: 900px){
             left: -7vw;
         }
     }
@@ -43,7 +43,10 @@
         color: #424242;
 
         @media(max-width: 1280px){
-            @media(min-height: 800px){
+            @media(max-height: 1024px){
+                width: 19vw;
+            }
+            @media(max-height: 800px){
                 width: 18vw;
             }
         }
@@ -55,8 +58,8 @@
     position: relative;
     left: 15.5vw;
     transform: scale(1.1) translateY(-6.35vh);
-
-    @media(max-width: $giant){
+    
+    @media(min-width: $giant){
         @media(min-height: 1080px){
             left: 15vw;
             transform: scale(1.1) translateY(-4vh);
@@ -64,20 +67,23 @@
     }
 
     @media(max-width: 1680px){
-        @media(min-height: 1050px){
+        @media(max-height: 1050px){
             transform: scale(1.1) translateY(-4.2vh);
-            left: 17vw;
+            left: 15vw;
         }
     }
 
     @media(max-width: 1600px){
-        @media(min-height: 900px){
+        @media(max-height: 900px){
             transform: scale(1.1) translateY(-5.4vh);
+        }
+        @media(max-height: 803px){
+            transform: scale(1.1) translateY(-6.35vh);
         }
     }
 
     @media(max-width: 1536px){
-        @media(min-height: 864px){
+        @media(max-height: 864px){
               transform: scale(1.1) translateY(-5.7vh);
         }
     }
@@ -85,29 +91,33 @@
     @media(max-width: $laptopL){
         transform: scale(1.1) translateY(-5.4vh);
         left: 15.5vw;
-
-        @media(min-height: 768px){
+        
+        @media(max-height: 900px){
+            transform: scale(1.1) translateY(-5.3vh);
+        }
+        @media(max-height: 768px){
             transform: scale(1.1) translateY(-6.7vh);
         }
 
-        @media(min-height: 900px){
-            transform: scale(1.1) translateY(-5.3vh);
-        }
     }
 
     @media(max-width: $laptopM){
-        @media(min-height: 768px){
+        @media(max-height: 768px){
             transform: scale(1.1) translateY(-6.7vh);
         }
     }
 
     @media(max-width: 1280px){
-        @media(min-height: 800px){
+        @media(max-height: 1024px){
+            transform: scale(1.1) translateY(-4.4vh);
+        }
+        @media(max-height: 918px){
+            left: 14vw;
+            transform: scale(1.1) translateY(-5.2vh);
+        }
+        @media(max-height: 800px){
             left: 14vw;
             transform: scale(1.1) translateY(-6.3vh);   
-        }
-        @media(min-height: 1024px){
-            transform: scale(1.1) translateY(-4.4vh);
         }
     }
     
@@ -128,20 +138,26 @@
         background-color: rgb(255, 251, 202);
         color: #424242;
 
-        @media(max-width: $giant){
+        @media(min-width: $giant){
             @media(min-height: 1080px){
                 width: 18vw;
             }
         }
 
+        @media(max-width: 1680px){
+            @media(max-height: 1050px){
+                width: 19vw;
+            }
+        }
+
         @media(max-width: 1600px){
-            @media(min-height: 900px){
+            @media(max-height: 900px){
                 width: 20vw;
             }
         }
 
         @media(max-width: 1280px){
-            @media(min-height: 800px){
+            @media(max-height: 800px){
                 width: 20vw;
             }
         }
@@ -164,20 +180,23 @@
     transform: scale(1.1) translateY(-2vh);
     left: 3.8vw;
     
-    @media(max-width: $giant){
+    @media(min-width: $giant){
         @media(min-height: 1080px){
             left: 5vw;
         }
     }
 
     @media(max-width: $laptopL){
-        @media(min-height: 900px){
+        @media(max-height: 900px){
             left: 3.5vw;
         }
     }
 
     @media(max-width: 1280px){
-        @media(min-height: 800px){
+        @media(max-height: 1024px){
+            left: 3vw;
+        }
+        @media(max-height: 800px){
             left: 3vw;
         }
     }
@@ -215,9 +234,14 @@
         
     }
 
-    @media(max-width: $giant){
+    @media(min-width: $giant){
         @media(min-height: 1080px){
             left: 4.5vw;
+        }
+    }
+    @media(max-width: 1280px){
+        @media(max-height: 1024px){
+            left: 3.5vw;
         }
     }
     

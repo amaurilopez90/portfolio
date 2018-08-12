@@ -64,43 +64,47 @@ div.Main-Background{
     opacity: 0.15;
 
     @media(max-width: $giant){
-        @media(min-height: 1080px){
+        @media(max-height: 1080px){
             left: 12vw;
         }
     }
 
     @media(max-width: 1680px){
-        @media(min-height: 1050px){
+        @media(max-height: 1050px){
             left: 11vw;
         }
     }
 
     @media(max-width: 1600px){
-        @media(min-height: 900px){
+        @media(max-height: 900px){
             left: 12vw;
         }
+        @media(max-height: 803px){
+            left: 10vw;
+        }
+        
     }
 
     @media(max-width: 1536px){
-        @media(min-height: 864px){
+        @media(max-height: 864px){
             left: 12vw;
         }
     }
 
     @media(max-width: $laptopL){
-        @media(min-height: 900px){
+        @media(max-height: 900px){
             left: 13vw;
         }
     }
 
     @media(max-width: $laptopM){
-        @media(min-height: 768px){
+        @media(max-height: 768px){
             left: 14vw;
         }
     }
 
     @media(max-width: 1280px){
-        @media(min-height: 800px){
+        @media(max-height: 800px){
             left: 12vw;
         }
     }
