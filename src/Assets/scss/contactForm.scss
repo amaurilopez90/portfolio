@@ -6,7 +6,7 @@
     transform: scale(1.1) translateY(2.5vh);
 
     @media(min-width: $giant){
-        @media(min-height: 1080px){
+        @media(max-height: 1080px){
             left: -5vw;
         }
     }
@@ -60,9 +60,12 @@
     transform: scale(1.1) translateY(-6.35vh);
     
     @media(min-width: $giant){
-        @media(min-height: 1080px){
+        @media(max-height: 1080px){
             left: 15vw;
             transform: scale(1.1) translateY(-4vh);
+        }
+        @media(max-height: 980px){
+            transform: scale(1.1) translateY(-4.7vh);
         }
     }
 
@@ -139,7 +142,7 @@
         color: #424242;
 
         @media(min-width: $giant){
-            @media(min-height: 1080px){
+            @media(max-height: 1080px){
                 width: 18vw;
             }
         }
@@ -181,7 +184,7 @@
     left: 3.8vw;
     
     @media(min-width: $giant){
-        @media(min-height: 1080px){
+        @media(max-height: 1080px){
             left: 5vw;
         }
     }
@@ -235,7 +238,7 @@
     }
 
     @media(min-width: $giant){
-        @media(min-height: 1080px){
+        @media(max-height: 1080px){
             left: 4.5vw;
         }
     }

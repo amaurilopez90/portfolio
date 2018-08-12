@@ -11,8 +11,8 @@
 
     .thePlayerContainer{
         @media(max-width: 1280px){
-            transform: scale(1, 1.45);
-            @media(max-height: 918px){
+            
+            @media(max-height: 1024px){
                 transform: scale(1, 1.45);
             }
             
@@ -43,7 +43,7 @@
         left: 33rem;
 
         @media(max-width: $giant){
-            @media(min-height: 1080px){
+            @media(max-height: 1080px){
                 left: 38rem;
             }
         }
@@ -51,24 +51,25 @@
         @media(max-width: $laptopL){
             left: 31rem;
             transform: translateY(-7rem) rotate(90deg);
-            @media(min-height: 900px){
+            @media(max-height: 900px){
                 transform: rotate(90deg);
             }
         }
 
         @media(max-width: $laptopM){
-            @media(min-height: 768px){
+            @media(max-height: 768px){
                 left: 28rem;
                 transform: rotate(90deg);   
             }
         }
 
         @media(max-width: 1280px){
-            @media(min-height: 800px){
-                left: 26rem;
-            }
-            @media(min-height: 1024px){
+            @media(max-height: 1024px){
+                left: 30em;
                 transform: translateY(-7rem) rotate(90deg);
+            }
+            @media(max-height: 800px){
+                left: 26rem;
             }
         }
 
@@ -111,11 +112,11 @@
         }
 
         @media(max-width: 1280px){
-            @media(min-height: 800px){
-                left: 7vw;
+            @media(max-height: 1024px){
+                @include translateY(-15vh);
             }
-            @media(min-height: 1024px){
-                @include translateY(-25vh);
+            @media(max-height: 800px){
+                left: 7vw;
             }
         }
         
@@ -127,7 +128,7 @@
 
         @media(max-width: $tablet){
             left: 25vw;
-            @media(min-height: 900px){
+            @media(max-height: 900px){
                 left: 24vw;
                 @include translateY(-35vh);
             }
