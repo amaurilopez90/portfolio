@@ -23,8 +23,8 @@ import ReallySmoothScroll from 'really-smooth-scroll';
 ReallySmoothScroll.shim();
 
 ReallySmoothScroll.config({
-  mousewheelSensitivity: 6.5, // Default
-  keydownSensitivity: 6.5 // Default (When you press arrow down/up key)
+  mousewheelSensitivity: 7, // Default
+  keydownSensitivity: 7 // Default (When you press arrow down/up key)
 });
 
 //Listen to a change in routes and scroll to the top of the screen
