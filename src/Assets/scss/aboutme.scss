@@ -70,7 +70,7 @@ div.AudioPlayer{
     }
     @media(max-width: 1280px){
         @media(max-height: 1024px){
-            left: 22vw;
+            left: 21vw;
              
         }
     }
@@ -152,6 +152,11 @@ div.AudioPlayer{
             width: 81%;
         }
     }
+    @media(max-width: 1280px){
+        @media(max-height: 1024px){
+            left: 7em;
+        }
+    }
 
     @media(max-width: $laptop){
         width: 85%;
@@ -205,6 +210,11 @@ div.AudioPlayer{
     @media(max-width: 1680px){
         @media(max-height: 1050px){
             top: 3vh;
+        }
+    }
+    @media(max-width: 1280px){
+        @media(max-height: 1024px){
+            left: 7em;
         }
     }
 
@@ -387,7 +397,7 @@ div.AudioPlayer{
 
         @media(max-width: 1280px){
             @media(max-height: 1024px){
-                left: 36vw;
+                left: 37vw;
             }
             @media(max-height: 800px){
                 font-size: 12px;
@@ -476,6 +486,9 @@ div.AudioPlayer{
         }
 
         @media(max-width: 1280px){
+            @media(max-height: 1024px){
+                left: 10em;
+            }
             @media(max-height: 800px){
                 font-size: 12px;
             }
@@ -571,6 +584,11 @@ div.AudioPlayer{
     @media(max-width: $giant){
         @media(max-height: 1080px){    
             left: 10em;
+        }
+    }
+    @media(max-width: 1280px){
+        @media(max-height: 1024px){
+            left: 8em;
         }
     }
 
