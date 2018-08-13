@@ -34,7 +34,10 @@ history.listen(() => {
 });
 
 class App extends Component {  
-
+  componentDidMount(){
+    document.title = "Amauri Lopez's Portfolio";
+  }
+  
   render() {
     return (
       <Router history={history}>
