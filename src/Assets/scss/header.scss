@@ -11,7 +11,7 @@ header{
     transform: scaleY(1.2);
 
     @media(max-width: $giant){
-        @media(min-height: 1080px){
+        @media(max-height: 1080px){
             left: 70%;
         }
     }

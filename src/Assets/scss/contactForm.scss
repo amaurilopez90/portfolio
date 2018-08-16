@@ -64,6 +64,9 @@
             left: 15vw;
             transform: scale(1.1) translateY(-4vh);
         }
+        @media(max-height: 1050px){
+            transform: scale(1.1) translateY(-4.3vh);
+        }
         @media(max-height: 980px){
             transform: scale(1.1) translateY(-4.7vh);
         }

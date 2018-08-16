@@ -665,6 +665,9 @@ div.AudioPlayer{
             @media(max-height: 1080px){
                 transform: rotate(90deg) translate(-20vw, -88vh);
             }
+            @media(max-height: 1050px){
+                transform: rotate(90deg) translate(-20vw, -94vh);
+            }
             @media(max-height: 980px){
                 transform: rotate(90deg) translate(-20vw, -98vh);
             }
@@ -758,6 +761,9 @@ div.AudioPlayer{
         @media(min-width: $giant){
             @media(max-height: 1080px){
                 transform: rotate(90deg) translate(-18vw, -138vh);
+            }
+            @media(max-height: 1050px){
+                transform: rotate(90deg) translate(-18vw, -145vh);
             }
             @media(max-height: 980px){
                 transform: rotate(90deg) translate(-18vw, -152vh);
@@ -872,6 +878,10 @@ div.AudioPlayer{
     @media(max-width: $giant){
         @media(max-height: 1080px){
             left: 35rem;    
+        }
+        @media(max-height: 1050px){
+            left: 36rem;
+            width: 58%;
         }
     }
 

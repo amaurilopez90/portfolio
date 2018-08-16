@@ -7,48 +7,48 @@ const ProgressTextDiv = styled.div`
   position: relative;
   display: inline-block;
   @media(max-width: 1920px){
-    @media(min-height: 1080px){
+    @media(max-height: 1080px){
       left: 7rem;
     }
   }
 
   @media(max-width: 1680px){
-    @media(min-height: 1050px){
+    @media(max-height: 1050px){
         left: 4rem;
     }
   }
 
   @media(max-width: 1600px){
-    @media(min-height: 900px){
+    @media(max-height: 900px){
         left: 3rem;
     }
   }
 
   @media(max-width: 1536px){
-    @media(min-height: 864px){
+    @media(max-height: 864px){
           left: 2rem;
     }
   }
 
   @media(max-width: 1440px){
-    @media(min-height: 900px){
+    @media(max-height: 900px){
       left: 4rem;
     }
   }
 
   @media(max-width: 1366px){
-    @media(min-height: 768px){
+    @media(max-height: 768px){
       left: 4rem;
     }
   }
 
   @media(max-width: 1280px){
-    @media(min-height: 800px){
+    @media(max-height: 800px){
       left: 0;       
     }
   }
   @media(max-width: 800px){
-    @media(min-height: 900px){
+    @media(max-height: 900px){
       left: -2rem;
     }
   }
