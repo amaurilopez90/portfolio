@@ -43,6 +43,9 @@ const ProgressTextDiv = styled.div`
   }
 
   @media(max-width: 1280px){
+    @media(max-height: 1024px){
+      left: 1rem;
+    }
     @media(max-height: 800px){
       left: 0;       
     }

@@ -166,14 +166,38 @@ export default class AudioPlayer extends Component{
         return(
             <div className="AudioPlayer">
             
+
+                <WhenInView>
+                    {({ isInView }) => 
+                        <Revealp transform={'left'} hide={!isInView}>
+                            <MusicPlayerContainer>
+                                <PlayButton id={'BlindManSee'} data-index={0} onClick={this.switchTrack}>
+                                    <p>
+                                        { !this.playing[0] && <i className="fa fa-play"></i>}
+                                        { this.playing[0] && <i className="fa fa-pause"></i>}
+                                    </p>
+                                </PlayButton>
+                                <div className="SongTitle">
+                                    <p style={{ margin: '0 0 10px 0', color: '#424242', transform: 'scaleY(1.2)' }}>
+                                        Hip-Hop Soulchef - Blind Man See
+                                    </p>
+                                    <AudioLine>
+                                        <span className="mainLine" id="BlindManSeeLine"></span>
+                                    </AudioLine>
+                                </div>
+                            </MusicPlayerContainer>
+                        </Revealp>
+                    }
+                </WhenInView>
+
                 <WhenInView>
                     {({ isInView }) => 
                         <Revealp transform={'left'} hide={!isInView} >
                             <MusicPlayerContainer>
-                                <PlayButton id={'TheGirlIHaventMet'} data-index={0} onClick={this.switchTrack}>
+                                <PlayButton id={'TheGirlIHaventMet'} data-index={1} onClick={this.switchTrack}>
                                     <p>
-                                        { !this.playing[0] && <i className="fa fa-play"></i>}
-                                        { this.playing[0] && <i className="fa fa-pause"></i>}
+                                        { !this.playing[1] && <i className="fa fa-play"></i>}
+                                        { this.playing[1] && <i className="fa fa-pause"></i>}
                                     </p>
                                 </PlayButton>
                                 <div className="SongTitle">
@@ -186,29 +210,6 @@ export default class AudioPlayer extends Component{
                                 </div>
                             </MusicPlayerContainer>
                         
-                        </Revealp>
-                    }
-                </WhenInView>
-
-                <WhenInView>
-                    {({ isInView }) => 
-                        <Revealp transform={'left'} hide={!isInView}>
-                            <MusicPlayerContainer>
-                                <PlayButton id={'BlindManSee'} data-index={1} onClick={this.switchTrack}>
-                                    <p>
-                                        { !this.playing[1] && <i className="fa fa-play"></i>}
-                                        { this.playing[1] && <i className="fa fa-pause"></i>}
-                                    </p>
-                                </PlayButton>
-                                <div className="SongTitle">
-                                    <p style={{ margin: '0 0 10px 0', color: '#424242', transform: 'scaleY(1.2)' }}>
-                                        Hip-Hop Soulchef - Blind Man See
-                                    </p>
-                                    <AudioLine>
-                                        <span className="mainLine" id="BlindManSeeLine"></span>
-                                    </AudioLine>
-                                </div>
-                            </MusicPlayerContainer>
                         </Revealp>
                     }
                 </WhenInView>

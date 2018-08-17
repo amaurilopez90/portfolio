@@ -47,6 +47,11 @@
                 left: 38rem;
             }
         }
+        @media(max-width: 1538px){
+            @media(max-height: 803px){
+                left: 32rem;
+            }
+        }
 
         @media(max-width: $laptopL){
             left: 31rem;

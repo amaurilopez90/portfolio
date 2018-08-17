@@ -324,10 +324,15 @@ div.SynthDemo{
                     margin-left: 3vw;
                 }
             }
+            @media(max-width: 1536px){
+                @media(max-height: 768px){
+                    margin-left: 5vw; margin-bottom: 0vh;
+                }
+            }
 
             @media(max-width: $laptopL){
                 @media(max-height: 900px){
-                    margin-left: 5vw;
+                    margin-left: 5vw; margin-bottom: -5vh;
                     width: 850px;
                 }
             }
@@ -379,6 +384,12 @@ div.SynthDemo{
                         }
                         @media(max-height: 803px){
                             right: 30vw;
+                        }
+                    }
+                    @media(max-width: 1536px){
+                        @media(max-height: 768px){
+                            right: 32vw;
+                            transform: translateY(-65vh) rotate(-90deg);
                         }
                     }
 
@@ -451,6 +462,11 @@ div.SynthDemo{
                             left: 30vw;
                         }
                     }
+                    @media(max-width: 1536px){
+                        @media(max-height: 768px){
+                            left: 31vw;
+                        }
+                    }
 
                     @media(max-width: $laptopL){
                         transform: translateY(-7vh) rotate(90deg);
@@ -517,7 +533,7 @@ div.SynthDemo{
 
             @media(max-width: 1536px){
                 @media(max-height: 864px){
-                    width: 1000px; margin-left: 3vw; height: 100%;
+                    width: 1100px; margin-left: 5vw; height: 100%;
                 }
             }
 
@@ -563,7 +579,7 @@ div.SynthDemo{
         h1{
             font-size: 17px;
             position: relative;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             color: $charcoalBlack;
             z-index: 1;
 
@@ -781,6 +797,9 @@ div.SynthDemo{
             @media(max-width: 1536px){
                 @media(max-height: 864px){
                       left: 30%;
+                }
+                @media(max-height: 768px){
+                    left: 32%;
                 }
             }
 

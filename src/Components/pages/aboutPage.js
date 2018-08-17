@@ -301,8 +301,8 @@ class AboutMe extends Component {
                 <Revealp className="LeftDescriptionReveal" transform={'left'} hide={!isInView} barColor = '#424242'>
                   <p className="LeftDescription" style={{color: '#424242'}}>
                     Tyler Carter is one of my favorite singers and songwriters within his genre. 
-                    The reason he stands out to me is because he brings a style of RnB and Pop way out of its arena into 
-                    the metal/post-hardcore scene.        
+                    Bringing a style of RnB and Pop out of its arena into the post-hardcore scene is what makes him stand out as a vocalist
+                    and its this behavior that encourages musical expansion around him.         
                   </p>
                 </Revealp>
               }
