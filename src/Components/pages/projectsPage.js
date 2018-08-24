@@ -75,7 +75,7 @@ class Projects extends Component {
               </div>
 
               <h1 className="left">
-                Tile Based - <a href="https://github.com/amaurilopez90/GameDev/tree/master/Alienz" target="_blank" rel="noopener noreferrer">
+                Tile Based - <a href="https://github.com/amaurilopez90/Alienz" target="_blank" rel="noopener noreferrer">
                 Alienz</a>
               
               </h1>
@@ -212,7 +212,7 @@ class Projects extends Component {
                   <Slidep direction={'right'} hide={!isInView}>
 
                     <h1 className="left">
-                      Unity 3D - <a href="https://github.com/amaurilopez90/GameDev/tree/master/BattleSpheres" target="_blank" rel="noopener noreferrer">
+                      Unity 3D - <a href="https://github.com/amaurilopez90/BattleSpheres" target="_blank" rel="noopener noreferrer">
                       Battle Spheres</a>
                     
                     </h1>
