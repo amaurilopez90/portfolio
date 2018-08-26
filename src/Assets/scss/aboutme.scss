@@ -355,7 +355,8 @@ div.AudioPlayer{
         }
         @media(max-width: $phone){
             @media(max-height: 670px){
-                margin-right: 2em; margin-top: -15vh;
+                margin-right: 20em; margin-top: -15vh;
+                transform: scale(1.8);
             }
         }
 
@@ -369,7 +370,8 @@ div.AudioPlayer{
         }
         @media(max-width: $phone){
             @media(max-height: 670px){
-                margin-left: 2em;
+                margin-left: 14em;
+                transform: scale(1.8);
             }
         }
     }
@@ -478,6 +480,9 @@ div.AudioPlayer{
         @media(max-width: $tablet){
             left: 38vw;
         }
+        @media(max-width: $phone){
+            left: 0vw; width: 85%;
+        }
     }
 
     @media(max-width: 1680px){
@@ -534,6 +539,9 @@ div.AudioPlayer{
         margin-Left: 1vw;
         text-Align: right;
         color: #5A6D87;
+        @media(max-width: $phone){
+            font-size: 9px;
+        }
     
     }
 }

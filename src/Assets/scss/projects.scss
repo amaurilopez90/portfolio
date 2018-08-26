@@ -21,6 +21,9 @@ div.SynthDemo{
         @media(max-width: $laptop){
             height: 100%;
         }
+        @media(max-width: $phone){
+            margin-bottom: 15vh;
+        }
     }
 
     .thePlayerContainer{
@@ -75,6 +78,11 @@ div.SynthDemo{
         @media(max-width: $tablet){
             right: 30px;
             top: 5vh;
+        }
+        @media(max-width: $phone){
+            @media(max-height: 670px){
+                top: 15vh; right: 25px;
+            }
         }
     }
 }
@@ -215,6 +223,9 @@ div.SynthDemo{
             @media(max-width: $tablet){
                 font-size: 10px;
                 margin-top: 10vh;
+            }
+            @media(max-width: $phone){
+                margin-left: 1em;
             }
         }
     }
@@ -581,6 +592,10 @@ div.SynthDemo{
                 width: 680px;
                 height: 400px;
             }
+            @media(max-width: $phone){
+                width: 320px; height: 250px;
+                margin-left: 1vw;
+            }
         }
 
         h1{
@@ -619,6 +634,9 @@ div.SynthDemo{
                 //Tablet
                 @media(max-width: $tablet){
                     margin-left: 4%;
+                }
+                @media(max-width: $phone){
+                    font-size: 12px;
                 }
             }
 
@@ -668,6 +686,9 @@ div.SynthDemo{
                 //Tablet
                 @media(max-width: $tablet){
                     margin-right: 3vw;
+                }
+                @media(max-width: $phone){
+                    margin-right: 10vw; font-size: 12px;
                 }
     
             }
@@ -722,6 +743,7 @@ div.SynthDemo{
                 margin-left: 3em;
             }
             
+            
             h1{
                 font-size: 4.6em;
                 font-weight: bold;
@@ -737,6 +759,9 @@ div.SynthDemo{
                     }
                     @media(max-width: 840px){
                         margin-left: 10em;
+                    }
+                    @media(max-width: $phone){
+                        margin-left: 6.5em;
                     }
                 }
 
@@ -869,6 +894,10 @@ div.SynthDemo{
 
             @media(max-width: 640px){
                 left: 1%;
+            }
+            @media(max-width: $phone){
+                transform: scale(0.6, 0.65);
+                left: -33%;
             }
 
         }

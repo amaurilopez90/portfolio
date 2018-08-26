@@ -15,7 +15,7 @@ div.PreviousPageIcon{
     @media(max-width: $phone){
         visibility: visible;
         @media(max-height: 670px){
-            left: 0.8rem;
+            left: -0.5rem;
             bottom: 1rem;
         }
     }
