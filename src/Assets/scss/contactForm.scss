@@ -50,6 +50,11 @@
                 width: 18vw;
             }
         }
+        @media(max-width: $phone){
+            @media(max-height: 670px){
+                width: 60vw;       
+            }
+        }
 
     }
 }
@@ -178,6 +183,9 @@
         @media(max-width: $tablet){
             width: 39vw;
         }
+        @media(max-width: $phone){
+            width: 60vw;
+        }        
 
         
     }
@@ -225,6 +233,10 @@
         border: 2px solid #424242;
         background-color: rgb(255, 251, 202);
         color: #424242;
+
+        @media(max-width: $phone){
+            width: 60vw;
+        }        
     }
 }
 

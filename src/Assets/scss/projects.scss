@@ -127,6 +127,13 @@ div.SynthDemo{
                 margin-left: 22%;
             }
         }
+        @media(max-width: $phone){
+            @media(max-height: 670px){
+                font-size: 6px;
+                margin-top: 30%; margin-left: 10%;
+                width: 85%;
+            }
+        }
     }
 
     

@@ -87,9 +87,12 @@ div.Main-Background{
         
     }
 
-    @media(max-width: 1536px){
+    @media(max-width: 1538px){
         @media(max-height: 864px){
             left: 12vw;
+        }
+        @media(max-height: 803px){
+            left: 10vw;
         }
     }
 
@@ -173,6 +176,9 @@ div.ProgressText{
     position: fixed;
     left: 38%;
 
+    @media(max-width: 1538px){
+        left: 36%;
+    }
     @media(max-width: $laptop){
         left: 36%;
     }

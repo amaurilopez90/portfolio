@@ -51,6 +51,13 @@ div.BassPlaythrough{
         @media(max-width: $tablet){
             right: 30px;
         }
+
+        @media(max-width: $phone){
+            @media(max-height: 670px){
+                right: 20px;
+                top: 13vh; transform: scale(1, 1);
+            }
+        }
     }
 }
 
@@ -68,7 +75,10 @@ div.AudioPlayer{
             transform: scale(1);
         }
     }
-    @media(max-width: 1536px){
+    @media(max-width: 1538px){
+        @media(max-height: 803px){
+            left: 10vw;
+        }
         @media(max-height: 768px){
             left: 28vw;
         }
@@ -107,6 +117,12 @@ div.AudioPlayer{
     @media(max-width: 640px){
         left: 3vw;
     }
+    @media(max-width: $phone){
+        @media(max-height: 670px){
+            transform: scale(0.5, 0.75);
+            left: -30vw; top: 6vh;
+        }
+    }
 
     .SongTitle{
         position: relative;
@@ -136,6 +152,11 @@ div.AudioPlayer{
         @media(max-width: $tablet){
             left: 7.5vw;
             bottom: 7.5vh;
+        }
+        @media(max-width: $phone){
+            @media(max-height: 670px){
+                left: 18vw; bottom: 8vh;
+            }
         }
     }
 }
@@ -171,6 +192,11 @@ div.AudioPlayer{
     @media (max-width: $tablet){
         width: 80%;
     }
+    @media(max-width: $phone){
+        @media(max-height: 670px){
+            width: 85%; left: 2em;
+        }
+    }
 
 
     .para1{
@@ -196,6 +222,9 @@ div.AudioPlayer{
         @media (max-width: $tablet){
             font-size: 10px;
             margin-left: 0.5vw;
+        }
+        @media(max-width: $phone){
+            font-size: 9px;
         }
     
     }
@@ -231,6 +260,11 @@ div.AudioPlayer{
     @media(max-width: $tablet){
         left: 8.5em;
     }
+    @media(max-width: $phone){
+        @media(max-height: 670px){
+            left: 2em; top: -8vh;
+        }
+    }
 
     .para2{
         margin-left: 1vw;
@@ -255,6 +289,9 @@ div.AudioPlayer{
             font-size: 10px;
             margin-left: 0.5vw;
         }
+        @media(max-width: $phone){
+            font-size: 9px;
+        }
     }
 }
 
@@ -271,6 +308,10 @@ div.AudioPlayer{
 
     @media(max-width: $tablet){
         left: 8em;
+    }
+    @media(max-width: $phone){
+        width: 85%;
+        left: 2em; top: 0;
     }
     h5{
         text-align: center;
@@ -312,6 +353,11 @@ div.AudioPlayer{
         @media(max-width: $tablet){
             margin-right: 1em;
         }
+        @media(max-width: $phone){
+            @media(max-height: 670px){
+                margin-right: 2em; margin-top: -15vh;
+            }
+        }
 
     }
 
@@ -320,6 +366,11 @@ div.AudioPlayer{
 
         @media(max-width: $laptop){
             margin-left: 4em;
+        }
+        @media(max-width: $phone){
+            @media(max-height: 670px){
+                margin-left: 2em;
+            }
         }
     }
 
@@ -339,6 +390,12 @@ div.AudioPlayer{
             @media(max-width: $tablet){
                 margin-left: 0;
             }
+            @media(max-width: $phone){
+                margin-left: -0.2em;
+                @media(max-height: 670px){
+                    margin-top: -5vh;
+                } 
+            }
         }
 
         .InspirationsIcon{
@@ -354,6 +411,11 @@ div.AudioPlayer{
 
             @media(max-width: $tablet){
                 margin-left: 0;
+            }
+            @media(max-width: $phone){
+                @media(max-height: 670px){
+                    margin-top: 15vh;
+                }
             }
             
         }
@@ -461,6 +523,12 @@ div.AudioPlayer{
         left: 39vw;
         font-size: 11px;
     }
+    @media(max-width: $phone){
+        font-size: 9px;
+        @media(max-height: 670px){
+            width: 85%; left: 5vw;
+        }
+    }
 
     .RightDescription{
         margin-Left: 1vw;
@@ -524,6 +592,13 @@ div.AudioPlayer{
     @media(max-width: $tablet){
         font-size: 11px;
     }
+    @media(max-width: $phone){
+        font-size: 9px;
+        @media(max-height: 670px){
+            left: 4em;
+            width: 85%;
+        }
+    }
 
     .LeftDescription{
         color: #5A5D87;
@@ -562,6 +637,9 @@ div.AudioPlayer{
         left: 5%;
         width: 32%;
     }
+    @media(max-width: $phone){
+        left: 10%;
+    }
 
     &:after{
         content: ' ';
@@ -576,6 +654,9 @@ div.AudioPlayer{
         @media(max-width: $tablet){
             left: -3%; bottom: 0;
             width: 100%; height: 100%;
+        }
+        @media(max-width: $phone){
+            width: 150%;
         }
     }
     
@@ -603,7 +684,12 @@ div.AudioPlayer{
 
     @media(max-width: $tablet){
         left: 11.2em;
-        
+    }
+    @media(max-width: $phone){
+        @media(max-height: 670px){
+            left: -3.5em; transform: scale(0.7, 0.7);
+            
+        }
     }
     
     .SideTextExercise{
@@ -613,6 +699,9 @@ div.AudioPlayer{
         left: -8rem;
         transition: .3s;
         display: inline-flex;
+        @media(max-width: $phone){
+            visibility: hidden;
+        }
 
     }
     
@@ -645,6 +734,9 @@ div.AudioPlayer{
         @media(max-width: $tablet){
             left: -3%;
             width: 32%;
+        }
+        @media(max-width: $phone){
+            width: 40%; left: 2%;
         }
 
         &:after{
@@ -873,6 +965,12 @@ div.AudioPlayer{
     @media(max-width: $laptop){
         left: 4rem;
     }
+    @media(max-width: $phone){
+        @media(max-height: 670px){
+            left: 4rem;
+            width: 65%;
+        }
+    }
 
 }
 
@@ -944,6 +1042,13 @@ div.AudioPlayer{
 
     @media(max-width: $tablet){
         left: 16rem;
+    }
+    @media(max-width: $phone){
+        @media(max-height: 670px){
+            left: 3.5rem;
+            width: 71%;
+            margin-top: -3vh;
+        }
     }
 }
 
