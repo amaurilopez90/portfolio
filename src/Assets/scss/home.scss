@@ -17,25 +17,19 @@
             }
             
         }
+
+        @media(max-width: $phone){
+            @media(max-height: 670px){
+                transform: scale(1.2, 1.4);
+                top: -6em;
+            }
+        }
     }
 }
 
 .container-fluid{
     line-height: 24px;
     font-size: 14px;
-    
-    .Image{
-        padding-bottom: 25px;
-        width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-
-        h1 {
-            margin-bottom: 0;
-            
-        }
-        
-    }
 
     div.SideTextHome{
         transform: rotate(90deg);
@@ -85,6 +79,9 @@
 
         @media(max-width: $tablet){
             left: 17rem;
+        }
+        @media(max-width: $phone){
+            visibility: hidden;
         }
 
         .SideText{
@@ -136,6 +133,13 @@
             @media(max-height: 900px){
                 left: 24vw;
                 @include translateY(-35vh);
+            }
+        }
+
+        @media(max-width: $phone){
+            @media(max-height: 670px){
+                left: 7vw;
+                @include translateY(-44vh);
             }
         }
 

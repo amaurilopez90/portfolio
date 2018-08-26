@@ -23,7 +23,7 @@ export default class Triangle extends Component {
             height="120px"
             viewBox="-4 -10 57 106">
             <polygon
-              strokeDasharray={271} // Oh. I did the math. Turns out, stroke-dasharray can be >= the perimeter of the triangle, or you know, any shape.
+              strokeDasharray={271} 
               strokeDashoffset={offset}
               stroke="#1DD3CC"
               strokeWidth="10"

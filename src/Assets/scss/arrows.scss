@@ -12,6 +12,13 @@ div.PreviousPageIcon{
     @media(max-width: $tablet){
         visibility: hidden;
     }
+    @media(max-width: $phone){
+        visibility: visible;
+        @media(max-height: 670px){
+            left: 0.8rem;
+            bottom: 4rem;
+        }
+    }
     
     a{
         text-decoration: none;
@@ -26,6 +33,10 @@ div.PreviousPageIcon{
         font-size: 8px;
         transform: scaleY(1.2);
         color: $charcoalBlack;
+        @media(max-width: $phone){
+            font-size: 6px;
+            left: 3rem;
+        }
     }
 
     i{
@@ -35,6 +46,9 @@ div.PreviousPageIcon{
         font-size: 30px;
         transform: scaleX(4);
         color: $red;
+        @media(max-width: $phone){
+            transform: scaleX(2);
+        }
         
     }
 
@@ -42,6 +56,9 @@ div.PreviousPageIcon{
 
         p{
             left: 2.5rem;
+            @media(max-width: $phone){
+                left: 4rem;
+            }
         }
 
         i{
@@ -94,6 +111,13 @@ div.NextPageIcon{
     @media(max-width: $tablet){
         visibility: hidden;
     }
+    @media(max-width: $phone){
+        visibility: visible;
+        @media(max-height: 670px){
+            left: 15rem;
+            bottom: 4rem;
+        }
+    }
     
     p{
         transition: .2s;
@@ -103,6 +127,11 @@ div.NextPageIcon{
         font-size: 8px;
         transform: scaleY(1.2);
         color: $charcoalBlack;
+        @media(max-width: $phone){
+            font-size: 6px;
+            left: 0.6rem;
+        }
+        
     }
 
     i{
@@ -112,6 +141,9 @@ div.NextPageIcon{
         font-size: 30px;
         transform: scaleX(4);
         color: $red;
+        @media(max-width: $phone){
+            transform: scaleX(2);
+        }
         
     }
 
@@ -119,6 +151,9 @@ div.NextPageIcon{
 
         p{
             left: -1.8rem;
+            @media(max-width: $phone){
+                left: -0.8rem;
+            }
         }
 
         i{

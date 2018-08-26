@@ -70,7 +70,7 @@ class Homepage extends Component {
                 <h6 className="SideText">Click to Zoom!</h6>
             </div>
 
-            <Flex justify={'left'}>
+            <Flex justify={'left'} style={{display: 'inline-flex'}}>
               <nav className="HomeNav">
                 <ul>
                   <WhenInView>

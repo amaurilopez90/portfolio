@@ -27,11 +27,18 @@
       transform: scale(0.7);
       left: 89%;
       top: 12px;
-      @media(min-height: 864px){
+      @media(max-height: 864px){
         top: 30px; left: 85%;
       }
-      @media(min-height: 900px){
+      @media(max-height: 900px){
         top: 30px;
+      }
+    }
+
+    @media(max-width: $phone){
+      transform: scale(0.5);
+      @media(max-height: 670px){
+        top: 18px;
       }
     }
   }

@@ -28,6 +28,8 @@ $robineggBlue: #1DD3CC;
 
 //Device breakpoint sizes
 $phone: 376px;
+$phoneL: 414px;
+$phoneGiant: 720px;
 $tablet: 768px;
 $desktop: 992px;
 $laptop: 1024px;
@@ -128,7 +130,10 @@ div.Main-Background{
 
     //Phone
     @media(max-width: $phone){
-        left: 0; width: 100%;
+        width: 100%;
+        @media(max-height: 670px){
+            left: 1.5vw;
+        }
     }
     
     background-image: url('../Aquicon-Github.png');
@@ -176,6 +181,9 @@ div.ProgressText{
         left: 28%;
         font-size: 14px;
     }
+    @media(max-width: $phone){
+        left: 3em; font-size: 10px;
+    }
 }
 
 h1.Title{
@@ -198,7 +206,7 @@ h1.Title{
     }
     //Phone
     @media(max-width: $phone){
-        font-size: 10px;
+        font-size: 12px;
     }
 
 }
@@ -230,7 +238,7 @@ Link{
     @media(max-width: $phone){
         padding-left: 10px;
         padding-right: 10px;
-        padding-top: 15px;
+        //padding-top: 15px;
     }
 
 }
